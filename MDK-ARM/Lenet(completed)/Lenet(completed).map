@@ -227,16 +227,18 @@ Section Cross References
     network.o(.data) refers to layers_nl_generic_float.o(i.forward_sm) for forward_sm
     network.o(.data) refers to network.o(.constdata) for dense_3_nl_chain
     network_data.o(i.ai_network_data_weights_get) refers to network_data.o(.constdata) for .constdata
-    app_x-cube-ai.o(i.MX_X_CUBE_AI_Init) refers to printf8.o(i.__0printf$8) for __2printf
+    app_x-cube-ai.o(i.MX_X_CUBE_AI_Init) refers to printfa.o(i.__0printf) for __2printf
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Init) refers to network_data.o(i.ai_network_data_weights_get) for ai_network_data_weights_get
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Init) refers to app_x-cube-ai.o(i.ai_boostrap) for ai_boostrap
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Init) refers to app_x-cube-ai.o(.bss) for .bss
-    app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to printf8.o(i.__0printf$8) for __2printf
+    app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to memcpya.o(.text) for __aeabi_memcpy4
+    app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to printfa.o(i.__0printf) for __2printf
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to network.o(i.ai_network_run) for ai_network_run
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to network.o(i.ai_network_get_error) for ai_network_get_error
+    app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(i.post_process) for post_process
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(i.ai_log_err) for ai_log_err
-    app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(.data) for .data
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(.constdata) for .constdata
+    app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(.data) for .data
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(.bss) for .bss
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(.conststring) for .conststring
     app_x-cube-ai.o(i.ai_boostrap) refers to network.o(i.ai_network_create) for ai_network_create
@@ -248,7 +250,8 @@ Section Cross References
     app_x-cube-ai.o(i.ai_boostrap) refers to app_x-cube-ai.o(.data) for .data
     app_x-cube-ai.o(i.ai_boostrap) refers to app_x-cube-ai.o(.constdata) for .constdata
     app_x-cube-ai.o(i.ai_boostrap) refers to app_x-cube-ai.o(.bss) for .bss
-    app_x-cube-ai.o(i.ai_log_err) refers to printf8.o(i.__0printf$8) for __2printf
+    app_x-cube-ai.o(i.ai_log_err) refers to printfa.o(i.__0printf) for __2printf
+    app_x-cube-ai.o(i.post_process) refers to printfa.o(i.__0printf) for __2printf
     main.o(i.MX_USART1_UART_Init) refers to stm32f7xx_hal_uart.o(i.HAL_UART_Init) for HAL_UART_Init
     main.o(i.MX_USART1_UART_Init) refers to main.o(.bss) for .bss
     main.o(i.SystemClock_Config) refers to memseta.o(.text) for __aeabi_memclr4
@@ -261,7 +264,7 @@ Section Cross References
     main.o(i.main) refers to stm32f7xx_hal_crc.o(i.HAL_CRC_Init) for HAL_CRC_Init
     main.o(i.main) refers to main.o(i.MX_USART1_UART_Init) for MX_USART1_UART_Init
     main.o(i.main) refers to app_x-cube-ai.o(i.MX_X_CUBE_AI_Init) for MX_X_CUBE_AI_Init
-    main.o(i.main) refers to printf8.o(i.__0printf$8) for __2printf
+    main.o(i.main) refers to printfa.o(i.__0printf) for __2printf
     main.o(i.main) refers to app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) for MX_X_CUBE_AI_Process
     main.o(i.main) refers to main.o(.bss) for .bss
     stm32f7xx_it.o(i.SysTick_Handler) refers to stm32f7xx_hal.o(i.HAL_IncTick) for HAL_IncTick
@@ -1584,7 +1587,6 @@ Removing Unused input sections from the image.
     Removing app_x-cube-ai.o(.revsh_text), (4 bytes).
     Removing app_x-cube-ai.o(.rrx_text), (6 bytes).
     Removing app_x-cube-ai.o(i.acquire_and_process_data), (4 bytes).
-    Removing app_x-cube-ai.o(i.post_process), (4 bytes).
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
@@ -2091,16 +2093,10 @@ Removing Unused input sections from the image.
     Removing arm_mat_init_f32.o(i.arm_mat_init_f32), (8 bytes).
     Removing frnd.o(.text), (60 bytes).
     Removing frem.o(.text), (82 bytes).
-    Removing dadd.o(.text), (334 bytes).
-    Removing dmul.o(.text), (228 bytes).
-    Removing ddiv.o(.text), (222 bytes).
-    Removing dfixul.o(.text), (48 bytes).
-    Removing cdrcmple.o(.text), (48 bytes).
     Removing fpstat.o(.text), (4 bytes).
     Removing fepilogue.o(.text), (110 bytes).
-    Removing depilogue.o(.text), (186 bytes).
 
-521 unused section(s) (total 42352 bytes) removed from the image.
+514 unused section(s) (total 41282 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2141,40 +2137,40 @@ Image Symbol Table
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
     ../clib/microlib/errno.c                 0x00000000   Number         0  errno.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
     ../clib/microlib/string/memcmp.c         0x00000000   Number         0  memcmp.o ABSOLUTE
@@ -2195,43 +2191,43 @@ Image Symbol Table
     ../mathlib/acosf.c                       0x00000000   Number         0  acosf_x.o ABSOLUTE
     ../mathlib/acoshf.c                      0x00000000   Number         0  acoshf_x.o ABSOLUTE
     ../mathlib/acoshf.c                      0x00000000   Number         0  acoshf.o ABSOLUTE
-    ../mathlib/asinf.c                       0x00000000   Number         0  asinf.o ABSOLUTE
     ../mathlib/asinf.c                       0x00000000   Number         0  asinf_x.o ABSOLUTE
-    ../mathlib/asinhf.c                      0x00000000   Number         0  asinhf.o ABSOLUTE
+    ../mathlib/asinf.c                       0x00000000   Number         0  asinf.o ABSOLUTE
     ../mathlib/asinhf.c                      0x00000000   Number         0  asinhf_x.o ABSOLUTE
+    ../mathlib/asinhf.c                      0x00000000   Number         0  asinhf.o ABSOLUTE
     ../mathlib/atanf.c                       0x00000000   Number         0  atanf_x.o ABSOLUTE
     ../mathlib/atanf.c                       0x00000000   Number         0  atanf.o ABSOLUTE
-    ../mathlib/atanhf.c                      0x00000000   Number         0  atanhf.o ABSOLUTE
     ../mathlib/atanhf.c                      0x00000000   Number         0  atanhf_x.o ABSOLUTE
+    ../mathlib/atanhf.c                      0x00000000   Number         0  atanhf.o ABSOLUTE
     ../mathlib/ceilf.c                       0x00000000   Number         0  ceilf.o ABSOLUTE
     ../mathlib/cosf.c                        0x00000000   Number         0  cosf.o ABSOLUTE
     ../mathlib/cosf.c                        0x00000000   Number         0  cosf_x.o ABSOLUTE
-    ../mathlib/coshf.c                       0x00000000   Number         0  coshf_x.o ABSOLUTE
     ../mathlib/coshf.c                       0x00000000   Number         0  coshf.o ABSOLUTE
-    ../mathlib/erff.c                        0x00000000   Number         0  erff_x.o ABSOLUTE
+    ../mathlib/coshf.c                       0x00000000   Number         0  coshf_x.o ABSOLUTE
     ../mathlib/erff.c                        0x00000000   Number         0  erff.o ABSOLUTE
-    ../mathlib/expf.c                        0x00000000   Number         0  expf_x.o ABSOLUTE
+    ../mathlib/erff.c                        0x00000000   Number         0  erff_x.o ABSOLUTE
     ../mathlib/expf.c                        0x00000000   Number         0  expf.o ABSOLUTE
+    ../mathlib/expf.c                        0x00000000   Number         0  expf_x.o ABSOLUTE
     ../mathlib/floorf.c                      0x00000000   Number         0  floorf.o ABSOLUTE
     ../mathlib/fmodf.c                       0x00000000   Number         0  fmodf_x.o ABSOLUTE
     ../mathlib/fmodf.c                       0x00000000   Number         0  fmodf.o ABSOLUTE
     ../mathlib/fpclassifyf.c                 0x00000000   Number         0  fpclassifyf.o ABSOLUTE
     ../mathlib/funder.c                      0x00000000   Number         0  funder.o ABSOLUTE
-    ../mathlib/log1pf.c                      0x00000000   Number         0  log1pf_i.o ABSOLUTE
     ../mathlib/log1pf.c                      0x00000000   Number         0  log1pf_x.o ABSOLUTE
+    ../mathlib/log1pf.c                      0x00000000   Number         0  log1pf_i.o ABSOLUTE
+    ../mathlib/logf.c                        0x00000000   Number         0  logf_i.o ABSOLUTE
     ../mathlib/logf.c                        0x00000000   Number         0  logf_x.o ABSOLUTE
     ../mathlib/logf.c                        0x00000000   Number         0  logf.o ABSOLUTE
-    ../mathlib/logf.c                        0x00000000   Number         0  logf_i.o ABSOLUTE
-    ../mathlib/powf.c                        0x00000000   Number         0  powf_x.o ABSOLUTE
     ../mathlib/powf.c                        0x00000000   Number         0  powf.o ABSOLUTE
+    ../mathlib/powf.c                        0x00000000   Number         0  powf_x.o ABSOLUTE
     ../mathlib/round.c                       0x00000000   Number         0  roundf.o ABSOLUTE
     ../mathlib/rredf.c                       0x00000000   Number         0  rredf.o ABSOLUTE
     ../mathlib/sinf.c                        0x00000000   Number         0  sinf_x.o ABSOLUTE
     ../mathlib/sinf.c                        0x00000000   Number         0  sinf.o ABSOLUTE
     ../mathlib/sinhf.c                       0x00000000   Number         0  sinhf_x.o ABSOLUTE
     ../mathlib/sinhf.c                       0x00000000   Number         0  sinhf.o ABSOLUTE
-    ../mathlib/sqrtf.c                       0x00000000   Number         0  sqrtf.o ABSOLUTE
     ../mathlib/sqrtf.c                       0x00000000   Number         0  sqrtf_x.o ABSOLUTE
+    ../mathlib/sqrtf.c                       0x00000000   Number         0  sqrtf.o ABSOLUTE
     ../mathlib/tanf.c                        0x00000000   Number         0  tanf.o ABSOLUTE
     ../mathlib/tanf.c                        0x00000000   Number         0  tanf_x.o ABSOLUTE
     ../mathlib/tanhf.c                       0x00000000   Number         0  tanhf.o ABSOLUTE
@@ -2297,195 +2293,206 @@ Image Symbol Table
     .text                                    0x08000296   Section        0  memcpya.o(.text)
     .text                                    0x080002ba   Section        0  memseta.o(.text)
     .text                                    0x080002de   Section        0  memcmp.o(.text)
-    .text                                    0x080002f8   Section        0  llshl.o(.text)
-    .text                                    0x08000316   Section        0  llushr.o(.text)
-    .text                                    0x08000336   Section        0  iusefp.o(.text)
-    .text                                    0x08000338   Section       36  init.o(.text)
-    .text                                    0x0800035c   Section        0  __dczerorl2.o(.text)
-    i.BusFault_Handler                       0x080003b2   Section        0  stm32f7xx_it.o(i.BusFault_Handler)
-    i.CRC_Lock                               0x080003b4   Section        0  ai_platform_interface.o(i.CRC_Lock)
-    CRC_Lock                                 0x080003b5   Thumb Code   130  ai_platform_interface.o(i.CRC_Lock)
-    i.DebugMon_Handler                       0x08000454   Section        0  stm32f7xx_it.o(i.DebugMon_Handler)
-    i.HAL_CRCEx_Polynomial_Set               0x08000456   Section        0  stm32f7xx_hal_crc_ex.o(i.HAL_CRCEx_Polynomial_Set)
-    i.HAL_CRC_Init                           0x080004a4   Section        0  stm32f7xx_hal_crc.o(i.HAL_CRC_Init)
-    i.HAL_CRC_MspInit                        0x0800051c   Section        0  stm32f7xx_hal_msp.o(i.HAL_CRC_MspInit)
-    i.HAL_DMA_Abort_IT                       0x08000544   Section        0  stm32f7xx_hal_dma.o(i.HAL_DMA_Abort_IT)
-    i.HAL_GPIO_Init                          0x08000568   Section        0  stm32f7xx_hal_gpio.o(i.HAL_GPIO_Init)
-    i.HAL_GetTick                            0x08000740   Section        0  stm32f7xx_hal.o(i.HAL_GetTick)
-    i.HAL_IncTick                            0x0800074c   Section        0  stm32f7xx_hal.o(i.HAL_IncTick)
-    i.HAL_Init                               0x0800075c   Section        0  stm32f7xx_hal.o(i.HAL_Init)
-    i.HAL_InitTick                           0x08000774   Section        0  stm32f7xx_hal.o(i.HAL_InitTick)
-    i.HAL_MspInit                            0x080007b4   Section        0  stm32f7xx_hal_msp.o(i.HAL_MspInit)
-    i.HAL_NVIC_EnableIRQ                     0x080007e4   Section        0  stm32f7xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ)
-    i.HAL_NVIC_SetPriority                   0x08000800   Section        0  stm32f7xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
-    i.HAL_NVIC_SetPriorityGrouping           0x08000840   Section        0  stm32f7xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
-    i.HAL_PWREx_EnableOverDrive              0x08000864   Section        0  stm32f7xx_hal_pwr_ex.o(i.HAL_PWREx_EnableOverDrive)
-    i.HAL_RCCEx_PeriphCLKConfig              0x080008d0   Section        0  stm32f7xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig)
-    i.HAL_RCC_ClockConfig                    0x08000e0c   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
-    i.HAL_RCC_GetPCLK1Freq                   0x08000f3c   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
-    i.HAL_RCC_GetPCLK2Freq                   0x08000f5c   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq)
-    i.HAL_RCC_GetSysClockFreq                0x08000f7c   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
-    i.HAL_RCC_OscConfig                      0x08000fe0   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_OscConfig)
-    i.HAL_SYSTICK_Config                     0x08001378   Section        0  stm32f7xx_hal_cortex.o(i.HAL_SYSTICK_Config)
-    i.HAL_UARTEx_WakeupCallback              0x0800139e   Section        0  stm32f7xx_hal_uart.o(i.HAL_UARTEx_WakeupCallback)
-    i.HAL_UART_ErrorCallback                 0x080013a0   Section        0  stm32f7xx_hal_uart.o(i.HAL_UART_ErrorCallback)
-    i.HAL_UART_IRQHandler                    0x080013a4   Section        0  stm32f7xx_hal_uart.o(i.HAL_UART_IRQHandler)
-    i.HAL_UART_Init                          0x08001500   Section        0  stm32f7xx_hal_uart.o(i.HAL_UART_Init)
-    i.HAL_UART_MspInit                       0x08001568   Section        0  stm32f7xx_hal_msp.o(i.HAL_UART_MspInit)
-    i.HAL_UART_TxCpltCallback                0x080015dc   Section        0  stm32f7xx_hal_uart.o(i.HAL_UART_TxCpltCallback)
-    i.HardFault_Handler                      0x080015de   Section        0  stm32f7xx_it.o(i.HardFault_Handler)
-    i.MX_USART1_UART_Init                    0x080015e0   Section        0  main.o(i.MX_USART1_UART_Init)
-    MX_USART1_UART_Init                      0x080015e1   Thumb Code    48  main.o(i.MX_USART1_UART_Init)
-    i.MX_X_CUBE_AI_Init                      0x08001618   Section        0  app_x-cube-ai.o(i.MX_X_CUBE_AI_Init)
-    i.MX_X_CUBE_AI_Process                   0x08001654   Section        0  app_x-cube-ai.o(i.MX_X_CUBE_AI_Process)
-    i.MemManage_Handler                      0x080016fc   Section        0  stm32f7xx_it.o(i.MemManage_Handler)
-    i.NMI_Handler                            0x080016fe   Section        0  stm32f7xx_it.o(i.NMI_Handler)
-    i.PendSV_Handler                         0x08001700   Section        0  stm32f7xx_it.o(i.PendSV_Handler)
-    i.SVC_Handler                            0x08001702   Section        0  stm32f7xx_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x08001704   Section        0  stm32f7xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x08001708   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x080017c0   Section        0  system_stm32f7xx.o(i.SystemInit)
-    i.UART_AdvFeatureConfig                  0x080017dc   Section        0  stm32f7xx_hal_uart.o(i.UART_AdvFeatureConfig)
-    i.UART_CheckIdleState                    0x080018a4   Section        0  stm32f7xx_hal_uart.o(i.UART_CheckIdleState)
-    i.UART_DMAAbortOnError                   0x080018fc   Section        0  stm32f7xx_hal_uart.o(i.UART_DMAAbortOnError)
-    UART_DMAAbortOnError                     0x080018fd   Thumb Code    20  stm32f7xx_hal_uart.o(i.UART_DMAAbortOnError)
-    i.UART_EndRxTransfer                     0x08001910   Section        0  stm32f7xx_hal_uart.o(i.UART_EndRxTransfer)
-    UART_EndRxTransfer                       0x08001911   Thumb Code    32  stm32f7xx_hal_uart.o(i.UART_EndRxTransfer)
-    i.UART_SetConfig                         0x08001930   Section        0  stm32f7xx_hal_uart.o(i.UART_SetConfig)
-    i.UART_WaitOnFlagUntilTimeout            0x08001b8c   Section        0  stm32f7xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    i.USART1_IRQHandler                      0x08001c30   Section        0  stm32f7xx_it.o(i.USART1_IRQHandler)
-    i.UsageFault_Handler                     0x08001c3c   Section        0  stm32f7xx_it.o(i.UsageFault_Handler)
-    i.__0printf$8                            0x08001c40   Section        0  printf8.o(i.__0printf$8)
-    i.__ARM_fpclassifyf                      0x08001c60   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
-    i.__NVIC_SetPriority                     0x08001c86   Section        0  stm32f7xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x08001c87   Thumb Code    34  stm32f7xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.__ai_math_dot_array_opt                0x08001ca8   Section        0  layers_conv2d_generic_float.o(i.__ai_math_dot_array_opt)
-    __ai_math_dot_array_opt                  0x08001ca9   Thumb Code   244  layers_conv2d_generic_float.o(i.__ai_math_dot_array_opt)
-    i.__free$realloc                         0x08001da0   Section        0  mallocr.o(i.__free$realloc)
-    i.__hardfp_expf                          0x08001dfc   Section        0  expf.o(i.__hardfp_expf)
-    i.__malloc$realloc                       0x08001ff0   Section        0  mallocr.o(i.__malloc$realloc)
-    i.__mathlib_flt_infnan                   0x08002040   Section        0  funder.o(i.__mathlib_flt_infnan)
-    i.__mathlib_flt_overflow                 0x08002048   Section        0  funder.o(i.__mathlib_flt_overflow)
-    i.__mathlib_flt_underflow                0x08002058   Section        0  funder.o(i.__mathlib_flt_underflow)
-    i.__scatterload_copy                     0x08002068   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08002076   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08002078   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.__set_errno                            0x08002088   Section        0  errno.o(i.__set_errno)
-    i._ai_platform_get_io_buffers_info       0x08002094   Section        0  ai_platform_interface.o(i._ai_platform_get_io_buffers_info)
-    _ai_platform_get_io_buffers_info         0x08002095   Thumb Code   170  ai_platform_interface.o(i._ai_platform_get_io_buffers_info)
-    i._platform_network_io_bind              0x0800213e   Section        0  ai_platform_interface.o(i._platform_network_io_bind)
-    _platform_network_io_bind                0x0800213f   Thumb Code   534  ai_platform_interface.o(i._platform_network_io_bind)
-    i._platform_network_state_setup          0x08002354   Section        0  ai_platform_interface.o(i._platform_network_state_setup)
-    _platform_network_state_setup            0x08002355   Thumb Code    56  ai_platform_interface.o(i._platform_network_state_setup)
-    i._platform_network_state_update_input   0x0800238c   Section        0  ai_platform_interface.o(i._platform_network_state_update_input)
-    _platform_network_state_update_input     0x0800238d   Thumb Code   108  ai_platform_interface.o(i._platform_network_state_update_input)
-    i._platform_network_state_update_output  0x080023f8   Section        0  ai_platform_interface.o(i._platform_network_state_update_output)
-    _platform_network_state_update_output    0x080023f9   Thumb Code   128  ai_platform_interface.o(i._platform_network_state_update_output)
-    i._printf_core                           0x08002478   Section        0  printf8.o(i._printf_core)
-    _printf_core                             0x08002479   Thumb Code   984  printf8.o(i._printf_core)
-    i._printf_post_padding                   0x0800287c   Section        0  printf8.o(i._printf_post_padding)
-    _printf_post_padding                     0x0800287d   Thumb Code    36  printf8.o(i._printf_post_padding)
-    i._printf_pre_padding                    0x080028a0   Section        0  printf8.o(i._printf_pre_padding)
-    _printf_pre_padding                      0x080028a1   Thumb Code    46  printf8.o(i._printf_pre_padding)
-    i.ai_array_get_byte_size                 0x080028ce   Section        0  ai_datatypes_format.o(i.ai_array_get_byte_size)
-    i.ai_array_to_buffer_fmt                 0x08002914   Section        0  ai_datatypes_format.o(i.ai_array_to_buffer_fmt)
-    i.ai_boostrap                            0x08002a00   Section        0  app_x-cube-ai.o(i.ai_boostrap)
-    ai_boostrap                              0x08002a01   Thumb Code    90  app_x-cube-ai.o(i.ai_boostrap)
-    i.ai_check_custom_types                  0x08002aa4   Section        0  layers.o(i.ai_check_custom_types)
-    i.ai_conv2d_kernel_depthwise_f32         0x08002ad0   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32)
-    ai_conv2d_kernel_depthwise_f32           0x08002ad1   Thumb Code   298  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32)
-    i.ai_conv2d_kernel_group_f32             0x08002c00   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32)
-    ai_conv2d_kernel_group_f32               0x08002c01   Thumb Code   378  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32)
-    i.ai_conv2d_kernel_simple_opt_f32        0x08002d80   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32)
-    ai_conv2d_kernel_simple_opt_f32          0x08002d81   Thumb Code   370  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32)
-    i.ai_conv2d_stripe_f32                   0x08002ef4   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32)
-    ai_conv2d_stripe_f32                     0x08002ef5   Thumb Code   616  layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32)
-    i.ai_dict4_dot_array_f32                 0x08003160   Section        0  layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32)
-    i.ai_dict8_dot_array_f32                 0x08003290   Section        0  layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32)
-    i.ai_dict_decompress_f32                 0x0800338c   Section        0  layers_conv2d_generic_float.o(i.ai_dict_decompress_f32)
-    i.ai_forward_layer                       0x08003406   Section        0  layers.o(i.ai_forward_layer)
-    ai_forward_layer                         0x08003407   Thumb Code    18  layers.o(i.ai_forward_layer)
-    i.ai_layers_forward_all                  0x08003418   Section        0  layers.o(i.ai_layers_forward_all)
-    i.ai_log_err                             0x08003464   Section        0  app_x-cube-ai.o(i.ai_log_err)
-    ai_log_err                               0x08003465   Thumb Code    30  app_x-cube-ai.o(i.ai_log_err)
-    i.ai_network_create                      0x080034e8   Section        0  network.o(i.ai_network_create)
-    i.ai_network_data_weights_get            0x08003500   Section        0  network_data.o(i.ai_network_data_weights_get)
-    i.ai_network_get_error                   0x08003508   Section        0  network.o(i.ai_network_get_error)
-    i.ai_network_get_info                    0x0800350c   Section        0  network.o(i.ai_network_get_info)
-    i.ai_network_init                        0x08003564   Section        0  network.o(i.ai_network_init)
-    i.ai_network_run                         0x0800359a   Section        0  network.o(i.ai_network_run)
-    i.ai_platform_api_get_network_report     0x080035a0   Section        0  ai_platform_interface.o(i.ai_platform_api_get_network_report)
-    i.ai_platform_api_get_version            0x0800365c   Section        0  ai_platform_interface.o(i.ai_platform_api_get_version)
-    i.ai_platform_context_acquire            0x08003670   Section        0  ai_platform_interface.o(i.ai_platform_context_acquire)
-    i.ai_platform_interface_api_get_version  0x0800368c   Section        0  ai_platform_interface.o(i.ai_platform_interface_api_get_version)
-    i.ai_platform_network_create             0x080036a0   Section        0  ai_platform_interface.o(i.ai_platform_network_create)
-    i.ai_platform_network_get_error          0x0800370c   Section        0  ai_platform_interface.o(i.ai_platform_network_get_error)
-    i.ai_platform_network_init               0x08003728   Section        0  ai_platform_interface.o(i.ai_platform_network_init)
-    i.ai_platform_network_post_init          0x080037a6   Section        0  ai_platform_interface.o(i.ai_platform_network_post_init)
-    i.ai_platform_network_process            0x080037e6   Section        0  ai_platform_interface.o(i.ai_platform_network_process)
-    i.ai_platform_network_set_error          0x0800383c   Section        0  ai_platform_interface.o(i.ai_platform_network_set_error)
-    i.ai_platform_runtime_get_revision       0x08003848   Section        0  ai_platform_interface.o(i.ai_platform_runtime_get_revision)
-    i.ai_platform_runtime_get_version        0x08003858   Section        0  ai_platform_interface.o(i.ai_platform_runtime_get_version)
-    i.ai_shape_get_size                      0x0800386c   Section        0  layers_nl_generic_float.o(i.ai_shape_get_size)
-    ai_shape_get_size                        0x0800386d   Thumb Code    26  layers_nl_generic_float.o(i.ai_shape_get_size)
-    i.core_get_error                         0x08003886   Section        0  core_common.o(i.core_get_error)
-    i.core_init                              0x08003892   Section        0  core_common.o(i.core_init)
-    i.core_nl_get_params_byte_size           0x08003896   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size)
-    core_nl_get_params_byte_size             0x08003897   Thumb Code    16  layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size)
-    i.core_nl_get_params_ptr                 0x080038a6   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_ptr)
-    core_nl_get_params_ptr                   0x080038a7   Thumb Code    18  layers_conv2d_generic_float.o(i.core_nl_get_params_ptr)
-    i.core_nl_get_params_stride              0x080038b8   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_stride)
-    core_nl_get_params_stride                0x080038b9   Thumb Code    10  layers_conv2d_generic_float.o(i.core_nl_get_params_stride)
-    i.core_set_error                         0x080038c2   Section        0  core_common.o(i.core_set_error)
-    i.forward_conv2d_nl_pool                 0x080038dc   Section        0  layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool)
-    i.forward_dense                          0x08003d5c   Section        0  layers_conv2d_generic_float.o(i.forward_dense)
-    i.forward_relu                           0x08003eec   Section        0  layers_nl_generic_float.o(i.forward_relu)
-    i.forward_sm                             0x08003f86   Section        0  layers_nl_generic_float.o(i.forward_sm)
-    i.fputc                                  0x08003ff4   Section        0  main.o(i.fputc)
-    i.func_dummy                             0x08004008   Section        0  layers_conv2d_generic_float.o(i.func_dummy)
-    func_dummy                               0x08004009   Thumb Code     2  layers_conv2d_generic_float.o(i.func_dummy)
-    i.internal_alloc                         0x0800400c   Section        0  mallocr.o(i.internal_alloc)
-    internal_alloc                           0x0800400d   Thumb Code    76  mallocr.o(i.internal_alloc)
-    i.main                                   0x0800405c   Section        0  main.o(i.main)
-    i.network_configure_activations          0x08004138   Section        0  network.o(i.network_configure_activations)
-    network_configure_activations            0x08004139   Thumb Code   112  network.o(i.network_configure_activations)
-    i.network_configure_weights              0x080041ac   Section        0  network.o(i.network_configure_weights)
-    network_configure_weights                0x080041ad   Thumb Code   228  network.o(i.network_configure_weights)
-    i.nl_func_relu_array_f32                 0x080042a4   Section        0  layers_nl_generic_float.o(i.nl_func_relu_array_f32)
-    i.nl_func_relu_generic_array_f32         0x080042d8   Section        0  layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32)
-    i.nl_func_relu_thresholded_array_f32     0x08004398   Section        0  layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32)
-    i.nl_func_sm_array_f32                   0x080043dc   Section        0  layers_nl_generic_float.o(i.nl_func_sm_array_f32)
-    i.nl_func_sm_channel_f32                 0x08004428   Section        0  layers_nl_generic_float.o(i.nl_func_sm_channel_f32)
-    i.pool_func_mp_array_f32                 0x080044b0   Section        0  layers_pool_generic_float.o(i.pool_func_mp_array_f32)
-    .constdata                               0x08004650   Section        8  network.o(.constdata)
-    conv2d_1_chain                           0x08004650   Data           8  network.o(.constdata)
-    .constdata                               0x08004658   Section        8  network.o(.constdata)
-    conv2d_2_chain                           0x08004658   Data           8  network.o(.constdata)
-    .constdata                               0x08004660   Section        8  network.o(.constdata)
-    dense_1_chain                            0x08004660   Data           8  network.o(.constdata)
-    .constdata                               0x08004668   Section        8  network.o(.constdata)
-    dense_1_nl_chain                         0x08004668   Data           8  network.o(.constdata)
-    .constdata                               0x08004670   Section        8  network.o(.constdata)
-    dense_2_chain                            0x08004670   Data           8  network.o(.constdata)
-    .constdata                               0x08004678   Section        8  network.o(.constdata)
-    dense_2_nl_chain                         0x08004678   Data           8  network.o(.constdata)
-    .constdata                               0x08004680   Section        8  network.o(.constdata)
-    dense_3_chain                            0x08004680   Data           8  network.o(.constdata)
-    .constdata                               0x08004688   Section        8  network.o(.constdata)
-    dense_3_nl_chain                         0x08004688   Data           8  network.o(.constdata)
-    .constdata                               0x08004690   Section      116  network.o(.constdata)
-    .constdata                               0x08004704   Section    246824  network_data.o(.constdata)
-    s_network_weights                        0x08004704   Data       246824  network_data.o(.constdata)
-    .constdata                               0x08040b2c   Section       56  app_x-cube-ai.o(.constdata)
-    .constdata                               0x08040b64   Section       16  system_stm32f7xx.o(.constdata)
-    .constdata                               0x08040b74   Section        8  system_stm32f7xx.o(.constdata)
-    .constdata                               0x08040b7c   Section       32  ai_platform_interface.o(.constdata)
-    .constdata                               0x08040b9c   Section       48  expf.o(.constdata)
-    twotokover4top                           0x08040b9c   Data          16  expf.o(.constdata)
-    twotokover4bot                           0x08040bac   Data          16  expf.o(.constdata)
-    twotokover4all                           0x08040bbc   Data          16  expf.o(.constdata)
-    .conststring                             0x08040bcc   Section      108  network.o(.conststring)
-    .conststring                             0x08040c38   Section       70  app_x-cube-ai.o(.conststring)
+    .text                                    0x080002f8   Section        0  uidiv.o(.text)
+    .text                                    0x08000324   Section        0  llshl.o(.text)
+    .text                                    0x08000342   Section        0  llushr.o(.text)
+    .text                                    0x08000362   Section        0  dadd.o(.text)
+    .text                                    0x08000362   Section        0  iusefp.o(.text)
+    .text                                    0x080004b0   Section        0  dmul.o(.text)
+    .text                                    0x08000594   Section        0  ddiv.o(.text)
+    .text                                    0x08000672   Section        0  dfixul.o(.text)
+    .text                                    0x080006a4   Section       48  cdrcmple.o(.text)
+    .text                                    0x080006d4   Section       36  init.o(.text)
+    .text                                    0x080006f8   Section        0  llsshr.o(.text)
+    .text                                    0x0800071c   Section        0  depilogue.o(.text)
+    .text                                    0x080007d6   Section        0  __dczerorl2.o(.text)
+    i.BusFault_Handler                       0x0800082c   Section        0  stm32f7xx_it.o(i.BusFault_Handler)
+    i.CRC_Lock                               0x08000830   Section        0  ai_platform_interface.o(i.CRC_Lock)
+    CRC_Lock                                 0x08000831   Thumb Code   130  ai_platform_interface.o(i.CRC_Lock)
+    i.DebugMon_Handler                       0x080008d0   Section        0  stm32f7xx_it.o(i.DebugMon_Handler)
+    i.HAL_CRCEx_Polynomial_Set               0x080008d2   Section        0  stm32f7xx_hal_crc_ex.o(i.HAL_CRCEx_Polynomial_Set)
+    i.HAL_CRC_Init                           0x08000920   Section        0  stm32f7xx_hal_crc.o(i.HAL_CRC_Init)
+    i.HAL_CRC_MspInit                        0x08000998   Section        0  stm32f7xx_hal_msp.o(i.HAL_CRC_MspInit)
+    i.HAL_DMA_Abort_IT                       0x080009c0   Section        0  stm32f7xx_hal_dma.o(i.HAL_DMA_Abort_IT)
+    i.HAL_GPIO_Init                          0x080009e4   Section        0  stm32f7xx_hal_gpio.o(i.HAL_GPIO_Init)
+    i.HAL_GetTick                            0x08000bbc   Section        0  stm32f7xx_hal.o(i.HAL_GetTick)
+    i.HAL_IncTick                            0x08000bc8   Section        0  stm32f7xx_hal.o(i.HAL_IncTick)
+    i.HAL_Init                               0x08000bd8   Section        0  stm32f7xx_hal.o(i.HAL_Init)
+    i.HAL_InitTick                           0x08000bf0   Section        0  stm32f7xx_hal.o(i.HAL_InitTick)
+    i.HAL_MspInit                            0x08000c30   Section        0  stm32f7xx_hal_msp.o(i.HAL_MspInit)
+    i.HAL_NVIC_EnableIRQ                     0x08000c60   Section        0  stm32f7xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ)
+    i.HAL_NVIC_SetPriority                   0x08000c7c   Section        0  stm32f7xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
+    i.HAL_NVIC_SetPriorityGrouping           0x08000cbc   Section        0  stm32f7xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
+    i.HAL_PWREx_EnableOverDrive              0x08000ce0   Section        0  stm32f7xx_hal_pwr_ex.o(i.HAL_PWREx_EnableOverDrive)
+    i.HAL_RCCEx_PeriphCLKConfig              0x08000d4c   Section        0  stm32f7xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig)
+    i.HAL_RCC_ClockConfig                    0x08001288   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
+    i.HAL_RCC_GetPCLK1Freq                   0x080013b8   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
+    i.HAL_RCC_GetPCLK2Freq                   0x080013d8   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq)
+    i.HAL_RCC_GetSysClockFreq                0x080013f8   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
+    i.HAL_RCC_OscConfig                      0x0800145c   Section        0  stm32f7xx_hal_rcc.o(i.HAL_RCC_OscConfig)
+    i.HAL_SYSTICK_Config                     0x080017f4   Section        0  stm32f7xx_hal_cortex.o(i.HAL_SYSTICK_Config)
+    i.HAL_UARTEx_WakeupCallback              0x0800181a   Section        0  stm32f7xx_hal_uart.o(i.HAL_UARTEx_WakeupCallback)
+    i.HAL_UART_ErrorCallback                 0x0800181c   Section        0  stm32f7xx_hal_uart.o(i.HAL_UART_ErrorCallback)
+    i.HAL_UART_IRQHandler                    0x08001820   Section        0  stm32f7xx_hal_uart.o(i.HAL_UART_IRQHandler)
+    i.HAL_UART_Init                          0x0800197c   Section        0  stm32f7xx_hal_uart.o(i.HAL_UART_Init)
+    i.HAL_UART_MspInit                       0x080019e4   Section        0  stm32f7xx_hal_msp.o(i.HAL_UART_MspInit)
+    i.HAL_UART_TxCpltCallback                0x08001a58   Section        0  stm32f7xx_hal_uart.o(i.HAL_UART_TxCpltCallback)
+    i.HardFault_Handler                      0x08001a5a   Section        0  stm32f7xx_it.o(i.HardFault_Handler)
+    i.MX_USART1_UART_Init                    0x08001a5c   Section        0  main.o(i.MX_USART1_UART_Init)
+    MX_USART1_UART_Init                      0x08001a5d   Thumb Code    48  main.o(i.MX_USART1_UART_Init)
+    i.MX_X_CUBE_AI_Init                      0x08001a94   Section        0  app_x-cube-ai.o(i.MX_X_CUBE_AI_Init)
+    i.MX_X_CUBE_AI_Process                   0x08001ad0   Section        0  app_x-cube-ai.o(i.MX_X_CUBE_AI_Process)
+    i.MemManage_Handler                      0x08001b90   Section        0  stm32f7xx_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x08001b92   Section        0  stm32f7xx_it.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x08001b94   Section        0  stm32f7xx_it.o(i.PendSV_Handler)
+    i.SVC_Handler                            0x08001b96   Section        0  stm32f7xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x08001b98   Section        0  stm32f7xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x08001b9c   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x08001c54   Section        0  system_stm32f7xx.o(i.SystemInit)
+    i.UART_AdvFeatureConfig                  0x08001c70   Section        0  stm32f7xx_hal_uart.o(i.UART_AdvFeatureConfig)
+    i.UART_CheckIdleState                    0x08001d38   Section        0  stm32f7xx_hal_uart.o(i.UART_CheckIdleState)
+    i.UART_DMAAbortOnError                   0x08001d90   Section        0  stm32f7xx_hal_uart.o(i.UART_DMAAbortOnError)
+    UART_DMAAbortOnError                     0x08001d91   Thumb Code    20  stm32f7xx_hal_uart.o(i.UART_DMAAbortOnError)
+    i.UART_EndRxTransfer                     0x08001da4   Section        0  stm32f7xx_hal_uart.o(i.UART_EndRxTransfer)
+    UART_EndRxTransfer                       0x08001da5   Thumb Code    32  stm32f7xx_hal_uart.o(i.UART_EndRxTransfer)
+    i.UART_SetConfig                         0x08001dc4   Section        0  stm32f7xx_hal_uart.o(i.UART_SetConfig)
+    i.UART_WaitOnFlagUntilTimeout            0x08002020   Section        0  stm32f7xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    i.USART1_IRQHandler                      0x080020c4   Section        0  stm32f7xx_it.o(i.USART1_IRQHandler)
+    i.UsageFault_Handler                     0x080020d0   Section        0  stm32f7xx_it.o(i.UsageFault_Handler)
+    i.__0printf                              0x080020d4   Section        0  printfa.o(i.__0printf)
+    i.__ARM_fpclassifyf                      0x080020f4   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
+    i.__NVIC_SetPriority                     0x0800211a   Section        0  stm32f7xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x0800211b   Thumb Code    34  stm32f7xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.__ai_math_dot_array_opt                0x0800213c   Section        0  layers_conv2d_generic_float.o(i.__ai_math_dot_array_opt)
+    __ai_math_dot_array_opt                  0x0800213d   Thumb Code   244  layers_conv2d_generic_float.o(i.__ai_math_dot_array_opt)
+    i.__free$realloc                         0x08002234   Section        0  mallocr.o(i.__free$realloc)
+    i.__hardfp_expf                          0x08002290   Section        0  expf.o(i.__hardfp_expf)
+    i.__malloc$realloc                       0x08002484   Section        0  mallocr.o(i.__malloc$realloc)
+    i.__mathlib_flt_infnan                   0x080024d4   Section        0  funder.o(i.__mathlib_flt_infnan)
+    i.__mathlib_flt_overflow                 0x080024dc   Section        0  funder.o(i.__mathlib_flt_overflow)
+    i.__mathlib_flt_underflow                0x080024ec   Section        0  funder.o(i.__mathlib_flt_underflow)
+    i.__scatterload_copy                     0x080024fc   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800250a   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0800250c   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__set_errno                            0x0800251c   Section        0  errno.o(i.__set_errno)
+    i._ai_platform_get_io_buffers_info       0x08002528   Section        0  ai_platform_interface.o(i._ai_platform_get_io_buffers_info)
+    _ai_platform_get_io_buffers_info         0x08002529   Thumb Code   170  ai_platform_interface.o(i._ai_platform_get_io_buffers_info)
+    i._fp_digits                             0x080025d4   Section        0  printfa.o(i._fp_digits)
+    _fp_digits                               0x080025d5   Thumb Code   366  printfa.o(i._fp_digits)
+    i._platform_network_io_bind              0x08002758   Section        0  ai_platform_interface.o(i._platform_network_io_bind)
+    _platform_network_io_bind                0x08002759   Thumb Code   534  ai_platform_interface.o(i._platform_network_io_bind)
+    i._platform_network_state_setup          0x0800296e   Section        0  ai_platform_interface.o(i._platform_network_state_setup)
+    _platform_network_state_setup            0x0800296f   Thumb Code    56  ai_platform_interface.o(i._platform_network_state_setup)
+    i._platform_network_state_update_input   0x080029a6   Section        0  ai_platform_interface.o(i._platform_network_state_update_input)
+    _platform_network_state_update_input     0x080029a7   Thumb Code   108  ai_platform_interface.o(i._platform_network_state_update_input)
+    i._platform_network_state_update_output  0x08002a12   Section        0  ai_platform_interface.o(i._platform_network_state_update_output)
+    _platform_network_state_update_output    0x08002a13   Thumb Code   128  ai_platform_interface.o(i._platform_network_state_update_output)
+    i._printf_core                           0x08002a94   Section        0  printfa.o(i._printf_core)
+    _printf_core                             0x08002a95   Thumb Code  1704  printfa.o(i._printf_core)
+    i._printf_post_padding                   0x08003148   Section        0  printfa.o(i._printf_post_padding)
+    _printf_post_padding                     0x08003149   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x0800316c   Section        0  printfa.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x0800316d   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i.ai_array_get_byte_size                 0x0800319a   Section        0  ai_datatypes_format.o(i.ai_array_get_byte_size)
+    i.ai_array_to_buffer_fmt                 0x080031e0   Section        0  ai_datatypes_format.o(i.ai_array_to_buffer_fmt)
+    i.ai_boostrap                            0x080032cc   Section        0  app_x-cube-ai.o(i.ai_boostrap)
+    ai_boostrap                              0x080032cd   Thumb Code    90  app_x-cube-ai.o(i.ai_boostrap)
+    i.ai_check_custom_types                  0x08003370   Section        0  layers.o(i.ai_check_custom_types)
+    i.ai_conv2d_kernel_depthwise_f32         0x0800339c   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32)
+    ai_conv2d_kernel_depthwise_f32           0x0800339d   Thumb Code   298  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32)
+    i.ai_conv2d_kernel_group_f32             0x080034cc   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32)
+    ai_conv2d_kernel_group_f32               0x080034cd   Thumb Code   378  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32)
+    i.ai_conv2d_kernel_simple_opt_f32        0x0800364c   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32)
+    ai_conv2d_kernel_simple_opt_f32          0x0800364d   Thumb Code   370  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32)
+    i.ai_conv2d_stripe_f32                   0x080037c0   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32)
+    ai_conv2d_stripe_f32                     0x080037c1   Thumb Code   616  layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32)
+    i.ai_dict4_dot_array_f32                 0x08003a2c   Section        0  layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32)
+    i.ai_dict8_dot_array_f32                 0x08003b5c   Section        0  layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32)
+    i.ai_dict_decompress_f32                 0x08003c58   Section        0  layers_conv2d_generic_float.o(i.ai_dict_decompress_f32)
+    i.ai_forward_layer                       0x08003cd2   Section        0  layers.o(i.ai_forward_layer)
+    ai_forward_layer                         0x08003cd3   Thumb Code    18  layers.o(i.ai_forward_layer)
+    i.ai_layers_forward_all                  0x08003ce4   Section        0  layers.o(i.ai_layers_forward_all)
+    i.ai_log_err                             0x08003d30   Section        0  app_x-cube-ai.o(i.ai_log_err)
+    ai_log_err                               0x08003d31   Thumb Code    30  app_x-cube-ai.o(i.ai_log_err)
+    i.ai_network_create                      0x08003db4   Section        0  network.o(i.ai_network_create)
+    i.ai_network_data_weights_get            0x08003dcc   Section        0  network_data.o(i.ai_network_data_weights_get)
+    i.ai_network_get_error                   0x08003dd4   Section        0  network.o(i.ai_network_get_error)
+    i.ai_network_get_info                    0x08003dd8   Section        0  network.o(i.ai_network_get_info)
+    i.ai_network_init                        0x08003e30   Section        0  network.o(i.ai_network_init)
+    i.ai_network_run                         0x08003e66   Section        0  network.o(i.ai_network_run)
+    i.ai_platform_api_get_network_report     0x08003e6c   Section        0  ai_platform_interface.o(i.ai_platform_api_get_network_report)
+    i.ai_platform_api_get_version            0x08003f28   Section        0  ai_platform_interface.o(i.ai_platform_api_get_version)
+    i.ai_platform_context_acquire            0x08003f3c   Section        0  ai_platform_interface.o(i.ai_platform_context_acquire)
+    i.ai_platform_interface_api_get_version  0x08003f58   Section        0  ai_platform_interface.o(i.ai_platform_interface_api_get_version)
+    i.ai_platform_network_create             0x08003f6c   Section        0  ai_platform_interface.o(i.ai_platform_network_create)
+    i.ai_platform_network_get_error          0x08003fd8   Section        0  ai_platform_interface.o(i.ai_platform_network_get_error)
+    i.ai_platform_network_init               0x08003ff4   Section        0  ai_platform_interface.o(i.ai_platform_network_init)
+    i.ai_platform_network_post_init          0x08004072   Section        0  ai_platform_interface.o(i.ai_platform_network_post_init)
+    i.ai_platform_network_process            0x080040b2   Section        0  ai_platform_interface.o(i.ai_platform_network_process)
+    i.ai_platform_network_set_error          0x08004108   Section        0  ai_platform_interface.o(i.ai_platform_network_set_error)
+    i.ai_platform_runtime_get_revision       0x08004114   Section        0  ai_platform_interface.o(i.ai_platform_runtime_get_revision)
+    i.ai_platform_runtime_get_version        0x08004124   Section        0  ai_platform_interface.o(i.ai_platform_runtime_get_version)
+    i.ai_shape_get_size                      0x08004138   Section        0  layers_nl_generic_float.o(i.ai_shape_get_size)
+    ai_shape_get_size                        0x08004139   Thumb Code    26  layers_nl_generic_float.o(i.ai_shape_get_size)
+    i.core_get_error                         0x08004152   Section        0  core_common.o(i.core_get_error)
+    i.core_init                              0x0800415e   Section        0  core_common.o(i.core_init)
+    i.core_nl_get_params_byte_size           0x08004162   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size)
+    core_nl_get_params_byte_size             0x08004163   Thumb Code    16  layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size)
+    i.core_nl_get_params_ptr                 0x08004172   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_ptr)
+    core_nl_get_params_ptr                   0x08004173   Thumb Code    18  layers_conv2d_generic_float.o(i.core_nl_get_params_ptr)
+    i.core_nl_get_params_stride              0x08004184   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_stride)
+    core_nl_get_params_stride                0x08004185   Thumb Code    10  layers_conv2d_generic_float.o(i.core_nl_get_params_stride)
+    i.core_set_error                         0x0800418e   Section        0  core_common.o(i.core_set_error)
+    i.forward_conv2d_nl_pool                 0x080041a8   Section        0  layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool)
+    i.forward_dense                          0x08004628   Section        0  layers_conv2d_generic_float.o(i.forward_dense)
+    i.forward_relu                           0x080047b8   Section        0  layers_nl_generic_float.o(i.forward_relu)
+    i.forward_sm                             0x08004852   Section        0  layers_nl_generic_float.o(i.forward_sm)
+    i.fputc                                  0x080048c0   Section        0  main.o(i.fputc)
+    i.func_dummy                             0x080048d4   Section        0  layers_conv2d_generic_float.o(i.func_dummy)
+    func_dummy                               0x080048d5   Thumb Code     2  layers_conv2d_generic_float.o(i.func_dummy)
+    i.internal_alloc                         0x080048d8   Section        0  mallocr.o(i.internal_alloc)
+    internal_alloc                           0x080048d9   Thumb Code    76  mallocr.o(i.internal_alloc)
+    i.main                                   0x08004928   Section        0  main.o(i.main)
+    i.network_configure_activations          0x08004a04   Section        0  network.o(i.network_configure_activations)
+    network_configure_activations            0x08004a05   Thumb Code   112  network.o(i.network_configure_activations)
+    i.network_configure_weights              0x08004a78   Section        0  network.o(i.network_configure_weights)
+    network_configure_weights                0x08004a79   Thumb Code   228  network.o(i.network_configure_weights)
+    i.nl_func_relu_array_f32                 0x08004b70   Section        0  layers_nl_generic_float.o(i.nl_func_relu_array_f32)
+    i.nl_func_relu_generic_array_f32         0x08004ba4   Section        0  layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32)
+    i.nl_func_relu_thresholded_array_f32     0x08004c64   Section        0  layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32)
+    i.nl_func_sm_array_f32                   0x08004ca8   Section        0  layers_nl_generic_float.o(i.nl_func_sm_array_f32)
+    i.nl_func_sm_channel_f32                 0x08004cf4   Section        0  layers_nl_generic_float.o(i.nl_func_sm_channel_f32)
+    i.pool_func_mp_array_f32                 0x08004d7c   Section        0  layers_pool_generic_float.o(i.pool_func_mp_array_f32)
+    i.post_process                           0x08004f1c   Section        0  app_x-cube-ai.o(i.post_process)
+    .constdata                               0x08004f98   Section        8  network.o(.constdata)
+    conv2d_1_chain                           0x08004f98   Data           8  network.o(.constdata)
+    .constdata                               0x08004fa0   Section        8  network.o(.constdata)
+    conv2d_2_chain                           0x08004fa0   Data           8  network.o(.constdata)
+    .constdata                               0x08004fa8   Section        8  network.o(.constdata)
+    dense_1_chain                            0x08004fa8   Data           8  network.o(.constdata)
+    .constdata                               0x08004fb0   Section        8  network.o(.constdata)
+    dense_1_nl_chain                         0x08004fb0   Data           8  network.o(.constdata)
+    .constdata                               0x08004fb8   Section        8  network.o(.constdata)
+    dense_2_chain                            0x08004fb8   Data           8  network.o(.constdata)
+    .constdata                               0x08004fc0   Section        8  network.o(.constdata)
+    dense_2_nl_chain                         0x08004fc0   Data           8  network.o(.constdata)
+    .constdata                               0x08004fc8   Section        8  network.o(.constdata)
+    dense_3_chain                            0x08004fc8   Data           8  network.o(.constdata)
+    .constdata                               0x08004fd0   Section        8  network.o(.constdata)
+    dense_3_nl_chain                         0x08004fd0   Data           8  network.o(.constdata)
+    .constdata                               0x08004fd8   Section      116  network.o(.constdata)
+    .constdata                               0x0800504c   Section    246824  network_data.o(.constdata)
+    s_network_weights                        0x0800504c   Data       246824  network_data.o(.constdata)
+    .constdata                               0x08041474   Section     3192  app_x-cube-ai.o(.constdata)
+    .constdata                               0x080420ec   Section       16  system_stm32f7xx.o(.constdata)
+    .constdata                               0x080420fc   Section        8  system_stm32f7xx.o(.constdata)
+    .constdata                               0x08042104   Section       32  ai_platform_interface.o(.constdata)
+    .constdata                               0x08042124   Section       48  expf.o(.constdata)
+    twotokover4top                           0x08042124   Data          16  expf.o(.constdata)
+    twotokover4bot                           0x08042134   Data          16  expf.o(.constdata)
+    twotokover4all                           0x08042144   Data          16  expf.o(.constdata)
+    .conststring                             0x08042154   Section      108  network.o(.conststring)
+    .conststring                             0x080421c0   Section       70  app_x-cube-ai.o(.conststring)
     .data                                    0x20000000   Section       16  network.o(.data)
     <Data1>                                  0x20000000   Data          16  network.o(.data)
     .data                                    0x20000010   Section       16  network.o(.data)
@@ -2776,14 +2783,12 @@ Image Symbol Table
     <Data95>                                 0x20000b14   Data          24  network.o(.bss)
     .bss                                     0x20000b2c   Section       16  network.o(.bss)
     <Data96>                                 0x20000b2c   Data          16  network.o(.bss)
-    .bss                                     0x20000b3c   Section     9724  app_x-cube-ai.o(.bss)
+    .bss                                     0x20000b3c   Section    25844  app_x-cube-ai.o(.bss)
     network_info                             0x20000b3c   Data         116  app_x-cube-ai.o(.bss)
-    activations                              0x20000bb0   Data        6432  app_x-cube-ai.o(.bss)
-    in_data_s                                0x200024d0   Data        3136  app_x-cube-ai.o(.bss)
-    out_data_s                               0x20003110   Data          40  app_x-cube-ai.o(.bss)
-    .bss                                     0x20003138   Section      164  main.o(.bss)
-    HEAP                                     0x200031e0   Section     8192  startup_stm32f767xx.o(HEAP)
-    STACK                                    0x200051e0   Section     8192  startup_stm32f767xx.o(STACK)
+    activations                              0x20000bb0   Data       25728  app_x-cube-ai.o(.bss)
+    .bss                                     0x20007030   Section      164  main.o(.bss)
+    HEAP                                     0x200070d8   Section     8192  startup_stm32f767xx.o(HEAP)
+    STACK                                    0x200090d8   Section     8192  startup_stm32f767xx.o(STACK)
 
     Global Symbols
 
@@ -2970,119 +2975,135 @@ Image Symbol Table
     __aeabi_memclr8                          0x080002c9   Thumb Code     0  memseta.o(.text)
     _memset$wrapper                          0x080002cd   Thumb Code    18  memseta.o(.text)
     memcmp                                   0x080002df   Thumb Code    26  memcmp.o(.text)
-    __aeabi_llsl                             0x080002f9   Thumb Code    30  llshl.o(.text)
-    _ll_shift_l                              0x080002f9   Thumb Code     0  llshl.o(.text)
-    __aeabi_llsr                             0x08000317   Thumb Code    32  llushr.o(.text)
-    _ll_ushift_r                             0x08000317   Thumb Code     0  llushr.o(.text)
-    __I$use$fp                               0x08000337   Thumb Code     0  iusefp.o(.text)
-    __scatterload                            0x08000339   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x08000339   Thumb Code     0  init.o(.text)
-    __decompress                             0x0800035d   Thumb Code     0  __dczerorl2.o(.text)
-    __decompress1                            0x0800035d   Thumb Code    86  __dczerorl2.o(.text)
-    BusFault_Handler                         0x080003b3   Thumb Code     2  stm32f7xx_it.o(i.BusFault_Handler)
-    DebugMon_Handler                         0x08000455   Thumb Code     2  stm32f7xx_it.o(i.DebugMon_Handler)
-    HAL_CRCEx_Polynomial_Set                 0x08000457   Thumb Code    78  stm32f7xx_hal_crc_ex.o(i.HAL_CRCEx_Polynomial_Set)
-    HAL_CRC_Init                             0x080004a5   Thumb Code   114  stm32f7xx_hal_crc.o(i.HAL_CRC_Init)
-    HAL_CRC_MspInit                          0x0800051d   Thumb Code    30  stm32f7xx_hal_msp.o(i.HAL_CRC_MspInit)
-    HAL_DMA_Abort_IT                         0x08000545   Thumb Code    36  stm32f7xx_hal_dma.o(i.HAL_DMA_Abort_IT)
-    HAL_GPIO_Init                            0x08000569   Thumb Code   420  stm32f7xx_hal_gpio.o(i.HAL_GPIO_Init)
-    HAL_GetTick                              0x08000741   Thumb Code     6  stm32f7xx_hal.o(i.HAL_GetTick)
-    HAL_IncTick                              0x0800074d   Thumb Code    12  stm32f7xx_hal.o(i.HAL_IncTick)
-    HAL_Init                                 0x0800075d   Thumb Code    22  stm32f7xx_hal.o(i.HAL_Init)
-    HAL_InitTick                             0x08000775   Thumb Code    54  stm32f7xx_hal.o(i.HAL_InitTick)
-    HAL_MspInit                              0x080007b5   Thumb Code    42  stm32f7xx_hal_msp.o(i.HAL_MspInit)
-    HAL_NVIC_EnableIRQ                       0x080007e5   Thumb Code    26  stm32f7xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ)
-    HAL_NVIC_SetPriority                     0x08000801   Thumb Code    60  stm32f7xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
-    HAL_NVIC_SetPriorityGrouping             0x08000841   Thumb Code    28  stm32f7xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
-    HAL_PWREx_EnableOverDrive                0x08000865   Thumb Code   100  stm32f7xx_hal_pwr_ex.o(i.HAL_PWREx_EnableOverDrive)
-    HAL_RCCEx_PeriphCLKConfig                0x080008d1   Thumb Code  1336  stm32f7xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig)
-    HAL_RCC_ClockConfig                      0x08000e0d   Thumb Code   284  stm32f7xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
-    HAL_RCC_GetPCLK1Freq                     0x08000f3d   Thumb Code    20  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
-    HAL_RCC_GetPCLK2Freq                     0x08000f5d   Thumb Code    20  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq)
-    HAL_RCC_GetSysClockFreq                  0x08000f7d   Thumb Code    88  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
-    HAL_RCC_OscConfig                        0x08000fe1   Thumb Code   906  stm32f7xx_hal_rcc.o(i.HAL_RCC_OscConfig)
-    HAL_SYSTICK_Config                       0x08001379   Thumb Code    38  stm32f7xx_hal_cortex.o(i.HAL_SYSTICK_Config)
-    HAL_UARTEx_WakeupCallback                0x0800139f   Thumb Code     2  stm32f7xx_hal_uart.o(i.HAL_UARTEx_WakeupCallback)
-    HAL_UART_ErrorCallback                   0x080013a1   Thumb Code     2  stm32f7xx_hal_uart.o(i.HAL_UART_ErrorCallback)
-    HAL_UART_IRQHandler                      0x080013a5   Thumb Code   344  stm32f7xx_hal_uart.o(i.HAL_UART_IRQHandler)
-    HAL_UART_Init                            0x08001501   Thumb Code   102  stm32f7xx_hal_uart.o(i.HAL_UART_Init)
-    HAL_UART_MspInit                         0x08001569   Thumb Code   104  stm32f7xx_hal_msp.o(i.HAL_UART_MspInit)
-    HAL_UART_TxCpltCallback                  0x080015dd   Thumb Code     2  stm32f7xx_hal_uart.o(i.HAL_UART_TxCpltCallback)
-    HardFault_Handler                        0x080015df   Thumb Code     2  stm32f7xx_it.o(i.HardFault_Handler)
-    MX_X_CUBE_AI_Init                        0x08001619   Thumb Code    22  app_x-cube-ai.o(i.MX_X_CUBE_AI_Init)
-    MX_X_CUBE_AI_Process                     0x08001655   Thumb Code    80  app_x-cube-ai.o(i.MX_X_CUBE_AI_Process)
-    MemManage_Handler                        0x080016fd   Thumb Code     2  stm32f7xx_it.o(i.MemManage_Handler)
-    NMI_Handler                              0x080016ff   Thumb Code     2  stm32f7xx_it.o(i.NMI_Handler)
-    PendSV_Handler                           0x08001701   Thumb Code     2  stm32f7xx_it.o(i.PendSV_Handler)
-    SVC_Handler                              0x08001703   Thumb Code     2  stm32f7xx_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x08001705   Thumb Code     4  stm32f7xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x08001709   Thumb Code   176  main.o(i.SystemClock_Config)
-    SystemInit                               0x080017c1   Thumb Code    22  system_stm32f7xx.o(i.SystemInit)
-    UART_AdvFeatureConfig                    0x080017dd   Thumb Code   200  stm32f7xx_hal_uart.o(i.UART_AdvFeatureConfig)
-    UART_CheckIdleState                      0x080018a5   Thumb Code    88  stm32f7xx_hal_uart.o(i.UART_CheckIdleState)
-    UART_SetConfig                           0x08001931   Thumb Code   554  stm32f7xx_hal_uart.o(i.UART_SetConfig)
-    UART_WaitOnFlagUntilTimeout              0x08001b8d   Thumb Code   164  stm32f7xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    USART1_IRQHandler                        0x08001c31   Thumb Code     6  stm32f7xx_it.o(i.USART1_IRQHandler)
-    UsageFault_Handler                       0x08001c3d   Thumb Code     2  stm32f7xx_it.o(i.UsageFault_Handler)
-    __0printf$8                              0x08001c41   Thumb Code    22  printf8.o(i.__0printf$8)
-    __1printf$8                              0x08001c41   Thumb Code     0  printf8.o(i.__0printf$8)
-    __2printf                                0x08001c41   Thumb Code     0  printf8.o(i.__0printf$8)
-    __ARM_fpclassifyf                        0x08001c61   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
-    free                                     0x08001da1   Thumb Code    88  mallocr.o(i.__free$realloc)
-    __hardfp_expf                            0x08001dfd   Thumb Code   426  expf.o(i.__hardfp_expf)
-    __mathlib_expf                           0x08001dfd   Thumb Code     0  expf.o(i.__hardfp_expf)
-    malloc                                   0x08001ff1   Thumb Code    64  mallocr.o(i.__malloc$realloc)
-    __mathlib_flt_infnan                     0x08002041   Thumb Code     6  funder.o(i.__mathlib_flt_infnan)
-    __mathlib_flt_overflow                   0x08002049   Thumb Code    10  funder.o(i.__mathlib_flt_overflow)
-    __mathlib_flt_underflow                  0x08002059   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
-    __scatterload_copy                       0x08002069   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08002077   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08002079   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    __set_errno                              0x08002089   Thumb Code     6  errno.o(i.__set_errno)
-    ai_array_get_byte_size                   0x080028cf   Thumb Code    68  ai_datatypes_format.o(i.ai_array_get_byte_size)
-    ai_array_to_buffer_fmt                   0x08002915   Thumb Code   202  ai_datatypes_format.o(i.ai_array_to_buffer_fmt)
-    ai_check_custom_types                    0x08002aa5   Thumb Code    38  layers.o(i.ai_check_custom_types)
-    ai_dict4_dot_array_f32                   0x08003161   Thumb Code   300  layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32)
-    ai_dict8_dot_array_f32                   0x08003291   Thumb Code   246  layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32)
-    ai_dict_decompress_f32                   0x0800338d   Thumb Code   122  layers_conv2d_generic_float.o(i.ai_dict_decompress_f32)
-    ai_layers_forward_all                    0x08003419   Thumb Code    74  layers.o(i.ai_layers_forward_all)
-    ai_network_create                        0x080034e9   Thumb Code    20  network.o(i.ai_network_create)
-    ai_network_data_weights_get              0x08003501   Thumb Code     4  network_data.o(i.ai_network_data_weights_get)
-    ai_network_get_error                     0x08003509   Thumb Code     4  network.o(i.ai_network_get_error)
-    ai_network_get_info                      0x0800350d   Thumb Code    82  network.o(i.ai_network_get_info)
-    ai_network_init                          0x08003565   Thumb Code    54  network.o(i.ai_network_init)
-    ai_network_run                           0x0800359b   Thumb Code     4  network.o(i.ai_network_run)
-    ai_platform_api_get_network_report       0x080035a1   Thumb Code   182  ai_platform_interface.o(i.ai_platform_api_get_network_report)
-    ai_platform_api_get_version              0x0800365d   Thumb Code    14  ai_platform_interface.o(i.ai_platform_api_get_version)
-    ai_platform_context_acquire              0x08003671   Thumb Code    24  ai_platform_interface.o(i.ai_platform_context_acquire)
-    ai_platform_interface_api_get_version    0x0800368d   Thumb Code    14  ai_platform_interface.o(i.ai_platform_interface_api_get_version)
-    ai_platform_network_create               0x080036a1   Thumb Code    96  ai_platform_interface.o(i.ai_platform_network_create)
-    ai_platform_network_get_error            0x0800370d   Thumb Code    24  ai_platform_interface.o(i.ai_platform_network_get_error)
-    ai_platform_network_init                 0x08003729   Thumb Code   126  ai_platform_interface.o(i.ai_platform_network_init)
-    ai_platform_network_post_init            0x080037a7   Thumb Code    64  ai_platform_interface.o(i.ai_platform_network_post_init)
-    ai_platform_network_process              0x080037e7   Thumb Code    86  ai_platform_interface.o(i.ai_platform_network_process)
-    ai_platform_network_set_error            0x0800383d   Thumb Code    12  ai_platform_interface.o(i.ai_platform_network_set_error)
-    ai_platform_runtime_get_revision         0x08003849   Thumb Code    10  ai_platform_interface.o(i.ai_platform_runtime_get_revision)
-    ai_platform_runtime_get_version          0x08003859   Thumb Code    14  ai_platform_interface.o(i.ai_platform_runtime_get_version)
-    core_get_error                           0x08003887   Thumb Code    12  core_common.o(i.core_get_error)
-    core_init                                0x08003893   Thumb Code     4  core_common.o(i.core_init)
-    core_set_error                           0x080038c3   Thumb Code    26  core_common.o(i.core_set_error)
-    forward_conv2d_nl_pool                   0x080038dd   Thumb Code  1148  layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool)
-    forward_dense                            0x08003d5d   Thumb Code   396  layers_conv2d_generic_float.o(i.forward_dense)
-    forward_relu                             0x08003eed   Thumb Code   154  layers_nl_generic_float.o(i.forward_relu)
-    forward_sm                               0x08003f87   Thumb Code   108  layers_nl_generic_float.o(i.forward_sm)
-    fputc                                    0x08003ff5   Thumb Code    14  main.o(i.fputc)
-    main                                     0x0800405d   Thumb Code   190  main.o(i.main)
-    nl_func_relu_array_f32                   0x080042a5   Thumb Code    48  layers_nl_generic_float.o(i.nl_func_relu_array_f32)
-    nl_func_relu_generic_array_f32           0x080042d9   Thumb Code   186  layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32)
-    nl_func_relu_thresholded_array_f32       0x08004399   Thumb Code    62  layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32)
-    nl_func_sm_array_f32                     0x080043dd   Thumb Code    76  layers_nl_generic_float.o(i.nl_func_sm_array_f32)
-    nl_func_sm_channel_f32                   0x08004429   Thumb Code   130  layers_nl_generic_float.o(i.nl_func_sm_channel_f32)
-    pool_func_mp_array_f32                   0x080044b1   Thumb Code   412  layers_pool_generic_float.o(i.pool_func_mp_array_f32)
-    AHBPrescTable                            0x08040b64   Data          16  system_stm32f7xx.o(.constdata)
-    APBPrescTable                            0x08040b74   Data           8  system_stm32f7xx.o(.constdata)
-    Region$$Table$$Base                      0x08040c80   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08040ca0   Number         0  anon$$obj.o(Region$$Table)
+    __aeabi_uidiv                            0x080002f9   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x080002f9   Thumb Code    44  uidiv.o(.text)
+    __aeabi_llsl                             0x08000325   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x08000325   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x08000343   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x08000343   Thumb Code     0  llushr.o(.text)
+    __I$use$fp                               0x08000363   Thumb Code     0  iusefp.o(.text)
+    __aeabi_dadd                             0x08000363   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x080004a5   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x080004ab   Thumb Code     6  dadd.o(.text)
+    __aeabi_dmul                             0x080004b1   Thumb Code   228  dmul.o(.text)
+    __aeabi_ddiv                             0x08000595   Thumb Code   222  ddiv.o(.text)
+    __aeabi_d2ulz                            0x08000673   Thumb Code    48  dfixul.o(.text)
+    __aeabi_cdrcmple                         0x080006a5   Thumb Code    48  cdrcmple.o(.text)
+    __scatterload                            0x080006d5   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x080006d5   Thumb Code     0  init.o(.text)
+    __aeabi_lasr                             0x080006f9   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x080006f9   Thumb Code     0  llsshr.o(.text)
+    _double_round                            0x0800071d   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x0800073b   Thumb Code   156  depilogue.o(.text)
+    __decompress                             0x080007d7   Thumb Code     0  __dczerorl2.o(.text)
+    __decompress1                            0x080007d7   Thumb Code    86  __dczerorl2.o(.text)
+    BusFault_Handler                         0x0800082d   Thumb Code     2  stm32f7xx_it.o(i.BusFault_Handler)
+    DebugMon_Handler                         0x080008d1   Thumb Code     2  stm32f7xx_it.o(i.DebugMon_Handler)
+    HAL_CRCEx_Polynomial_Set                 0x080008d3   Thumb Code    78  stm32f7xx_hal_crc_ex.o(i.HAL_CRCEx_Polynomial_Set)
+    HAL_CRC_Init                             0x08000921   Thumb Code   114  stm32f7xx_hal_crc.o(i.HAL_CRC_Init)
+    HAL_CRC_MspInit                          0x08000999   Thumb Code    30  stm32f7xx_hal_msp.o(i.HAL_CRC_MspInit)
+    HAL_DMA_Abort_IT                         0x080009c1   Thumb Code    36  stm32f7xx_hal_dma.o(i.HAL_DMA_Abort_IT)
+    HAL_GPIO_Init                            0x080009e5   Thumb Code   420  stm32f7xx_hal_gpio.o(i.HAL_GPIO_Init)
+    HAL_GetTick                              0x08000bbd   Thumb Code     6  stm32f7xx_hal.o(i.HAL_GetTick)
+    HAL_IncTick                              0x08000bc9   Thumb Code    12  stm32f7xx_hal.o(i.HAL_IncTick)
+    HAL_Init                                 0x08000bd9   Thumb Code    22  stm32f7xx_hal.o(i.HAL_Init)
+    HAL_InitTick                             0x08000bf1   Thumb Code    54  stm32f7xx_hal.o(i.HAL_InitTick)
+    HAL_MspInit                              0x08000c31   Thumb Code    42  stm32f7xx_hal_msp.o(i.HAL_MspInit)
+    HAL_NVIC_EnableIRQ                       0x08000c61   Thumb Code    26  stm32f7xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ)
+    HAL_NVIC_SetPriority                     0x08000c7d   Thumb Code    60  stm32f7xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
+    HAL_NVIC_SetPriorityGrouping             0x08000cbd   Thumb Code    28  stm32f7xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
+    HAL_PWREx_EnableOverDrive                0x08000ce1   Thumb Code   100  stm32f7xx_hal_pwr_ex.o(i.HAL_PWREx_EnableOverDrive)
+    HAL_RCCEx_PeriphCLKConfig                0x08000d4d   Thumb Code  1336  stm32f7xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig)
+    HAL_RCC_ClockConfig                      0x08001289   Thumb Code   284  stm32f7xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
+    HAL_RCC_GetPCLK1Freq                     0x080013b9   Thumb Code    20  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
+    HAL_RCC_GetPCLK2Freq                     0x080013d9   Thumb Code    20  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq)
+    HAL_RCC_GetSysClockFreq                  0x080013f9   Thumb Code    88  stm32f7xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
+    HAL_RCC_OscConfig                        0x0800145d   Thumb Code   906  stm32f7xx_hal_rcc.o(i.HAL_RCC_OscConfig)
+    HAL_SYSTICK_Config                       0x080017f5   Thumb Code    38  stm32f7xx_hal_cortex.o(i.HAL_SYSTICK_Config)
+    HAL_UARTEx_WakeupCallback                0x0800181b   Thumb Code     2  stm32f7xx_hal_uart.o(i.HAL_UARTEx_WakeupCallback)
+    HAL_UART_ErrorCallback                   0x0800181d   Thumb Code     2  stm32f7xx_hal_uart.o(i.HAL_UART_ErrorCallback)
+    HAL_UART_IRQHandler                      0x08001821   Thumb Code   344  stm32f7xx_hal_uart.o(i.HAL_UART_IRQHandler)
+    HAL_UART_Init                            0x0800197d   Thumb Code   102  stm32f7xx_hal_uart.o(i.HAL_UART_Init)
+    HAL_UART_MspInit                         0x080019e5   Thumb Code   104  stm32f7xx_hal_msp.o(i.HAL_UART_MspInit)
+    HAL_UART_TxCpltCallback                  0x08001a59   Thumb Code     2  stm32f7xx_hal_uart.o(i.HAL_UART_TxCpltCallback)
+    HardFault_Handler                        0x08001a5b   Thumb Code     2  stm32f7xx_it.o(i.HardFault_Handler)
+    MX_X_CUBE_AI_Init                        0x08001a95   Thumb Code    22  app_x-cube-ai.o(i.MX_X_CUBE_AI_Init)
+    MX_X_CUBE_AI_Process                     0x08001ad1   Thumb Code   108  app_x-cube-ai.o(i.MX_X_CUBE_AI_Process)
+    MemManage_Handler                        0x08001b91   Thumb Code     2  stm32f7xx_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x08001b93   Thumb Code     2  stm32f7xx_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x08001b95   Thumb Code     2  stm32f7xx_it.o(i.PendSV_Handler)
+    SVC_Handler                              0x08001b97   Thumb Code     2  stm32f7xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08001b99   Thumb Code     4  stm32f7xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x08001b9d   Thumb Code   176  main.o(i.SystemClock_Config)
+    SystemInit                               0x08001c55   Thumb Code    22  system_stm32f7xx.o(i.SystemInit)
+    UART_AdvFeatureConfig                    0x08001c71   Thumb Code   200  stm32f7xx_hal_uart.o(i.UART_AdvFeatureConfig)
+    UART_CheckIdleState                      0x08001d39   Thumb Code    88  stm32f7xx_hal_uart.o(i.UART_CheckIdleState)
+    UART_SetConfig                           0x08001dc5   Thumb Code   554  stm32f7xx_hal_uart.o(i.UART_SetConfig)
+    UART_WaitOnFlagUntilTimeout              0x08002021   Thumb Code   164  stm32f7xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    USART1_IRQHandler                        0x080020c5   Thumb Code     6  stm32f7xx_it.o(i.USART1_IRQHandler)
+    UsageFault_Handler                       0x080020d1   Thumb Code     2  stm32f7xx_it.o(i.UsageFault_Handler)
+    __0printf                                0x080020d5   Thumb Code    22  printfa.o(i.__0printf)
+    __1printf                                0x080020d5   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x080020d5   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x080020d5   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x080020d5   Thumb Code     0  printfa.o(i.__0printf)
+    __ARM_fpclassifyf                        0x080020f5   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
+    free                                     0x08002235   Thumb Code    88  mallocr.o(i.__free$realloc)
+    __hardfp_expf                            0x08002291   Thumb Code   426  expf.o(i.__hardfp_expf)
+    __mathlib_expf                           0x08002291   Thumb Code     0  expf.o(i.__hardfp_expf)
+    malloc                                   0x08002485   Thumb Code    64  mallocr.o(i.__malloc$realloc)
+    __mathlib_flt_infnan                     0x080024d5   Thumb Code     6  funder.o(i.__mathlib_flt_infnan)
+    __mathlib_flt_overflow                   0x080024dd   Thumb Code    10  funder.o(i.__mathlib_flt_overflow)
+    __mathlib_flt_underflow                  0x080024ed   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
+    __scatterload_copy                       0x080024fd   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800250b   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0800250d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    __set_errno                              0x0800251d   Thumb Code     6  errno.o(i.__set_errno)
+    ai_array_get_byte_size                   0x0800319b   Thumb Code    68  ai_datatypes_format.o(i.ai_array_get_byte_size)
+    ai_array_to_buffer_fmt                   0x080031e1   Thumb Code   202  ai_datatypes_format.o(i.ai_array_to_buffer_fmt)
+    ai_check_custom_types                    0x08003371   Thumb Code    38  layers.o(i.ai_check_custom_types)
+    ai_dict4_dot_array_f32                   0x08003a2d   Thumb Code   300  layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32)
+    ai_dict8_dot_array_f32                   0x08003b5d   Thumb Code   246  layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32)
+    ai_dict_decompress_f32                   0x08003c59   Thumb Code   122  layers_conv2d_generic_float.o(i.ai_dict_decompress_f32)
+    ai_layers_forward_all                    0x08003ce5   Thumb Code    74  layers.o(i.ai_layers_forward_all)
+    ai_network_create                        0x08003db5   Thumb Code    20  network.o(i.ai_network_create)
+    ai_network_data_weights_get              0x08003dcd   Thumb Code     4  network_data.o(i.ai_network_data_weights_get)
+    ai_network_get_error                     0x08003dd5   Thumb Code     4  network.o(i.ai_network_get_error)
+    ai_network_get_info                      0x08003dd9   Thumb Code    82  network.o(i.ai_network_get_info)
+    ai_network_init                          0x08003e31   Thumb Code    54  network.o(i.ai_network_init)
+    ai_network_run                           0x08003e67   Thumb Code     4  network.o(i.ai_network_run)
+    ai_platform_api_get_network_report       0x08003e6d   Thumb Code   182  ai_platform_interface.o(i.ai_platform_api_get_network_report)
+    ai_platform_api_get_version              0x08003f29   Thumb Code    14  ai_platform_interface.o(i.ai_platform_api_get_version)
+    ai_platform_context_acquire              0x08003f3d   Thumb Code    24  ai_platform_interface.o(i.ai_platform_context_acquire)
+    ai_platform_interface_api_get_version    0x08003f59   Thumb Code    14  ai_platform_interface.o(i.ai_platform_interface_api_get_version)
+    ai_platform_network_create               0x08003f6d   Thumb Code    96  ai_platform_interface.o(i.ai_platform_network_create)
+    ai_platform_network_get_error            0x08003fd9   Thumb Code    24  ai_platform_interface.o(i.ai_platform_network_get_error)
+    ai_platform_network_init                 0x08003ff5   Thumb Code   126  ai_platform_interface.o(i.ai_platform_network_init)
+    ai_platform_network_post_init            0x08004073   Thumb Code    64  ai_platform_interface.o(i.ai_platform_network_post_init)
+    ai_platform_network_process              0x080040b3   Thumb Code    86  ai_platform_interface.o(i.ai_platform_network_process)
+    ai_platform_network_set_error            0x08004109   Thumb Code    12  ai_platform_interface.o(i.ai_platform_network_set_error)
+    ai_platform_runtime_get_revision         0x08004115   Thumb Code    10  ai_platform_interface.o(i.ai_platform_runtime_get_revision)
+    ai_platform_runtime_get_version          0x08004125   Thumb Code    14  ai_platform_interface.o(i.ai_platform_runtime_get_version)
+    core_get_error                           0x08004153   Thumb Code    12  core_common.o(i.core_get_error)
+    core_init                                0x0800415f   Thumb Code     4  core_common.o(i.core_init)
+    core_set_error                           0x0800418f   Thumb Code    26  core_common.o(i.core_set_error)
+    forward_conv2d_nl_pool                   0x080041a9   Thumb Code  1148  layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool)
+    forward_dense                            0x08004629   Thumb Code   396  layers_conv2d_generic_float.o(i.forward_dense)
+    forward_relu                             0x080047b9   Thumb Code   154  layers_nl_generic_float.o(i.forward_relu)
+    forward_sm                               0x08004853   Thumb Code   108  layers_nl_generic_float.o(i.forward_sm)
+    fputc                                    0x080048c1   Thumb Code    14  main.o(i.fputc)
+    main                                     0x08004929   Thumb Code   190  main.o(i.main)
+    nl_func_relu_array_f32                   0x08004b71   Thumb Code    48  layers_nl_generic_float.o(i.nl_func_relu_array_f32)
+    nl_func_relu_generic_array_f32           0x08004ba5   Thumb Code   186  layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32)
+    nl_func_relu_thresholded_array_f32       0x08004c65   Thumb Code    62  layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32)
+    nl_func_sm_array_f32                     0x08004ca9   Thumb Code    76  layers_nl_generic_float.o(i.nl_func_sm_array_f32)
+    nl_func_sm_channel_f32                   0x08004cf5   Thumb Code   130  layers_nl_generic_float.o(i.nl_func_sm_channel_f32)
+    pool_func_mp_array_f32                   0x08004d7d   Thumb Code   412  layers_pool_generic_float.o(i.pool_func_mp_array_f32)
+    post_process                             0x08004f1d   Thumb Code    70  app_x-cube-ai.o(i.post_process)
+    AHBPrescTable                            0x080420ec   Data          16  system_stm32f7xx.o(.constdata)
+    APBPrescTable                            0x080420fc   Data           8  system_stm32f7xx.o(.constdata)
+    Region$$Table$$Base                      0x08042208   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08042228   Number         0  anon$$obj.o(Region$$Table)
     uwTickFreq                               0x20000a9c   Data           1  stm32f7xx_hal.o(.data)
     uwTickPrio                               0x20000aa0   Data           4  stm32f7xx_hal.o(.data)
     uwTick                                   0x20000aa4   Data           4  stm32f7xx_hal.o(.data)
@@ -3090,11 +3111,11 @@ Image Symbol Table
     __stdout                                 0x20000aac   Data           4  stdout.o(.data)
     __microlib_freelist                      0x20000ab0   Data           4  mvars.o(.data)
     __microlib_freelist_initialised          0x20000ab4   Data           4  mvars.o(.data)
-    hcrc                                     0x20003138   Data          36  main.o(.bss)
-    huart1                                   0x2000315c   Data         128  main.o(.bss)
-    __heap_base                              0x200031e0   Data           0  startup_stm32f767xx.o(HEAP)
-    __heap_limit                             0x200051e0   Data           0  startup_stm32f767xx.o(HEAP)
-    __initial_sp                             0x200071e0   Data           0  startup_stm32f767xx.o(STACK)
+    hcrc                                     0x20007030   Data          36  main.o(.bss)
+    huart1                                   0x20007054   Data         128  main.o(.bss)
+    __heap_base                              0x200070d8   Data           0  startup_stm32f767xx.o(HEAP)
+    __heap_limit                             0x200090d8   Data           0  startup_stm32f767xx.o(HEAP)
+    __initial_sp                             0x2000b0d8   Data           0  startup_stm32f767xx.o(STACK)
 
 
 
@@ -3104,9 +3125,9 @@ Memory Map of the image
 
   Image Entry point : 0x080001f9
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0004175c, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x00041028])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00042ce4, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x000425b0])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00040ca0, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00042228, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3126,173 +3147,186 @@ Memory Map of the image
     0x08000296   0x08000296   0x00000024   Code   RO         3601    .text               mc_w.l(memcpya.o)
     0x080002ba   0x080002ba   0x00000024   Code   RO         3603    .text               mc_w.l(memseta.o)
     0x080002de   0x080002de   0x0000001a   Code   RO         3605    .text               mc_w.l(memcmp.o)
-    0x080002f8   0x080002f8   0x0000001e   Code   RO         3961    .text               mc_w.l(llshl.o)
-    0x08000316   0x08000316   0x00000020   Code   RO         3963    .text               mc_w.l(llushr.o)
-    0x08000336   0x08000336   0x00000000   Code   RO         3974    .text               mc_w.l(iusefp.o)
-    0x08000336   0x08000336   0x00000002   PAD
-    0x08000338   0x08000338   0x00000024   Code   RO         3991    .text               mc_w.l(init.o)
-    0x0800035c   0x0800035c   0x00000056   Code   RO         4007    .text               mc_w.l(__dczerorl2.o)
-    0x080003b2   0x080003b2   0x00000002   Code   RO          574    i.BusFault_Handler  stm32f7xx_it.o
-    0x080003b4   0x080003b4   0x000000a0   Code   RO         3010    i.CRC_Lock          NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08000454   0x08000454   0x00000002   Code   RO          575    i.DebugMon_Handler  stm32f7xx_it.o
-    0x08000456   0x08000456   0x0000004e   Code   RO          911    i.HAL_CRCEx_Polynomial_Set  stm32f7xx_hal_crc_ex.o
-    0x080004a4   0x080004a4   0x00000078   Code   RO          845    i.HAL_CRC_Init      stm32f7xx_hal_crc.o
-    0x0800051c   0x0800051c   0x00000028   Code   RO          657    i.HAL_CRC_MspInit   stm32f7xx_hal_msp.o
-    0x08000544   0x08000544   0x00000024   Code   RO         1359    i.HAL_DMA_Abort_IT  stm32f7xx_hal_dma.o
-    0x08000568   0x08000568   0x000001d8   Code   RO         1292    i.HAL_GPIO_Init     stm32f7xx_hal_gpio.o
-    0x08000740   0x08000740   0x0000000c   Code   RO         1735    i.HAL_GetTick       stm32f7xx_hal.o
-    0x0800074c   0x0800074c   0x00000010   Code   RO         1741    i.HAL_IncTick       stm32f7xx_hal.o
-    0x0800075c   0x0800075c   0x00000016   Code   RO         1742    i.HAL_Init          stm32f7xx_hal.o
-    0x08000772   0x08000772   0x00000002   PAD
-    0x08000774   0x08000774   0x00000040   Code   RO         1743    i.HAL_InitTick      stm32f7xx_hal.o
-    0x080007b4   0x080007b4   0x00000030   Code   RO          658    i.HAL_MspInit       stm32f7xx_hal_msp.o
-    0x080007e4   0x080007e4   0x0000001a   Code   RO          709    i.HAL_NVIC_EnableIRQ  stm32f7xx_hal_cortex.o
-    0x080007fe   0x080007fe   0x00000002   PAD
-    0x08000800   0x08000800   0x00000040   Code   RO          715    i.HAL_NVIC_SetPriority  stm32f7xx_hal_cortex.o
-    0x08000840   0x08000840   0x00000024   Code   RO          716    i.HAL_NVIC_SetPriorityGrouping  stm32f7xx_hal_cortex.o
-    0x08000864   0x08000864   0x0000006c   Code   RO         1632    i.HAL_PWREx_EnableOverDrive  stm32f7xx_hal_pwr_ex.o
-    0x080008d0   0x080008d0   0x0000053c   Code   RO         1053    i.HAL_RCCEx_PeriphCLKConfig  stm32f7xx_hal_rcc_ex.o
-    0x08000e0c   0x08000e0c   0x00000130   Code   RO          946    i.HAL_RCC_ClockConfig  stm32f7xx_hal_rcc.o
-    0x08000f3c   0x08000f3c   0x00000020   Code   RO          953    i.HAL_RCC_GetPCLK1Freq  stm32f7xx_hal_rcc.o
-    0x08000f5c   0x08000f5c   0x00000020   Code   RO          954    i.HAL_RCC_GetPCLK2Freq  stm32f7xx_hal_rcc.o
-    0x08000f7c   0x08000f7c   0x00000064   Code   RO          955    i.HAL_RCC_GetSysClockFreq  stm32f7xx_hal_rcc.o
-    0x08000fe0   0x08000fe0   0x00000398   Code   RO          958    i.HAL_RCC_OscConfig  stm32f7xx_hal_rcc.o
-    0x08001378   0x08001378   0x00000026   Code   RO          720    i.HAL_SYSTICK_Config  stm32f7xx_hal_cortex.o
-    0x0800139e   0x0800139e   0x00000002   Code   RO         2544    i.HAL_UARTEx_WakeupCallback  stm32f7xx_hal_uart.o
-    0x080013a0   0x080013a0   0x00000002   Code   RO         2560    i.HAL_UART_ErrorCallback  stm32f7xx_hal_uart.o
-    0x080013a2   0x080013a2   0x00000002   PAD
-    0x080013a4   0x080013a4   0x0000015c   Code   RO         2563    i.HAL_UART_IRQHandler  stm32f7xx_hal_uart.o
-    0x08001500   0x08001500   0x00000066   Code   RO         2564    i.HAL_UART_Init     stm32f7xx_hal_uart.o
-    0x08001566   0x08001566   0x00000002   PAD
-    0x08001568   0x08001568   0x00000074   Code   RO          660    i.HAL_UART_MspInit  stm32f7xx_hal_msp.o
-    0x080015dc   0x080015dc   0x00000002   Code   RO         2576    i.HAL_UART_TxCpltCallback  stm32f7xx_hal_uart.o
-    0x080015de   0x080015de   0x00000002   Code   RO          576    i.HardFault_Handler  stm32f7xx_it.o
-    0x080015e0   0x080015e0   0x00000038   Code   RO          511    i.MX_USART1_UART_Init  main.o
-    0x08001618   0x08001618   0x0000003c   Code   RO          329    i.MX_X_CUBE_AI_Init  app_x-cube-ai.o
-    0x08001654   0x08001654   0x000000a8   Code   RO          330    i.MX_X_CUBE_AI_Process  app_x-cube-ai.o
-    0x080016fc   0x080016fc   0x00000002   Code   RO          577    i.MemManage_Handler  stm32f7xx_it.o
-    0x080016fe   0x080016fe   0x00000002   Code   RO          578    i.NMI_Handler       stm32f7xx_it.o
-    0x08001700   0x08001700   0x00000002   Code   RO          579    i.PendSV_Handler    stm32f7xx_it.o
-    0x08001702   0x08001702   0x00000002   Code   RO          580    i.SVC_Handler       stm32f7xx_it.o
-    0x08001704   0x08001704   0x00000004   Code   RO          581    i.SysTick_Handler   stm32f7xx_it.o
-    0x08001708   0x08001708   0x000000b8   Code   RO          512    i.SystemClock_Config  main.o
-    0x080017c0   0x080017c0   0x0000001c   Code   RO         2976    i.SystemInit        system_stm32f7xx.o
-    0x080017dc   0x080017dc   0x000000c8   Code   RO         2578    i.UART_AdvFeatureConfig  stm32f7xx_hal_uart.o
-    0x080018a4   0x080018a4   0x00000058   Code   RO         2579    i.UART_CheckIdleState  stm32f7xx_hal_uart.o
-    0x080018fc   0x080018fc   0x00000014   Code   RO         2580    i.UART_DMAAbortOnError  stm32f7xx_hal_uart.o
-    0x08001910   0x08001910   0x00000020   Code   RO         2590    i.UART_EndRxTransfer  stm32f7xx_hal_uart.o
-    0x08001930   0x08001930   0x0000025c   Code   RO         2594    i.UART_SetConfig    stm32f7xx_hal_uart.o
-    0x08001b8c   0x08001b8c   0x000000a4   Code   RO         2597    i.UART_WaitOnFlagUntilTimeout  stm32f7xx_hal_uart.o
-    0x08001c30   0x08001c30   0x0000000c   Code   RO          582    i.USART1_IRQHandler  stm32f7xx_it.o
-    0x08001c3c   0x08001c3c   0x00000002   Code   RO          583    i.UsageFault_Handler  stm32f7xx_it.o
-    0x08001c3e   0x08001c3e   0x00000002   PAD
-    0x08001c40   0x08001c40   0x00000020   Code   RO         3816    i.__0printf$8       mc_w.l(printf8.o)
-    0x08001c60   0x08001c60   0x00000026   Code   RO         3904    i.__ARM_fpclassifyf  m_wv.l(fpclassifyf.o)
-    0x08001c86   0x08001c86   0x00000022   Code   RO          722    i.__NVIC_SetPriority  stm32f7xx_hal_cortex.o
-    0x08001ca8   0x08001ca8   0x000000f8   Code   RO         3066    i.__ai_math_dot_array_opt  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08001da0   0x08001da0   0x0000005c   Code   RO         3874    i.__free$realloc    mc_w.l(mallocr.o)
-    0x08001dfc   0x08001dfc   0x000001f4   Code   RO         3484    i.__hardfp_expf     m_wv.l(expf.o)
-    0x08001ff0   0x08001ff0   0x00000050   Code   RO         3875    i.__malloc$realloc  mc_w.l(mallocr.o)
-    0x08002040   0x08002040   0x00000006   Code   RO         3907    i.__mathlib_flt_infnan  m_wv.l(funder.o)
-    0x08002046   0x08002046   0x00000002   PAD
-    0x08002048   0x08002048   0x00000010   Code   RO         3910    i.__mathlib_flt_overflow  m_wv.l(funder.o)
-    0x08002058   0x08002058   0x00000010   Code   RO         3912    i.__mathlib_flt_underflow  m_wv.l(funder.o)
-    0x08002068   0x08002068   0x0000000e   Code   RO         4001    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08002076   0x08002076   0x00000002   Code   RO         4002    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08002078   0x08002078   0x0000000e   Code   RO         4003    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08002086   0x08002086   0x00000002   PAD
-    0x08002088   0x08002088   0x0000000c   Code   RO         3969    i.__set_errno       mc_w.l(errno.o)
-    0x08002094   0x08002094   0x000000aa   Code   RO         3011    i._ai_platform_get_io_buffers_info  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x0800213e   0x0800213e   0x00000216   Code   RO         3012    i._platform_network_io_bind  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08002354   0x08002354   0x00000038   Code   RO         3013    i._platform_network_state_setup  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x0800238c   0x0800238c   0x0000006c   Code   RO         3014    i._platform_network_state_update_input  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x080023f8   0x080023f8   0x00000080   Code   RO         3015    i._platform_network_state_update_output  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08002478   0x08002478   0x00000404   Code   RO         3823    i._printf_core      mc_w.l(printf8.o)
-    0x0800287c   0x0800287c   0x00000024   Code   RO         3824    i._printf_post_padding  mc_w.l(printf8.o)
-    0x080028a0   0x080028a0   0x0000002e   Code   RO         3825    i._printf_pre_padding  mc_w.l(printf8.o)
-    0x080028ce   0x080028ce   0x00000044   Code   RO         3271    i.ai_array_get_byte_size  NetworkRuntime520_CM7_Keil.lib(ai_datatypes_format.o)
-    0x08002912   0x08002912   0x00000002   PAD
-    0x08002914   0x08002914   0x000000ec   Code   RO         3274    i.ai_array_to_buffer_fmt  NetworkRuntime520_CM7_Keil.lib(ai_datatypes_format.o)
-    0x08002a00   0x08002a00   0x000000a4   Code   RO          332    i.ai_boostrap       app_x-cube-ai.o
-    0x08002aa4   0x08002aa4   0x0000002c   Code   RO         3334    i.ai_check_custom_types  NetworkRuntime520_CM7_Keil.lib(layers.o)
-    0x08002ad0   0x08002ad0   0x00000130   Code   RO         3067    i.ai_conv2d_kernel_depthwise_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08002c00   0x08002c00   0x00000180   Code   RO         3068    i.ai_conv2d_kernel_group_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08002d80   0x08002d80   0x00000172   Code   RO         3069    i.ai_conv2d_kernel_simple_opt_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08002ef2   0x08002ef2   0x00000002   PAD
-    0x08002ef4   0x08002ef4   0x0000026c   Code   RO         3070    i.ai_conv2d_stripe_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08003160   0x08003160   0x00000130   Code   RO         3071    i.ai_dict4_dot_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08003290   0x08003290   0x000000fc   Code   RO         3072    i.ai_dict8_dot_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x0800338c   0x0800338c   0x0000007a   Code   RO         3073    i.ai_dict_decompress_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08003406   0x08003406   0x00000012   Code   RO         3335    i.ai_forward_layer  NetworkRuntime520_CM7_Keil.lib(layers.o)
-    0x08003418   0x08003418   0x0000004a   Code   RO         3338    i.ai_layers_forward_all  NetworkRuntime520_CM7_Keil.lib(layers.o)
-    0x08003462   0x08003462   0x00000002   PAD
-    0x08003464   0x08003464   0x00000084   Code   RO          333    i.ai_log_err        app_x-cube-ai.o
-    0x080034e8   0x080034e8   0x00000018   Code   RO           10    i.ai_network_create  network.o
-    0x08003500   0x08003500   0x00000008   Code   RO          307    i.ai_network_data_weights_get  network_data.o
-    0x08003508   0x08003508   0x00000004   Code   RO           13    i.ai_network_get_error  network.o
-    0x0800350c   0x0800350c   0x00000058   Code   RO           14    i.ai_network_get_info  network.o
-    0x08003564   0x08003564   0x00000036   Code   RO           15    i.ai_network_init   network.o
-    0x0800359a   0x0800359a   0x00000004   Code   RO           16    i.ai_network_run    network.o
-    0x0800359e   0x0800359e   0x00000002   PAD
-    0x080035a0   0x080035a0   0x000000bc   Code   RO         3017    i.ai_platform_api_get_network_report  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x0800365c   0x0800365c   0x00000014   Code   RO         3018    i.ai_platform_api_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08003670   0x08003670   0x0000001c   Code   RO         3019    i.ai_platform_context_acquire  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x0800368c   0x0800368c   0x00000014   Code   RO         3021    i.ai_platform_interface_api_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x080036a0   0x080036a0   0x0000006c   Code   RO         3022    i.ai_platform_network_create  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x0800370c   0x0800370c   0x0000001c   Code   RO         3024    i.ai_platform_network_get_error  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08003728   0x08003728   0x0000007e   Code   RO         3025    i.ai_platform_network_init  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x080037a6   0x080037a6   0x00000040   Code   RO         3026    i.ai_platform_network_post_init  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x080037e6   0x080037e6   0x00000056   Code   RO         3027    i.ai_platform_network_process  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x0800383c   0x0800383c   0x0000000c   Code   RO         3028    i.ai_platform_network_set_error  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08003848   0x08003848   0x00000010   Code   RO         3034    i.ai_platform_runtime_get_revision  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08003858   0x08003858   0x00000014   Code   RO         3035    i.ai_platform_runtime_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x0800386c   0x0800386c   0x0000001a   Code   RO         3105    i.ai_shape_get_size  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08003886   0x08003886   0x0000000c   Code   RO         3346    i.core_get_error    NetworkRuntime520_CM7_Keil.lib(core_common.o)
-    0x08003892   0x08003892   0x00000004   Code   RO         3347    i.core_init         NetworkRuntime520_CM7_Keil.lib(core_common.o)
-    0x08003896   0x08003896   0x00000010   Code   RO         3075    i.core_nl_get_params_byte_size  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x080038a6   0x080038a6   0x00000012   Code   RO         3076    i.core_nl_get_params_ptr  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x080038b8   0x080038b8   0x0000000a   Code   RO         3077    i.core_nl_get_params_stride  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x080038c2   0x080038c2   0x0000001a   Code   RO         3348    i.core_set_error    NetworkRuntime520_CM7_Keil.lib(core_common.o)
-    0x080038dc   0x080038dc   0x00000480   Code   RO         3079    i.forward_conv2d_nl_pool  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08003d5c   0x08003d5c   0x00000190   Code   RO         3080    i.forward_dense     NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08003eec   0x08003eec   0x0000009a   Code   RO         3127    i.forward_relu      NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08003f86   0x08003f86   0x0000006c   Code   RO         3136    i.forward_sm        NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08003ff2   0x08003ff2   0x00000002   PAD
-    0x08003ff4   0x08003ff4   0x00000014   Code   RO          513    i.fputc             main.o
-    0x08004008   0x08004008   0x00000002   Code   RO         3083    i.func_dummy        NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x0800400a   0x0800400a   0x00000002   PAD
-    0x0800400c   0x0800400c   0x00000050   Code   RO         3876    i.internal_alloc    mc_w.l(mallocr.o)
-    0x0800405c   0x0800405c   0x000000dc   Code   RO          514    i.main              main.o
-    0x08004138   0x08004138   0x00000074   Code   RO           17    i.network_configure_activations  network.o
-    0x080041ac   0x080041ac   0x000000f8   Code   RO           18    i.network_configure_weights  network.o
-    0x080042a4   0x080042a4   0x00000034   Code   RO         3163    i.nl_func_relu_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x080042d8   0x080042d8   0x000000c0   Code   RO         3164    i.nl_func_relu_generic_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08004398   0x08004398   0x00000044   Code   RO         3165    i.nl_func_relu_thresholded_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x080043dc   0x080043dc   0x0000004c   Code   RO         3173    i.nl_func_sm_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08004428   0x08004428   0x00000088   Code   RO         3174    i.nl_func_sm_channel_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x080044b0   0x080044b0   0x000001a0   Code   RO         3259    i.pool_func_mp_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_pool_generic_float.o)
-    0x08004650   0x08004650   0x00000008   Data   RO           26    .constdata          network.o
-    0x08004658   0x08004658   0x00000008   Data   RO           27    .constdata          network.o
-    0x08004660   0x08004660   0x00000008   Data   RO           28    .constdata          network.o
-    0x08004668   0x08004668   0x00000008   Data   RO           29    .constdata          network.o
-    0x08004670   0x08004670   0x00000008   Data   RO           30    .constdata          network.o
-    0x08004678   0x08004678   0x00000008   Data   RO           31    .constdata          network.o
-    0x08004680   0x08004680   0x00000008   Data   RO           32    .constdata          network.o
-    0x08004688   0x08004688   0x00000008   Data   RO           33    .constdata          network.o
-    0x08004690   0x08004690   0x00000074   Data   RO           34    .constdata          network.o
-    0x08004704   0x08004704   0x0003c428   Data   RO          308    .constdata          network_data.o
-    0x08040b2c   0x08040b2c   0x00000038   Data   RO          336    .constdata          app_x-cube-ai.o
-    0x08040b64   0x08040b64   0x00000010   Data   RO         2977    .constdata          system_stm32f7xx.o
-    0x08040b74   0x08040b74   0x00000008   Data   RO         2978    .constdata          system_stm32f7xx.o
-    0x08040b7c   0x08040b7c   0x00000020   Data   RO         3036    .constdata          NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08040b9c   0x08040b9c   0x00000030   Data   RO         3487    .constdata          m_wv.l(expf.o)
-    0x08040bcc   0x08040bcc   0x0000006c   Data   RO           35    .conststring        network.o
-    0x08040c38   0x08040c38   0x00000046   Data   RO          337    .conststring        app_x-cube-ai.o
-    0x08040c7e   0x08040c7e   0x00000002   PAD
-    0x08040c80   0x08040c80   0x00000020   Data   RO         3999    Region$$Table       anon$$obj.o
+    0x080002f8   0x080002f8   0x0000002c   Code   RO         3959    .text               mc_w.l(uidiv.o)
+    0x08000324   0x08000324   0x0000001e   Code   RO         3961    .text               mc_w.l(llshl.o)
+    0x08000342   0x08000342   0x00000020   Code   RO         3963    .text               mc_w.l(llushr.o)
+    0x08000362   0x08000362   0x00000000   Code   RO         3974    .text               mc_w.l(iusefp.o)
+    0x08000362   0x08000362   0x0000014e   Code   RO         3979    .text               mf_w.l(dadd.o)
+    0x080004b0   0x080004b0   0x000000e4   Code   RO         3981    .text               mf_w.l(dmul.o)
+    0x08000594   0x08000594   0x000000de   Code   RO         3983    .text               mf_w.l(ddiv.o)
+    0x08000672   0x08000672   0x00000030   Code   RO         3985    .text               mf_w.l(dfixul.o)
+    0x080006a2   0x080006a2   0x00000002   PAD
+    0x080006a4   0x080006a4   0x00000030   Code   RO         3987    .text               mf_w.l(cdrcmple.o)
+    0x080006d4   0x080006d4   0x00000024   Code   RO         3991    .text               mc_w.l(init.o)
+    0x080006f8   0x080006f8   0x00000024   Code   RO         3993    .text               mc_w.l(llsshr.o)
+    0x0800071c   0x0800071c   0x000000ba   Code   RO         3997    .text               mf_w.l(depilogue.o)
+    0x080007d6   0x080007d6   0x00000056   Code   RO         4007    .text               mc_w.l(__dczerorl2.o)
+    0x0800082c   0x0800082c   0x00000002   Code   RO          574    i.BusFault_Handler  stm32f7xx_it.o
+    0x0800082e   0x0800082e   0x00000002   PAD
+    0x08000830   0x08000830   0x000000a0   Code   RO         3010    i.CRC_Lock          NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x080008d0   0x080008d0   0x00000002   Code   RO          575    i.DebugMon_Handler  stm32f7xx_it.o
+    0x080008d2   0x080008d2   0x0000004e   Code   RO          911    i.HAL_CRCEx_Polynomial_Set  stm32f7xx_hal_crc_ex.o
+    0x08000920   0x08000920   0x00000078   Code   RO          845    i.HAL_CRC_Init      stm32f7xx_hal_crc.o
+    0x08000998   0x08000998   0x00000028   Code   RO          657    i.HAL_CRC_MspInit   stm32f7xx_hal_msp.o
+    0x080009c0   0x080009c0   0x00000024   Code   RO         1359    i.HAL_DMA_Abort_IT  stm32f7xx_hal_dma.o
+    0x080009e4   0x080009e4   0x000001d8   Code   RO         1292    i.HAL_GPIO_Init     stm32f7xx_hal_gpio.o
+    0x08000bbc   0x08000bbc   0x0000000c   Code   RO         1735    i.HAL_GetTick       stm32f7xx_hal.o
+    0x08000bc8   0x08000bc8   0x00000010   Code   RO         1741    i.HAL_IncTick       stm32f7xx_hal.o
+    0x08000bd8   0x08000bd8   0x00000016   Code   RO         1742    i.HAL_Init          stm32f7xx_hal.o
+    0x08000bee   0x08000bee   0x00000002   PAD
+    0x08000bf0   0x08000bf0   0x00000040   Code   RO         1743    i.HAL_InitTick      stm32f7xx_hal.o
+    0x08000c30   0x08000c30   0x00000030   Code   RO          658    i.HAL_MspInit       stm32f7xx_hal_msp.o
+    0x08000c60   0x08000c60   0x0000001a   Code   RO          709    i.HAL_NVIC_EnableIRQ  stm32f7xx_hal_cortex.o
+    0x08000c7a   0x08000c7a   0x00000002   PAD
+    0x08000c7c   0x08000c7c   0x00000040   Code   RO          715    i.HAL_NVIC_SetPriority  stm32f7xx_hal_cortex.o
+    0x08000cbc   0x08000cbc   0x00000024   Code   RO          716    i.HAL_NVIC_SetPriorityGrouping  stm32f7xx_hal_cortex.o
+    0x08000ce0   0x08000ce0   0x0000006c   Code   RO         1632    i.HAL_PWREx_EnableOverDrive  stm32f7xx_hal_pwr_ex.o
+    0x08000d4c   0x08000d4c   0x0000053c   Code   RO         1053    i.HAL_RCCEx_PeriphCLKConfig  stm32f7xx_hal_rcc_ex.o
+    0x08001288   0x08001288   0x00000130   Code   RO          946    i.HAL_RCC_ClockConfig  stm32f7xx_hal_rcc.o
+    0x080013b8   0x080013b8   0x00000020   Code   RO          953    i.HAL_RCC_GetPCLK1Freq  stm32f7xx_hal_rcc.o
+    0x080013d8   0x080013d8   0x00000020   Code   RO          954    i.HAL_RCC_GetPCLK2Freq  stm32f7xx_hal_rcc.o
+    0x080013f8   0x080013f8   0x00000064   Code   RO          955    i.HAL_RCC_GetSysClockFreq  stm32f7xx_hal_rcc.o
+    0x0800145c   0x0800145c   0x00000398   Code   RO          958    i.HAL_RCC_OscConfig  stm32f7xx_hal_rcc.o
+    0x080017f4   0x080017f4   0x00000026   Code   RO          720    i.HAL_SYSTICK_Config  stm32f7xx_hal_cortex.o
+    0x0800181a   0x0800181a   0x00000002   Code   RO         2544    i.HAL_UARTEx_WakeupCallback  stm32f7xx_hal_uart.o
+    0x0800181c   0x0800181c   0x00000002   Code   RO         2560    i.HAL_UART_ErrorCallback  stm32f7xx_hal_uart.o
+    0x0800181e   0x0800181e   0x00000002   PAD
+    0x08001820   0x08001820   0x0000015c   Code   RO         2563    i.HAL_UART_IRQHandler  stm32f7xx_hal_uart.o
+    0x0800197c   0x0800197c   0x00000066   Code   RO         2564    i.HAL_UART_Init     stm32f7xx_hal_uart.o
+    0x080019e2   0x080019e2   0x00000002   PAD
+    0x080019e4   0x080019e4   0x00000074   Code   RO          660    i.HAL_UART_MspInit  stm32f7xx_hal_msp.o
+    0x08001a58   0x08001a58   0x00000002   Code   RO         2576    i.HAL_UART_TxCpltCallback  stm32f7xx_hal_uart.o
+    0x08001a5a   0x08001a5a   0x00000002   Code   RO          576    i.HardFault_Handler  stm32f7xx_it.o
+    0x08001a5c   0x08001a5c   0x00000038   Code   RO          511    i.MX_USART1_UART_Init  main.o
+    0x08001a94   0x08001a94   0x0000003c   Code   RO          329    i.MX_X_CUBE_AI_Init  app_x-cube-ai.o
+    0x08001ad0   0x08001ad0   0x000000c0   Code   RO          330    i.MX_X_CUBE_AI_Process  app_x-cube-ai.o
+    0x08001b90   0x08001b90   0x00000002   Code   RO          577    i.MemManage_Handler  stm32f7xx_it.o
+    0x08001b92   0x08001b92   0x00000002   Code   RO          578    i.NMI_Handler       stm32f7xx_it.o
+    0x08001b94   0x08001b94   0x00000002   Code   RO          579    i.PendSV_Handler    stm32f7xx_it.o
+    0x08001b96   0x08001b96   0x00000002   Code   RO          580    i.SVC_Handler       stm32f7xx_it.o
+    0x08001b98   0x08001b98   0x00000004   Code   RO          581    i.SysTick_Handler   stm32f7xx_it.o
+    0x08001b9c   0x08001b9c   0x000000b8   Code   RO          512    i.SystemClock_Config  main.o
+    0x08001c54   0x08001c54   0x0000001c   Code   RO         2976    i.SystemInit        system_stm32f7xx.o
+    0x08001c70   0x08001c70   0x000000c8   Code   RO         2578    i.UART_AdvFeatureConfig  stm32f7xx_hal_uart.o
+    0x08001d38   0x08001d38   0x00000058   Code   RO         2579    i.UART_CheckIdleState  stm32f7xx_hal_uart.o
+    0x08001d90   0x08001d90   0x00000014   Code   RO         2580    i.UART_DMAAbortOnError  stm32f7xx_hal_uart.o
+    0x08001da4   0x08001da4   0x00000020   Code   RO         2590    i.UART_EndRxTransfer  stm32f7xx_hal_uart.o
+    0x08001dc4   0x08001dc4   0x0000025c   Code   RO         2594    i.UART_SetConfig    stm32f7xx_hal_uart.o
+    0x08002020   0x08002020   0x000000a4   Code   RO         2597    i.UART_WaitOnFlagUntilTimeout  stm32f7xx_hal_uart.o
+    0x080020c4   0x080020c4   0x0000000c   Code   RO          582    i.USART1_IRQHandler  stm32f7xx_it.o
+    0x080020d0   0x080020d0   0x00000002   Code   RO          583    i.UsageFault_Handler  stm32f7xx_it.o
+    0x080020d2   0x080020d2   0x00000002   PAD
+    0x080020d4   0x080020d4   0x00000020   Code   RO         3842    i.__0printf         mc_w.l(printfa.o)
+    0x080020f4   0x080020f4   0x00000026   Code   RO         3904    i.__ARM_fpclassifyf  m_wv.l(fpclassifyf.o)
+    0x0800211a   0x0800211a   0x00000022   Code   RO          722    i.__NVIC_SetPriority  stm32f7xx_hal_cortex.o
+    0x0800213c   0x0800213c   0x000000f8   Code   RO         3066    i.__ai_math_dot_array_opt  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08002234   0x08002234   0x0000005c   Code   RO         3874    i.__free$realloc    mc_w.l(mallocr.o)
+    0x08002290   0x08002290   0x000001f4   Code   RO         3484    i.__hardfp_expf     m_wv.l(expf.o)
+    0x08002484   0x08002484   0x00000050   Code   RO         3875    i.__malloc$realloc  mc_w.l(mallocr.o)
+    0x080024d4   0x080024d4   0x00000006   Code   RO         3907    i.__mathlib_flt_infnan  m_wv.l(funder.o)
+    0x080024da   0x080024da   0x00000002   PAD
+    0x080024dc   0x080024dc   0x00000010   Code   RO         3910    i.__mathlib_flt_overflow  m_wv.l(funder.o)
+    0x080024ec   0x080024ec   0x00000010   Code   RO         3912    i.__mathlib_flt_underflow  m_wv.l(funder.o)
+    0x080024fc   0x080024fc   0x0000000e   Code   RO         4001    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800250a   0x0800250a   0x00000002   Code   RO         4002    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0800250c   0x0800250c   0x0000000e   Code   RO         4003    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800251a   0x0800251a   0x00000002   PAD
+    0x0800251c   0x0800251c   0x0000000c   Code   RO         3969    i.__set_errno       mc_w.l(errno.o)
+    0x08002528   0x08002528   0x000000aa   Code   RO         3011    i._ai_platform_get_io_buffers_info  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x080025d2   0x080025d2   0x00000002   PAD
+    0x080025d4   0x080025d4   0x00000184   Code   RO         3849    i._fp_digits        mc_w.l(printfa.o)
+    0x08002758   0x08002758   0x00000216   Code   RO         3012    i._platform_network_io_bind  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x0800296e   0x0800296e   0x00000038   Code   RO         3013    i._platform_network_state_setup  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x080029a6   0x080029a6   0x0000006c   Code   RO         3014    i._platform_network_state_update_input  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08002a12   0x08002a12   0x00000080   Code   RO         3015    i._platform_network_state_update_output  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08002a92   0x08002a92   0x00000002   PAD
+    0x08002a94   0x08002a94   0x000006b4   Code   RO         3850    i._printf_core      mc_w.l(printfa.o)
+    0x08003148   0x08003148   0x00000024   Code   RO         3851    i._printf_post_padding  mc_w.l(printfa.o)
+    0x0800316c   0x0800316c   0x0000002e   Code   RO         3852    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x0800319a   0x0800319a   0x00000044   Code   RO         3271    i.ai_array_get_byte_size  NetworkRuntime520_CM7_Keil.lib(ai_datatypes_format.o)
+    0x080031de   0x080031de   0x00000002   PAD
+    0x080031e0   0x080031e0   0x000000ec   Code   RO         3274    i.ai_array_to_buffer_fmt  NetworkRuntime520_CM7_Keil.lib(ai_datatypes_format.o)
+    0x080032cc   0x080032cc   0x000000a4   Code   RO          332    i.ai_boostrap       app_x-cube-ai.o
+    0x08003370   0x08003370   0x0000002c   Code   RO         3334    i.ai_check_custom_types  NetworkRuntime520_CM7_Keil.lib(layers.o)
+    0x0800339c   0x0800339c   0x00000130   Code   RO         3067    i.ai_conv2d_kernel_depthwise_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x080034cc   0x080034cc   0x00000180   Code   RO         3068    i.ai_conv2d_kernel_group_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x0800364c   0x0800364c   0x00000172   Code   RO         3069    i.ai_conv2d_kernel_simple_opt_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x080037be   0x080037be   0x00000002   PAD
+    0x080037c0   0x080037c0   0x0000026c   Code   RO         3070    i.ai_conv2d_stripe_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08003a2c   0x08003a2c   0x00000130   Code   RO         3071    i.ai_dict4_dot_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08003b5c   0x08003b5c   0x000000fc   Code   RO         3072    i.ai_dict8_dot_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08003c58   0x08003c58   0x0000007a   Code   RO         3073    i.ai_dict_decompress_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08003cd2   0x08003cd2   0x00000012   Code   RO         3335    i.ai_forward_layer  NetworkRuntime520_CM7_Keil.lib(layers.o)
+    0x08003ce4   0x08003ce4   0x0000004a   Code   RO         3338    i.ai_layers_forward_all  NetworkRuntime520_CM7_Keil.lib(layers.o)
+    0x08003d2e   0x08003d2e   0x00000002   PAD
+    0x08003d30   0x08003d30   0x00000084   Code   RO          333    i.ai_log_err        app_x-cube-ai.o
+    0x08003db4   0x08003db4   0x00000018   Code   RO           10    i.ai_network_create  network.o
+    0x08003dcc   0x08003dcc   0x00000008   Code   RO          307    i.ai_network_data_weights_get  network_data.o
+    0x08003dd4   0x08003dd4   0x00000004   Code   RO           13    i.ai_network_get_error  network.o
+    0x08003dd8   0x08003dd8   0x00000058   Code   RO           14    i.ai_network_get_info  network.o
+    0x08003e30   0x08003e30   0x00000036   Code   RO           15    i.ai_network_init   network.o
+    0x08003e66   0x08003e66   0x00000004   Code   RO           16    i.ai_network_run    network.o
+    0x08003e6a   0x08003e6a   0x00000002   PAD
+    0x08003e6c   0x08003e6c   0x000000bc   Code   RO         3017    i.ai_platform_api_get_network_report  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08003f28   0x08003f28   0x00000014   Code   RO         3018    i.ai_platform_api_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08003f3c   0x08003f3c   0x0000001c   Code   RO         3019    i.ai_platform_context_acquire  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08003f58   0x08003f58   0x00000014   Code   RO         3021    i.ai_platform_interface_api_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08003f6c   0x08003f6c   0x0000006c   Code   RO         3022    i.ai_platform_network_create  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08003fd8   0x08003fd8   0x0000001c   Code   RO         3024    i.ai_platform_network_get_error  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08003ff4   0x08003ff4   0x0000007e   Code   RO         3025    i.ai_platform_network_init  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004072   0x08004072   0x00000040   Code   RO         3026    i.ai_platform_network_post_init  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x080040b2   0x080040b2   0x00000056   Code   RO         3027    i.ai_platform_network_process  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004108   0x08004108   0x0000000c   Code   RO         3028    i.ai_platform_network_set_error  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004114   0x08004114   0x00000010   Code   RO         3034    i.ai_platform_runtime_get_revision  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004124   0x08004124   0x00000014   Code   RO         3035    i.ai_platform_runtime_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004138   0x08004138   0x0000001a   Code   RO         3105    i.ai_shape_get_size  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08004152   0x08004152   0x0000000c   Code   RO         3346    i.core_get_error    NetworkRuntime520_CM7_Keil.lib(core_common.o)
+    0x0800415e   0x0800415e   0x00000004   Code   RO         3347    i.core_init         NetworkRuntime520_CM7_Keil.lib(core_common.o)
+    0x08004162   0x08004162   0x00000010   Code   RO         3075    i.core_nl_get_params_byte_size  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004172   0x08004172   0x00000012   Code   RO         3076    i.core_nl_get_params_ptr  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004184   0x08004184   0x0000000a   Code   RO         3077    i.core_nl_get_params_stride  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x0800418e   0x0800418e   0x0000001a   Code   RO         3348    i.core_set_error    NetworkRuntime520_CM7_Keil.lib(core_common.o)
+    0x080041a8   0x080041a8   0x00000480   Code   RO         3079    i.forward_conv2d_nl_pool  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004628   0x08004628   0x00000190   Code   RO         3080    i.forward_dense     NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x080047b8   0x080047b8   0x0000009a   Code   RO         3127    i.forward_relu      NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08004852   0x08004852   0x0000006c   Code   RO         3136    i.forward_sm        NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x080048be   0x080048be   0x00000002   PAD
+    0x080048c0   0x080048c0   0x00000014   Code   RO          513    i.fputc             main.o
+    0x080048d4   0x080048d4   0x00000002   Code   RO         3083    i.func_dummy        NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x080048d6   0x080048d6   0x00000002   PAD
+    0x080048d8   0x080048d8   0x00000050   Code   RO         3876    i.internal_alloc    mc_w.l(mallocr.o)
+    0x08004928   0x08004928   0x000000dc   Code   RO          514    i.main              main.o
+    0x08004a04   0x08004a04   0x00000074   Code   RO           17    i.network_configure_activations  network.o
+    0x08004a78   0x08004a78   0x000000f8   Code   RO           18    i.network_configure_weights  network.o
+    0x08004b70   0x08004b70   0x00000034   Code   RO         3163    i.nl_func_relu_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08004ba4   0x08004ba4   0x000000c0   Code   RO         3164    i.nl_func_relu_generic_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08004c64   0x08004c64   0x00000044   Code   RO         3165    i.nl_func_relu_thresholded_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08004ca8   0x08004ca8   0x0000004c   Code   RO         3173    i.nl_func_sm_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08004cf4   0x08004cf4   0x00000088   Code   RO         3174    i.nl_func_sm_channel_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08004d7c   0x08004d7c   0x000001a0   Code   RO         3259    i.pool_func_mp_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_pool_generic_float.o)
+    0x08004f1c   0x08004f1c   0x0000007c   Code   RO          334    i.post_process      app_x-cube-ai.o
+    0x08004f98   0x08004f98   0x00000008   Data   RO           26    .constdata          network.o
+    0x08004fa0   0x08004fa0   0x00000008   Data   RO           27    .constdata          network.o
+    0x08004fa8   0x08004fa8   0x00000008   Data   RO           28    .constdata          network.o
+    0x08004fb0   0x08004fb0   0x00000008   Data   RO           29    .constdata          network.o
+    0x08004fb8   0x08004fb8   0x00000008   Data   RO           30    .constdata          network.o
+    0x08004fc0   0x08004fc0   0x00000008   Data   RO           31    .constdata          network.o
+    0x08004fc8   0x08004fc8   0x00000008   Data   RO           32    .constdata          network.o
+    0x08004fd0   0x08004fd0   0x00000008   Data   RO           33    .constdata          network.o
+    0x08004fd8   0x08004fd8   0x00000074   Data   RO           34    .constdata          network.o
+    0x0800504c   0x0800504c   0x0003c428   Data   RO          308    .constdata          network_data.o
+    0x08041474   0x08041474   0x00000c78   Data   RO          336    .constdata          app_x-cube-ai.o
+    0x080420ec   0x080420ec   0x00000010   Data   RO         2977    .constdata          system_stm32f7xx.o
+    0x080420fc   0x080420fc   0x00000008   Data   RO         2978    .constdata          system_stm32f7xx.o
+    0x08042104   0x08042104   0x00000020   Data   RO         3036    .constdata          NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08042124   0x08042124   0x00000030   Data   RO         3487    .constdata          m_wv.l(expf.o)
+    0x08042154   0x08042154   0x0000006c   Data   RO           35    .conststring        network.o
+    0x080421c0   0x080421c0   0x00000046   Data   RO          337    .conststring        app_x-cube-ai.o
+    0x08042206   0x08042206   0x00000002   PAD
+    0x08042208   0x08042208   0x00000020   Data   RO         3999    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08040ca0, Size: 0x000071e0, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x00000388])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08042228, Size: 0x0000b0d8, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x00000388])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3433,11 +3467,11 @@ Memory Map of the image
     0x20000b04        -       0x00000010   Zero   RW           23    .bss                network.o
     0x20000b14        -       0x00000018   Zero   RW           24    .bss                network.o
     0x20000b2c        -       0x00000010   Zero   RW           25    .bss                network.o
-    0x20000b3c        -       0x000025fc   Zero   RW          335    .bss                app_x-cube-ai.o
-    0x20003138        -       0x000000a4   Zero   RW          515    .bss                main.o
-    0x200031dc   COMPRESSED   0x00000004   PAD
-    0x200031e0        -       0x00002000   Zero   RW            2    HEAP                startup_stm32f767xx.o
-    0x200051e0        -       0x00002000   Zero   RW            1    STACK               startup_stm32f767xx.o
+    0x20000b3c        -       0x000064f4   Zero   RW          335    .bss                app_x-cube-ai.o
+    0x20007030        -       0x000000a4   Zero   RW          515    .bss                main.o
+    0x200070d4   COMPRESSED   0x00000004   PAD
+    0x200070d8        -       0x00002000   Zero   RW            2    HEAP                startup_stm32f767xx.o
+    0x200090d8        -       0x00002000   Zero   RW            1    STACK               startup_stm32f767xx.o
 
 
 ==============================================================================
@@ -3447,7 +3481,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       524        302        126          4       9724     843431   app_x-cube-ai.o
+       672        352       3262          4      25844     844154   app_x-cube-ai.o
        480         52          0          0        164      39801   main.o
        538         34        288       2712        128      52020   network.o
          8          4     246824          0          0       9470   network_data.o
@@ -3467,9 +3501,9 @@ Image component sizes
         28          6         24          4          0       1151   system_stm32f7xx.o
 
     ----------------------------------------------------------------------
-      7280        704     247800       2732      26404    1024421   Object Totals
+      7430        754     250936       2732      42524    1025144   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        12          0          2          0          4          0   (incl. Padding)
+        14          0          2          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -3500,19 +3534,27 @@ Image component sizes
         36          8          0          0          0         68   init.o
          0          0          0          0          0          0   iusefp.o
         30          0          0          0          0         68   llshl.o
+        36          0          0          0          0         68   llsshr.o
         32          0          0          0          0         68   llushr.o
        252         24          0          0          0        252   mallocr.o
         26          0          0          0          0         80   memcmp.o
         36          0          0          0          0         68   memcpya.o
         36          0          0          0          0        108   memseta.o
          0          0          0          8          0          0   mvars.o
-      1142         54          0          0          0        352   printf8.o
+      2218         90          0          0          0        464   printfa.o
          0          0          0          4          0          0   stdout.o
+        44          0          0          0          0         80   uidiv.o
         98          0          0          0          0         92   uldiv.o
+        48          0          0          0          0         68   cdrcmple.o
+       334          0          0          0          0        148   dadd.o
+       222          0          0          0          0        100   ddiv.o
+       186          0          0          0          0        176   depilogue.o
+        48          0          0          0          0         68   dfixul.o
+       228          0          0          0          0         96   dmul.o
 
     ----------------------------------------------------------------------
-     10216        370         80         16          0       8352   Library Totals
-        16          0          0          0          0          0   (incl. Padding)
+     12442        406         80         16          0       9268   Library Totals
+        20          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -3520,10 +3562,11 @@ Image component sizes
 
       7784        184         32          0          0       6428   NetworkRuntime520_CM7_Keil.lib
        576         86         48          0          0        700   m_wv.l
-      1840        100          0         16          0       1224   mc_w.l
+      2996        136          0         16          0       1484   mc_w.l
+      1066          0          0          0          0        656   mf_w.l
 
     ----------------------------------------------------------------------
-     10216        370         80         16          0       8352   Library Totals
+     12442        406         80         16          0       9268   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -3532,15 +3575,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     17496       1074     247880       2748      26404    1022285   Grand Totals
-     17496       1074     247880        904      26404    1022285   ELF Image Totals (compressed)
-     17496       1074     247880        904          0          0   ROM Totals
+     19872       1160     251016       2748      42524    1023304   Grand Totals
+     19872       1160     251016        904      42524    1023304   ELF Image Totals (compressed)
+     19872       1160     251016        904          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               265376 ( 259.16kB)
-    Total RW  Size (RW Data + ZI Data)             29152 (  28.47kB)
-    Total ROM Size (Code + RO Data + RW Data)     266280 ( 260.04kB)
+    Total RO  Size (Code + RO Data)               270888 ( 264.54kB)
+    Total RW  Size (RW Data + ZI Data)             45272 (  44.21kB)
+    Total ROM Size (Code + RO Data + RW Data)     271792 ( 265.42kB)
 
 ==============================================================================
 
