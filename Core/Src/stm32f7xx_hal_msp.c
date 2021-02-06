@@ -126,7 +126,7 @@ void HAL_CRC_MspDeInit(CRC_HandleTypeDef* hcrc)
 * This function configures the hardware resources used in this example
 * @param huart: UART handle pointer
 * @retval None
-//*/
+*/
 //void HAL_UART_MspInit(UART_HandleTypeDef* huart)
 //{
 //  GPIO_InitTypeDef GPIO_InitStruct = {0};

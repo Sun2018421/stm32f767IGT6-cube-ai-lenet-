@@ -22,7 +22,9 @@
 #include "sys.h"
 #include "usart.h"
 #include "delay.h"
-
+#include "myiic.h"
+#include "pcf8574.h"
+#include "ov2640.h"
 #include "app_x-cube-ai.h"
 #include <stdio.h>
 /* Private includes ----------------------------------------------------------*/
@@ -75,9 +77,13 @@ int main(void)
 	//	SystemClock_Config(); ÐÞ¸Ä
 	Stm32_Clock_Init(432,25,2,9);
 	uart_init(115200);
-	delay_init(216); 	
+	delay_init(216);
+	while(OV2640_Init()){
+	}
+	
+	PCF8574_Init();
   MX_GPIO_Init();
-  MX_CRC_Init();
+	MX_CRC_Init();
 
   MX_X_CUBE_AI_Init();
   MX_X_CUBE_AI_Process();

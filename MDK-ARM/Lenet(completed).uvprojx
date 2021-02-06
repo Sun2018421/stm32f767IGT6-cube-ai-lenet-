@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../X-CUBE-AI/App;../X-CUBE-AI;../Core/Inc;../Middlewares/ST/AI/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include;..\Additional(1_30)\SYSTEM\delay;..\Additional(1_30)\SYSTEM\sys;..\Additional(1_30)\SYSTEM\usart</IncludePath>
+              <IncludePath>../X-CUBE-AI/App;../X-CUBE-AI;../Core/Inc;../Middlewares/ST/AI/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include;..\Additional(1_30)\SYSTEM\delay;..\Additional(1_30)\SYSTEM\sys;..\Additional(1_30)\SYSTEM\usart;..\Additional(1_30)\HARDWARE\IIC;..\Additional(1_30)\HARDWARE\PCF8574;..\Additional(1_30)\HARDWARE\OV2640</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -581,6 +581,31 @@
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Additional(1_30)\SYSTEM\delay\delay.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HARDWARE</GroupName>
+          <Files>
+            <File>
+              <FileName>myiic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Additional(1_30)\HARDWARE\IIC\myiic.c</FilePath>
+            </File>
+            <File>
+              <FileName>pcf8574.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Additional(1_30)\HARDWARE\PCF8574\pcf8574.c</FilePath>
+            </File>
+            <File>
+              <FileName>sccb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Additional(1_30)\HARDWARE\OV2640\sccb.c</FilePath>
+            </File>
+            <File>
+              <FileName>ov2640.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Additional(1_30)\HARDWARE\OV2640\ov2640.c</FilePath>
             </File>
           </Files>
         </Group>
