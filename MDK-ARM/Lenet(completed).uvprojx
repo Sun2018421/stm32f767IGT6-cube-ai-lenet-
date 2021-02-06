@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../X-CUBE-AI/App;../X-CUBE-AI;../Core/Inc;../Middlewares/ST/AI/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../X-CUBE-AI/App;../X-CUBE-AI;../Core/Inc;../Middlewares/ST/AI/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include;..\Additional(1_30)\SYSTEM\delay;..\Additional(1_30)\SYSTEM\sys;..\Additional(1_30)\SYSTEM\usart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -561,6 +561,16 @@
               <FileName>NetworkRuntime520_CM7_Keil.lib</FileName>
               <FileType>4</FileType>
               <FilePath>../Middlewares/ST/AI/Lib/NetworkRuntime520_CM7_Keil.lib</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SYSTEM</GroupName>
+          <Files>
+            <File>
+              <FileName>sys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Additional(1_30)\SYSTEM\sys\sys.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -19,6 +19,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "sys.h"
+//#include "uart.h"
+//#include "delay.h"
+
 #include "app_x-cube-ai.h"
 #include <stdio.h>
 /* Private includes ----------------------------------------------------------*/
@@ -70,44 +74,16 @@ static void MX_USART1_UART_Init(void);
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
-
-  /* Enable I-Cache---------------------------------------------------------*/
   SCB_EnableICache();
-
-  /* Enable D-Cache---------------------------------------------------------*/
   SCB_EnableDCache();
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
-  SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
+	//	SystemClock_Config(); ÐÞ¸Ä
+	Stm32_Clock_Init(432,25,2,9);
   MX_GPIO_Init();
   MX_CRC_Init();
   MX_USART1_UART_Init();
   MX_X_CUBE_AI_Init();
-  /* USER CODE BEGIN 2 */
-	
 	printf("test\r\n");
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
@@ -115,7 +91,6 @@ int main(void)
   MX_X_CUBE_AI_Process();
     /* USER CODE BEGIN 3 */
   }
-  /* USER CODE END 3 */
 }
 
 /**

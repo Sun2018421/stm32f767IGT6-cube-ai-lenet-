@@ -28,6 +28,7 @@
 "lenet(completed)\stm32f7xx_hal_uart_ex.o"
 "lenet(completed)\system_stm32f7xx.o"
 "../Middlewares/ST/AI/Lib/NetworkRuntime520_CM7_Keil.lib"
+"lenet(completed)\sys.o"
 --library_type=microlib --strict --scatter "Lenet(completed)\Lenet(completed).sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
