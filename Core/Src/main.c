@@ -21,7 +21,7 @@
 #include "main.h"
 #include "sys.h"
 #include "usart.h"
-//#include "delay.h"
+#include "delay.h"
 
 #include "app_x-cube-ai.h"
 #include <stdio.h>
@@ -74,7 +74,8 @@ int main(void)
   HAL_Init();
 	//	SystemClock_Config(); ÐÞ¸Ä
 	Stm32_Clock_Init(432,25,2,9);
-	uart_init(115200);	
+	uart_init(115200);
+	delay_init(216); 	
   MX_GPIO_Init();
   MX_CRC_Init();
 

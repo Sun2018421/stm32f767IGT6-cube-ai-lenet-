@@ -37,6 +37,7 @@ lenet(completed)\main.o: ..\Additional(1_30)\SYSTEM\sys\sys.h
 lenet(completed)\main.o: ../Drivers/CMSIS/Include/core_cm7.h
 lenet(completed)\main.o: ..\Additional(1_30)\SYSTEM\usart\usart.h
 lenet(completed)\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+lenet(completed)\main.o: ..\Additional(1_30)\SYSTEM\delay\delay.h
 lenet(completed)\main.o: ../X-CUBE-AI/App/app_x-cube-ai.h
 lenet(completed)\main.o: ../Middlewares/ST/AI/Inc/ai_platform.h
 lenet(completed)\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\inttypes.h

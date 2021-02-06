@@ -577,6 +577,11 @@
               <FileType>1</FileType>
               <FilePath>..\Additional(1_30)\SYSTEM\usart\usart.c</FilePath>
             </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Additional(1_30)\SYSTEM\delay\delay.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
