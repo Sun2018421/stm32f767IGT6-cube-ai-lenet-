@@ -35,6 +35,8 @@ lenet(completed)\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.
 lenet(completed)\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 lenet(completed)\main.o: ..\Additional(1_30)\SYSTEM\sys\sys.h
 lenet(completed)\main.o: ../Drivers/CMSIS/Include/core_cm7.h
+lenet(completed)\main.o: ..\Additional(1_30)\SYSTEM\usart\usart.h
+lenet(completed)\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 lenet(completed)\main.o: ../X-CUBE-AI/App/app_x-cube-ai.h
 lenet(completed)\main.o: ../Middlewares/ST/AI/Inc/ai_platform.h
 lenet(completed)\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\inttypes.h
@@ -47,4 +49,3 @@ lenet(completed)\main.o: ../Middlewares/ST/AI/Inc/ai_datatypes_defines.h
 lenet(completed)\main.o: ../Middlewares/ST/AI/Inc/core_datatypes.h
 lenet(completed)\main.o: ../Middlewares/ST/AI/Inc/formats_list.h
 lenet(completed)\main.o: ../X-CUBE-AI/App/network_data.h
-lenet(completed)\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h

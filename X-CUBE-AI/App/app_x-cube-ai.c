@@ -192,7 +192,7 @@ int post_process(void * data)
 			maxP = pointer[i];
 		}
 	}
-	printf("The number is %d and it's possibility is %f%\r\n",pos,maxP*100);
+	printf("The number is %d and it's possibility is %f%%\r\n",pos,maxP*100);
   return 0;
 }
 /* USER CODE END 2 */
@@ -258,7 +258,7 @@ void MX_X_CUBE_AI_Process(void)
     /* 1 - Set the I/O data buffer */
 
     /* 2 - main loop */
-    do {
+
       /* 1 - acquire and pre-process input data */
       res = acquire_and_process_data(in_data);
       /* 2 - process the data - call inference engine */
@@ -267,13 +267,8 @@ void MX_X_CUBE_AI_Process(void)
       /* 3- post-process the predictions */
       if (res == 0)
         res = post_process(out_data);
-    } while (res==0);
   }
 
-  if (res) {
-    ai_error err = {AI_ERROR_INVALID_STATE, AI_ERROR_CODE_NETWORK};
-    ai_log_err(err, "Process has FAILED");
-  }
     /* USER CODE END 4 */
 }
 #ifdef __cplusplus

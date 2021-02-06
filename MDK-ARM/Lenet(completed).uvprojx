@@ -572,6 +572,11 @@
               <FileType>1</FileType>
               <FilePath>..\Additional(1_30)\SYSTEM\sys\sys.c</FilePath>
             </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Additional(1_30)\SYSTEM\usart\usart.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
