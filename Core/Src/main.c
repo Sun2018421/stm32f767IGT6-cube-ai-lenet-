@@ -62,7 +62,15 @@ static void MX_CRC_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void jpeg_data_process(void)
+{
+	u16 i;
+	u16 rlen;			//剩余数据长度
+	u32 *pbuf;
 
+	
+
+}
 /* USER CODE END 0 */
 
 /**

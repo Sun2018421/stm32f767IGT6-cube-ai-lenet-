@@ -26,6 +26,8 @@
 "lenet(completed)\stm32f7xx_hal_tim_ex.o"
 "lenet(completed)\stm32f7xx_hal_uart.o"
 "lenet(completed)\stm32f7xx_hal_uart_ex.o"
+"lenet(completed)\stm32f7xx_hal_dcmi.o"
+"lenet(completed)\stm32f7xx_hal_dcmi_ex.o"
 "lenet(completed)\system_stm32f7xx.o"
 "../Middlewares/ST/AI/Lib/NetworkRuntime520_CM7_Keil.lib"
 "lenet(completed)\sys.o"
@@ -35,6 +37,7 @@
 "lenet(completed)\pcf8574.o"
 "lenet(completed)\sccb.o"
 "lenet(completed)\ov2640.o"
+"lenet(completed)\dcmi.o"
 --library_type=microlib --strict --scatter "Lenet(completed)\Lenet(completed).sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

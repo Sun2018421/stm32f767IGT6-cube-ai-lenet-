@@ -1,8 +1,5 @@
 #include "sys.h"
 #include "dcmi.h" 
-#include "lcd.h" 
-#include "ltdc.h"
-#include "led.h" 
 #include "ov2640.h" 
 //////////////////////////////////////////////////////////////////////////////////	 
 //本程序只供学习使用，未经作者许可，不得用于其它任何用途
@@ -132,8 +129,6 @@ void DCMI_DMA_Init(u32 mem0addr,u32 mem1addr,u16 memsize,u32 memblen,u32 meminc)
 //DCMI,启动传输
 void DCMI_Start(void)
 {  
-    LCD_SetCursor(0,0);  
-	LCD_WriteRAM_Prepare();		        //开始写入GRAM
     __HAL_DMA_ENABLE(&DMADMCI_Handler); //使能DMA
     DCMI->CR|=DCMI_CR_CAPTURE;          //DCMI捕获使能
 }
@@ -157,7 +152,7 @@ void DCMI_IRQHandler(void)
 void HAL_DCMI_FrameEventCallback(DCMI_HandleTypeDef *hdcmi)
 {
 	jpeg_data_process();//jpeg数据处理
-	LED1_Toggle;
+//	LED1_Toggle;
 	ov_frame++; 
     //重新使能帧中断,因为HAL_DCMI_IRQHandler()函数会关闭帧中断
     __HAL_DCMI_ENABLE_IT(&DCMI_Handler,DCMI_IT_FRAME);
@@ -182,11 +177,11 @@ void DMA2_Stream1_IRQHandler(void)
 void DCMI_Set_Window(u16 sx,u16 sy,u16 width,u16 height)
 {
 	DCMI_Stop(); 
-	LCD_Clear(WHITE);
-	LCD_Set_Window(sx,sy,width,height);
+//	LCD_Clear(WHITE);
+//	LCD_Set_Window(sx,sy,width,height);
 	OV2640_OutSize_Set(width,height);
-    LCD_SetCursor(0,0);  
-	LCD_WriteRAM_Prepare();		        //开始写入GRAM  
+//    LCD_SetCursor(0,0);  
+//	LCD_WriteRAM_Prepare();		        //开始写入GRAM  
     __HAL_DMA_ENABLE(&DMADMCI_Handler); //开启DMA2,Stream1  
     DCMI->CR|=DCMI_CR_CAPTURE;          //DCMI捕获使能	
 }

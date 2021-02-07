@@ -26,6 +26,7 @@ lenet(completed)\usart.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_
 lenet(completed)\usart.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h
 lenet(completed)\usart.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h
 lenet(completed)\usart.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h
+lenet(completed)\usart.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dcmi.h
 lenet(completed)\usart.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h
 lenet(completed)\usart.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h
 lenet(completed)\usart.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h
