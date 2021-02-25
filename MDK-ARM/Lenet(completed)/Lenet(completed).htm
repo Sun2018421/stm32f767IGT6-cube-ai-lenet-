@@ -3,7 +3,7 @@
 <title>Static Call Graph - [Lenet(completed)\Lenet(completed).axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image Lenet(completed)\Lenet(completed).axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Feb 25 15:46:07 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Feb 25 18:50:11 2021
 <BR><P>
 <H3>Maximum Stack Usage =       3292 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -162,7 +162,7 @@ Global Symbols
 <P><STRONG><a name="[7e]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f767xx.o(.text)
 </UL>
-<P><STRONG><a name="[137]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[138]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[84]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -172,17 +172,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[138]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[139]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[139]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[13a]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[13a]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[13b]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[13b]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[13c]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 
-<P><STRONG><a name="[13c]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[13d]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[13d]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[13e]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[6]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f767xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f767xx.o(RESET)
@@ -523,23 +523,22 @@ Global Symbols
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;internal_alloc
 </UL>
 
-<P><STRONG><a name="[d3]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_X_CUBE_AI_Process
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_boostrap
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_init
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
+<P><STRONG><a name="[10b]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_boostrap
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_init
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
 </UL>
 
-<P><STRONG><a name="[13e]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[13f]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[10e]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text))
+<P><STRONG><a name="[10f]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = memcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_check_custom_types
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_check_custom_types
 </UL>
 
-<P><STRONG><a name="[13f]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[140]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[109]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
@@ -552,7 +551,7 @@ Global Symbols
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[140]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[141]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[87]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
@@ -560,9 +559,9 @@ Global Symbols
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[141]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[142]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
-<P><STRONG><a name="[142]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[143]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[89]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
@@ -612,13 +611,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[143]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[144]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[8a]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[144]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[145]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
 <P><STRONG><a name="[8c]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
@@ -635,9 +634,9 @@ Global Symbols
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[145]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[146]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[146]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[147]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
 <P><STRONG><a name="[a]"></a>BusFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.BusFault_Handler))
 <BR><BR>[Calls]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
@@ -674,7 +673,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[135]"></a>DCMI_Start</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, dcmi.o(i.DCMI_Start))
+<P><STRONG><a name="[136]"></a>DCMI_Start</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, dcmi.o(i.DCMI_Start))
 <BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -941,8 +940,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stm32_Clock_Init
 </UL>
 
-<P><STRONG><a name="[129]"></a>HAL_SYSTICK_CLKSourceConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f7xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
+<P><STRONG><a name="[12a]"></a>HAL_SYSTICK_CLKSourceConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f7xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
 </UL>
 
 <P><STRONG><a name="[b1]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, stm32f7xx_hal_cortex.o(i.HAL_SYSTICK_Config))
@@ -982,7 +981,7 @@ Global Symbols
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_AdvFeatureConfig
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
+<BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
 </UL>
 
 <P><STRONG><a name="[bd]"></a>HAL_UART_MspInit</STRONG> (Thumb, 122 bytes, Stack size 40 bytes, usart.o(i.HAL_UART_MspInit))
@@ -1111,14 +1110,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d2]"></a>MX_X_CUBE_AI_Process</STRONG> (Thumb, 104 bytes, Stack size 3192 bytes, app_x-cube-ai.o(i.MX_X_CUBE_AI_Process))
+<P><STRONG><a name="[d2]"></a>MX_X_CUBE_AI_Process</STRONG> (Thumb, 102 bytes, Stack size 3192 bytes, app_x-cube-ai.o(i.MX_X_CUBE_AI_Process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 3268<LI>Call Chain = MX_X_CUBE_AI_Process &rArr; ai_network_run &rArr; ai_platform_network_process &rArr; _platform_network_io_bind &rArr; ai_array_to_buffer_fmt
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;post_process
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;acquire_and_process_data
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_log_err
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_run
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_error
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1431,7 +1430,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[147]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[148]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[cf]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
@@ -1444,18 +1443,18 @@ Global Symbols
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[148]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[149]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[149]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[14a]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[f9]"></a>__ARM_fpclassifyf</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fpclassifyf.o(i.__ARM_fpclassifyf))
 <BR><BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_expf
 </UL>
 
-<P><STRONG><a name="[111]"></a>free</STRONG> (Thumb, 88 bytes, Stack size 12 bytes, mallocr.o(i.__free$realloc))
+<P><STRONG><a name="[112]"></a>free</STRONG> (Thumb, 88 bytes, Stack size 12 bytes, mallocr.o(i.__free$realloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
+<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
 </UL>
 
 <P><STRONG><a name="[f4]"></a>__hardfp_expf</STRONG> (Thumb, 426 bytes, Stack size 16 bytes, expf.o(i.__hardfp_expf))
@@ -1467,17 +1466,17 @@ Global Symbols
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_flt_infnan
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassifyf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_sm_channel_f32
+<BR>[Called By]<UL><LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_sm_channel_f32
 </UL>
 
-<P><STRONG><a name="[14a]"></a>__mathlib_expf</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, expf.o(i.__hardfp_expf), UNUSED)
+<P><STRONG><a name="[14b]"></a>__mathlib_expf</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, expf.o(i.__hardfp_expf), UNUSED)
 
 <P><STRONG><a name="[fa]"></a>malloc</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, mallocr.o(i.__malloc$realloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = malloc &rArr; internal_alloc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;internal_alloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
+<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
 </UL>
 
 <P><STRONG><a name="[f7]"></a>__mathlib_flt_infnan</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, funder.o(i.__mathlib_flt_infnan))
@@ -1492,20 +1491,26 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_expf
 </UL>
 
-<P><STRONG><a name="[14b]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[14c]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[14c]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[14d]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[14d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[14e]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[f5]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
 <BR><BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_expf
 </UL>
 
+<P><STRONG><a name="[d3]"></a>acquire_and_process_data</STRONG> (Thumb, 190 bytes, Stack size 28 bytes, app_x-cube-ai.o(i.acquire_and_process_data))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = acquire_and_process_data
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_X_CUBE_AI_Process
+</UL>
+
 <P><STRONG><a name="[101]"></a>ai_array_get_byte_size</STRONG> (Thumb, 68 bytes, Stack size 12 bytes, ai_datatypes_format.o(i.ai_array_get_byte_size))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = ai_array_get_byte_size
 </UL>
-<BR>[Called By]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_nl_get_params_byte_size
+<BR>[Called By]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_nl_get_params_byte_size
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_platform_network_io_bind
 </UL>
 
@@ -1516,44 +1521,44 @@ Global Symbols
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ai_platform_get_io_buffers_info
 </UL>
 
-<P><STRONG><a name="[10d]"></a>ai_check_custom_types</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, layers.o(i.ai_check_custom_types))
+<P><STRONG><a name="[10e]"></a>ai_check_custom_types</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, layers.o(i.ai_check_custom_types))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = ai_check_custom_types &rArr; memcmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
+<BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_create
+<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_create
 </UL>
 
-<P><STRONG><a name="[12e]"></a>ai_dict4_dot_array_f32</STRONG> (Thumb, 300 bytes, Stack size 32 bytes, layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32))
+<P><STRONG><a name="[12f]"></a>ai_dict4_dot_array_f32</STRONG> (Thumb, 300 bytes, Stack size 32 bytes, layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ai_dict4_dot_array_f32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_dense
 </UL>
 
-<P><STRONG><a name="[12d]"></a>ai_dict8_dot_array_f32</STRONG> (Thumb, 246 bytes, Stack size 20 bytes, layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32))
+<P><STRONG><a name="[12e]"></a>ai_dict8_dot_array_f32</STRONG> (Thumb, 246 bytes, Stack size 20 bytes, layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = ai_dict8_dot_array_f32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_dense
 </UL>
 
-<P><STRONG><a name="[12c]"></a>ai_dict_decompress_f32</STRONG> (Thumb, 122 bytes, Stack size 20 bytes, layers_conv2d_generic_float.o(i.ai_dict_decompress_f32))
+<P><STRONG><a name="[12d]"></a>ai_dict_decompress_f32</STRONG> (Thumb, 122 bytes, Stack size 20 bytes, layers_conv2d_generic_float.o(i.ai_dict_decompress_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = ai_dict_decompress_f32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_conv2d_nl_pool
 </UL>
 
-<P><STRONG><a name="[114]"></a>ai_layers_forward_all</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, layers.o(i.ai_layers_forward_all))
+<P><STRONG><a name="[115]"></a>ai_layers_forward_all</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, layers.o(i.ai_layers_forward_all))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ai_layers_forward_all &rArr; ai_forward_layer
 </UL>
-<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_forward_layer
+<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_forward_layer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
+<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
 </UL>
 
 <P><STRONG><a name="[10a]"></a>ai_network_create</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, network.o(i.ai_network_create))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = ai_network_create &rArr; ai_platform_network_create &rArr; ai_check_custom_types &rArr; memcmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_create
+<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_create
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_boostrap
 </UL>
@@ -1565,33 +1570,33 @@ Global Symbols
 <P><STRONG><a name="[d5]"></a>ai_network_get_error</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, network.o(i.ai_network_get_error))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = ai_network_get_error &rArr; ai_platform_network_get_error &rArr; ai_platform_context_acquire &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_get_error
+<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_get_error
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_X_CUBE_AI_Process
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_boostrap
 </UL>
 
-<P><STRONG><a name="[10c]"></a>ai_network_get_info</STRONG> (Thumb, 82 bytes, Stack size 128 bytes, network.o(i.ai_network_get_info))
+<P><STRONG><a name="[10d]"></a>ai_network_get_info</STRONG> (Thumb, 82 bytes, Stack size 128 bytes, network.o(i.ai_network_get_info))
 <BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = ai_network_get_info &rArr; ai_platform_api_get_network_report &rArr; _ai_platform_get_io_buffers_info &rArr; ai_array_to_buffer_fmt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_version
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_revision
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_interface_api_get_version
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_version
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_version
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_revision
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_interface_api_get_version
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_version
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_boostrap
 </UL>
 
-<P><STRONG><a name="[10b]"></a>ai_network_init</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, network.o(i.ai_network_init))
+<P><STRONG><a name="[10c]"></a>ai_network_init</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, network.o(i.ai_network_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = ai_network_init &rArr; ai_platform_network_post_init &rArr; ai_platform_context_acquire &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_post_init
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_init
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;network_configure_weights
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;network_configure_activations
+<BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_post_init
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_init
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;network_configure_weights
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;network_configure_activations
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_boostrap
 </UL>
@@ -1599,100 +1604,100 @@ Global Symbols
 <P><STRONG><a name="[d4]"></a>ai_network_run</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, network.o(i.ai_network_run))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = ai_network_run &rArr; ai_platform_network_process &rArr; _platform_network_io_bind &rArr; ai_array_to_buffer_fmt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
+<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_X_CUBE_AI_Process
 </UL>
 
-<P><STRONG><a name="[11d]"></a>ai_platform_api_get_network_report</STRONG> (Thumb, 182 bytes, Stack size 16 bytes, ai_platform_interface.o(i.ai_platform_api_get_network_report))
+<P><STRONG><a name="[11e]"></a>ai_platform_api_get_network_report</STRONG> (Thumb, 182 bytes, Stack size 16 bytes, ai_platform_interface.o(i.ai_platform_api_get_network_report))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = ai_platform_api_get_network_report &rArr; _ai_platform_get_io_buffers_info &rArr; ai_array_to_buffer_fmt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_version
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_interface_api_get_version
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_version
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_version
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_interface_api_get_version
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_version
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_set_error
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ai_platform_get_io_buffers_info
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
+<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
 </UL>
 
-<P><STRONG><a name="[11b]"></a>ai_platform_api_get_version</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_api_get_version))
+<P><STRONG><a name="[11c]"></a>ai_platform_api_get_version</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_api_get_version))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = ai_platform_api_get_version &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
+<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
+<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
 </UL>
 
-<P><STRONG><a name="[118]"></a>ai_platform_context_acquire</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_context_acquire))
+<P><STRONG><a name="[119]"></a>ai_platform_context_acquire</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_context_acquire))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = ai_platform_context_acquire &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
+<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
-<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_post_init
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_get_error
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
+<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_post_init
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_init
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_get_error
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
 </UL>
 
-<P><STRONG><a name="[11c]"></a>ai_platform_interface_api_get_version</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_interface_api_get_version))
+<P><STRONG><a name="[11d]"></a>ai_platform_interface_api_get_version</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_interface_api_get_version))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = ai_platform_interface_api_get_version &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
+<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
+<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
 </UL>
 
-<P><STRONG><a name="[116]"></a>ai_platform_network_create</STRONG> (Thumb, 96 bytes, Stack size 32 bytes, ai_platform_interface.o(i.ai_platform_network_create))
+<P><STRONG><a name="[117]"></a>ai_platform_network_create</STRONG> (Thumb, 96 bytes, Stack size 32 bytes, ai_platform_interface.o(i.ai_platform_network_create))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = ai_platform_network_create &rArr; ai_check_custom_types &rArr; memcmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_init
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_check_custom_types
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
+<BR>[Calls]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_init
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_check_custom_types
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_create
 </UL>
 
-<P><STRONG><a name="[117]"></a>ai_platform_network_get_error</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_network_get_error))
+<P><STRONG><a name="[118]"></a>ai_platform_network_get_error</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_network_get_error))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = ai_platform_network_get_error &rArr; ai_platform_context_acquire &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
-<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_get_error
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_get_error
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_error
 </UL>
 
-<P><STRONG><a name="[11e]"></a>ai_platform_network_init</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, ai_platform_interface.o(i.ai_platform_network_init))
+<P><STRONG><a name="[11f]"></a>ai_platform_network_init</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, ai_platform_interface.o(i.ai_platform_network_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = ai_platform_network_init &rArr; ai_platform_context_acquire &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_set_error
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
 </UL>
 
-<P><STRONG><a name="[121]"></a>ai_platform_network_post_init</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, ai_platform_interface.o(i.ai_platform_network_post_init))
+<P><STRONG><a name="[122]"></a>ai_platform_network_post_init</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, ai_platform_interface.o(i.ai_platform_network_post_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = ai_platform_network_post_init &rArr; ai_platform_context_acquire &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_set_error
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
 </UL>
 
-<P><STRONG><a name="[122]"></a>ai_platform_network_process</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, ai_platform_interface.o(i.ai_platform_network_process))
+<P><STRONG><a name="[123]"></a>ai_platform_network_process</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, ai_platform_interface.o(i.ai_platform_network_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = ai_platform_network_process &rArr; _platform_network_io_bind &rArr; ai_array_to_buffer_fmt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_layers_forward_all
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_layers_forward_all
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_platform_network_state_update_output
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_platform_network_state_update_input
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_platform_network_io_bind
@@ -1701,47 +1706,47 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[103]"></a>ai_platform_network_set_error</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ai_platform_interface.o(i.ai_platform_network_set_error))
-<BR><BR>[Calls]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_set_error
+<BR><BR>[Calls]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_set_error
 </UL>
-<BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_post_init
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_init
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
+<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_post_init
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_init
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_platform_network_io_bind
 </UL>
 
-<P><STRONG><a name="[119]"></a>ai_platform_runtime_get_revision</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_runtime_get_revision))
+<P><STRONG><a name="[11a]"></a>ai_platform_runtime_get_revision</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_runtime_get_revision))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = ai_platform_runtime_get_revision &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
+<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
+<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
 </UL>
 
-<P><STRONG><a name="[11a]"></a>ai_platform_runtime_get_version</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_runtime_get_version))
+<P><STRONG><a name="[11b]"></a>ai_platform_runtime_get_version</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ai_platform_interface.o(i.ai_platform_runtime_get_version))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = ai_platform_runtime_get_version &rArr; CRC_Lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
+<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
-</UL>
-
-<P><STRONG><a name="[125]"></a>core_get_error</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, core_common.o(i.core_get_error))
-<BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_get_error
+<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
 </UL>
 
-<P><STRONG><a name="[124]"></a>core_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, core_common.o(i.core_init))
-<BR><BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_create
+<P><STRONG><a name="[126]"></a>core_get_error</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, core_common.o(i.core_get_error))
+<BR><BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_get_error
 </UL>
 
-<P><STRONG><a name="[126]"></a>core_set_error</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, core_common.o(i.core_set_error))
+<P><STRONG><a name="[125]"></a>core_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, core_common.o(i.core_init))
+<BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_create
+</UL>
+
+<P><STRONG><a name="[127]"></a>core_set_error</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, core_common.o(i.core_set_error))
 <BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_set_error
 </UL>
 
-<P><STRONG><a name="[128]"></a>delay_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, delay.o(i.delay_init))
+<P><STRONG><a name="[129]"></a>delay_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, delay.o(i.delay_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_CLKSourceConfig
+<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_CLKSourceConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1778,11 +1783,11 @@ Global Symbols
 <P><STRONG><a name="[0]"></a>forward_conv2d_nl_pool</STRONG> (Thumb, 1148 bytes, Stack size 280 bytes, layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool))
 <BR><BR>[Stack]<UL><LI>Max Depth = 468<LI>Call Chain = forward_conv2d_nl_pool &rArr; ai_conv2d_stripe_f32 &rArr; ai_conv2d_kernel_simple_opt_f32
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_dict_decompress_f32
-<LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_nl_get_params_stride
-<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_nl_get_params_ptr
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_nl_get_params_byte_size
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
+<BR>[Calls]<UL><LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_dict_decompress_f32
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_nl_get_params_stride
+<LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_nl_get_params_ptr
+<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_nl_get_params_byte_size
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> network.o(.data)
 <LI> network.o(.data)
@@ -1790,9 +1795,9 @@ Global Symbols
 <P><STRONG><a name="[3]"></a>forward_dense</STRONG> (Thumb, 396 bytes, Stack size 112 bytes, layers_conv2d_generic_float.o(i.forward_dense))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = forward_dense &rArr; ai_dict4_dot_array_f32
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_dict8_dot_array_f32
-<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_dict4_dot_array_f32
-<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ai_math_dot_array_opt
+<BR>[Calls]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_dict8_dot_array_f32
+<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_dict4_dot_array_f32
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ai_math_dot_array_opt
 </UL>
 <BR>[Address Reference Count : 3]<UL><LI> network.o(.data)
 <LI> network.o(.data)
@@ -1802,9 +1807,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = forward_relu &rArr; nl_func_relu_thresholded_array_f32
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_relu_array_f32
-<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_relu_thresholded_array_f32
-<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_relu_generic_array_f32
-<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_shape_get_size
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_relu_thresholded_array_f32
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_relu_generic_array_f32
+<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_shape_get_size
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> network.o(.data)
 <LI> network.o(.data)
@@ -1812,8 +1817,8 @@ Global Symbols
 <P><STRONG><a name="[5]"></a>forward_sm</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, layers_nl_generic_float.o(i.forward_sm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = forward_sm &rArr; nl_func_sm_array_f32 &rArr; nl_func_sm_channel_f32 &rArr; __hardfp_expf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_sm_array_f32
-<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_shape_get_size
+<BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_sm_array_f32
+<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_shape_get_size
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> network.o(.data)
 </UL>
@@ -1829,8 +1834,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_X_CUBE_AI_Process
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_X_CUBE_AI_Init
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stm32_Clock_Init
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PCF8574_Init
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OV2640_RGB565_Mode
@@ -1843,7 +1848,7 @@ Global Symbols
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OV2640_Brightness
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CRC_Init
-<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCMI_Start
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCMI_Start
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCMI_Init
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCMI_DMA_Init
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
@@ -1858,32 +1863,32 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> network.o(.data)
 <LI> network.o(.data)
 </UL>
-<P><STRONG><a name="[131]"></a>nl_func_relu_generic_array_f32</STRONG> (Thumb, 186 bytes, Stack size 12 bytes, layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32))
+<P><STRONG><a name="[132]"></a>nl_func_relu_generic_array_f32</STRONG> (Thumb, 186 bytes, Stack size 12 bytes, layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = nl_func_relu_generic_array_f32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_relu
 </UL>
 
-<P><STRONG><a name="[132]"></a>nl_func_relu_thresholded_array_f32</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32))
+<P><STRONG><a name="[133]"></a>nl_func_relu_thresholded_array_f32</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = nl_func_relu_thresholded_array_f32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_relu
 </UL>
 
-<P><STRONG><a name="[133]"></a>nl_func_sm_array_f32</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, layers_nl_generic_float.o(i.nl_func_sm_array_f32))
+<P><STRONG><a name="[134]"></a>nl_func_sm_array_f32</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, layers_nl_generic_float.o(i.nl_func_sm_array_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = nl_func_sm_array_f32 &rArr; nl_func_sm_channel_f32 &rArr; __hardfp_expf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_sm_channel_f32
+<BR>[Calls]<UL><LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_sm_channel_f32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_sm
 </UL>
 
-<P><STRONG><a name="[136]"></a>nl_func_sm_channel_f32</STRONG> (Thumb, 130 bytes, Stack size 32 bytes, layers_nl_generic_float.o(i.nl_func_sm_channel_f32))
+<P><STRONG><a name="[137]"></a>nl_func_sm_channel_f32</STRONG> (Thumb, 130 bytes, Stack size 32 bytes, layers_nl_generic_float.o(i.nl_func_sm_channel_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = nl_func_sm_channel_f32 &rArr; __hardfp_expf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_expf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_sm_array_f32
+<BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nl_func_sm_array_f32
 </UL>
 
 <P><STRONG><a name="[2]"></a>pool_func_mp_array_f32</STRONG> (Thumb, 412 bytes, Stack size 68 bytes, layers_pool_generic_float.o(i.pool_func_mp_array_f32))
@@ -1900,7 +1905,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_X_CUBE_AI_Process
 </UL>
 
-<P><STRONG><a name="[134]"></a>uart_init</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, usart.o(i.uart_init))
+<P><STRONG><a name="[135]"></a>uart_init</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, usart.o(i.uart_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = uart_init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
@@ -1911,27 +1916,27 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[120]"></a>network_configure_activations</STRONG> (Thumb, 112 bytes, Stack size 20 bytes, network.o(i.network_configure_activations))
+<P><STRONG><a name="[121]"></a>network_configure_activations</STRONG> (Thumb, 112 bytes, Stack size 20 bytes, network.o(i.network_configure_activations))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = network_configure_activations
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
 </UL>
 
-<P><STRONG><a name="[11f]"></a>network_configure_weights</STRONG> (Thumb, 228 bytes, Stack size 20 bytes, network.o(i.network_configure_weights))
+<P><STRONG><a name="[120]"></a>network_configure_weights</STRONG> (Thumb, 228 bytes, Stack size 20 bytes, network.o(i.network_configure_weights))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = network_configure_weights
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
 </UL>
 
 <P><STRONG><a name="[d1]"></a>ai_boostrap</STRONG> (Thumb, 90 bytes, Stack size 64 bytes, app_x-cube-ai.o(i.ai_boostrap))
 <BR><BR>[Stack]<UL><LI>Max Depth = 260<LI>Call Chain = ai_boostrap &rArr; ai_network_get_info &rArr; ai_platform_api_get_network_report &rArr; _ai_platform_get_io_buffers_info &rArr; ai_array_to_buffer_fmt
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_log_err
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_init
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_info
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_get_error
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_network_create
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_X_CUBE_AI_Init
 </UL>
@@ -1993,16 +1998,16 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32f7xx_hal_dcmi.o(i.HAL_DCMI_IRQHandler)
 </UL>
-<P><STRONG><a name="[123]"></a>CRC_Lock</STRONG> (Thumb, 130 bytes, Stack size 20 bytes, ai_platform_interface.o(i.CRC_Lock))
+<P><STRONG><a name="[124]"></a>CRC_Lock</STRONG> (Thumb, 130 bytes, Stack size 20 bytes, ai_platform_interface.o(i.CRC_Lock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = CRC_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_version
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_revision
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_create
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_interface_api_get_version
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_version
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
+<BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_version
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_runtime_get_revision
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_create
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_interface_api_get_version
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_context_acquire
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_version
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
 </UL>
 
 <P><STRONG><a name="[fc]"></a>_ai_platform_get_io_buffers_info</STRONG> (Thumb, 170 bytes, Stack size 40 bytes, ai_platform_interface.o(i._ai_platform_get_io_buffers_info))
@@ -2010,7 +2015,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_array_to_buffer_fmt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
+<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_api_get_network_report
 </UL>
 
 <P><STRONG><a name="[100]"></a>_platform_network_io_bind</STRONG> (Thumb, 534 bytes, Stack size 48 bytes, ai_platform_interface.o(i._platform_network_io_bind))
@@ -2021,7 +2026,7 @@ Local Symbols
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_set_error
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_platform_network_state_setup
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
+<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
 </UL>
 
 <P><STRONG><a name="[102]"></a>_platform_network_state_setup</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, ai_platform_interface.o(i._platform_network_state_setup))
@@ -2035,7 +2040,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
+<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
 </UL>
 
 <P><STRONG><a name="[106]"></a>_platform_network_state_update_output</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, ai_platform_interface.o(i._platform_network_state_update_output))
@@ -2043,44 +2048,44 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
+<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_platform_network_process
 </UL>
 
-<P><STRONG><a name="[12f]"></a>__ai_math_dot_array_opt</STRONG> (Thumb, 244 bytes, Stack size 0 bytes, layers_conv2d_generic_float.o(i.__ai_math_dot_array_opt))
+<P><STRONG><a name="[130]"></a>__ai_math_dot_array_opt</STRONG> (Thumb, 244 bytes, Stack size 0 bytes, layers_conv2d_generic_float.o(i.__ai_math_dot_array_opt))
 <BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_dense
 </UL>
 
-<P><STRONG><a name="[112]"></a>ai_conv2d_kernel_depthwise_f32</STRONG> (Thumb, 298 bytes, Stack size 64 bytes, layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32))
+<P><STRONG><a name="[113]"></a>ai_conv2d_kernel_depthwise_f32</STRONG> (Thumb, 298 bytes, Stack size 64 bytes, layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = ai_conv2d_kernel_depthwise_f32
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
+<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
 </UL>
 
-<P><STRONG><a name="[113]"></a>ai_conv2d_kernel_group_f32</STRONG> (Thumb, 378 bytes, Stack size 68 bytes, layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32))
+<P><STRONG><a name="[114]"></a>ai_conv2d_kernel_group_f32</STRONG> (Thumb, 378 bytes, Stack size 68 bytes, layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = ai_conv2d_kernel_group_f32
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
+<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
 </UL>
 
-<P><STRONG><a name="[110]"></a>ai_conv2d_kernel_simple_opt_f32</STRONG> (Thumb, 370 bytes, Stack size 68 bytes, layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32))
+<P><STRONG><a name="[111]"></a>ai_conv2d_kernel_simple_opt_f32</STRONG> (Thumb, 370 bytes, Stack size 68 bytes, layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = ai_conv2d_kernel_simple_opt_f32
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
+<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_stripe_f32
 </UL>
 
-<P><STRONG><a name="[10f]"></a>ai_conv2d_stripe_f32</STRONG> (Thumb, 616 bytes, Stack size 120 bytes, layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32))
+<P><STRONG><a name="[110]"></a>ai_conv2d_stripe_f32</STRONG> (Thumb, 616 bytes, Stack size 120 bytes, layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = ai_conv2d_stripe_f32 &rArr; ai_conv2d_kernel_simple_opt_f32
 </UL>
-<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_kernel_simple_opt_f32
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_kernel_group_f32
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_kernel_depthwise_f32
+<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_kernel_simple_opt_f32
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_kernel_group_f32
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_conv2d_kernel_depthwise_f32
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 </UL>
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_conv2d_nl_pool
 </UL>
 
-<P><STRONG><a name="[127]"></a>core_nl_get_params_byte_size</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size))
+<P><STRONG><a name="[128]"></a>core_nl_get_params_byte_size</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = core_nl_get_params_byte_size &rArr; ai_array_get_byte_size
 </UL>
 <BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_array_get_byte_size
@@ -2088,26 +2093,26 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_conv2d_nl_pool
 </UL>
 
-<P><STRONG><a name="[12a]"></a>core_nl_get_params_ptr</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, layers_conv2d_generic_float.o(i.core_nl_get_params_ptr))
+<P><STRONG><a name="[12b]"></a>core_nl_get_params_ptr</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, layers_conv2d_generic_float.o(i.core_nl_get_params_ptr))
 <BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_conv2d_nl_pool
 </UL>
 
-<P><STRONG><a name="[12b]"></a>core_nl_get_params_stride</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, layers_conv2d_generic_float.o(i.core_nl_get_params_stride))
+<P><STRONG><a name="[12c]"></a>core_nl_get_params_stride</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, layers_conv2d_generic_float.o(i.core_nl_get_params_stride))
 <BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_conv2d_nl_pool
 </UL>
 
 <P><STRONG><a name="[82]"></a>func_dummy</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, layers_conv2d_generic_float.o(i.func_dummy))
 <BR>[Address Reference Count : 1]<UL><LI> layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool)
 </UL>
-<P><STRONG><a name="[130]"></a>ai_shape_get_size</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, layers_nl_generic_float.o(i.ai_shape_get_size))
+<P><STRONG><a name="[131]"></a>ai_shape_get_size</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, layers_nl_generic_float.o(i.ai_shape_get_size))
 <BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_sm
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward_relu
 </UL>
 
-<P><STRONG><a name="[115]"></a>ai_forward_layer</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, layers.o(i.ai_forward_layer))
+<P><STRONG><a name="[116]"></a>ai_forward_layer</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, layers.o(i.ai_forward_layer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ai_forward_layer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_layers_forward_all
+<BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_layers_forward_all
 </UL>
 
 <P><STRONG><a name="[fe]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, printfa.o(i._fp_digits), UNUSED)
