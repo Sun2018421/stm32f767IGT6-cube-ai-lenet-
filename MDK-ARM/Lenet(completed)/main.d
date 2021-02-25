@@ -43,6 +43,7 @@ lenet(completed)\main.o: ..\Additional(1_30)\HARDWARE\IIC\myiic.h
 lenet(completed)\main.o: ..\Additional(1_30)\HARDWARE\PCF8574\pcf8574.h
 lenet(completed)\main.o: ..\Additional(1_30)\HARDWARE\OV2640\ov2640.h
 lenet(completed)\main.o: ..\Additional(1_30)\HARDWARE\OV2640\sccb.h
+lenet(completed)\main.o: ..\Additional(1_30)\HARDWARE\DCMI\dcmi.h
 lenet(completed)\main.o: ../X-CUBE-AI/App/app_x-cube-ai.h
 lenet(completed)\main.o: ../Middlewares/ST/AI/Inc/ai_platform.h
 lenet(completed)\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\inttypes.h

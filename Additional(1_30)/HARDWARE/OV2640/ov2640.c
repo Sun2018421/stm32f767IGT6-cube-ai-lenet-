@@ -71,10 +71,14 @@ u8 OV2640_Init(void)
 		return 2;
 	}   
  	//初始化 OV2640,采用SXGA分辨率(1600*1200)  
-	for(i=0;i<sizeof(ov2640_sxga_init_reg_tbl)/2;i++)
-	{
-	   	SCCB_WR_Reg(ov2640_sxga_init_reg_tbl[i][0],ov2640_sxga_init_reg_tbl[i][1]);
- 	} 
+//	for(i=0;i<sizeof(ov2640_sxga_init_reg_tbl)/2;i++)
+//	{
+//	   	SCCB_WR_Reg(ov2640_sxga_init_reg_tbl[i][0],ov2640_sxga_init_reg_tbl[i][1]);
+// 	} 
+		//初始化OV2640,采用SVGA分辨率(800*600)
+	for(i = 0 ; i<sizeof(ov2640_svga_init_reg_tbl)/2;i++){
+		SCCB_WR_Reg(ov2640_svga_init_reg_tbl[i][0],ov2640_svga_init_reg_tbl[i][1]);
+	}
   	return 0x00; 	//ok
 } 
 //OV2640切换为JPEG模式

@@ -120,10 +120,10 @@ void DCMI_DMA_Init(u32 mem0addr,u32 mem1addr,u16 memsize,u32 memblen,u32 meminc)
     else                //使用双缓冲
     {
         HAL_DMAEx_MultiBufferStart(&DMADMCI_Handler,(u32)&DCMI->DR,mem0addr,mem1addr,memsize);//开启双缓冲
-        __HAL_DMA_ENABLE_IT(&DMADMCI_Handler,DMA_IT_TC);    //开启传输完成中断
-        HAL_NVIC_SetPriority(DMA2_Stream1_IRQn,0,0);        //DMA中断优先级
-        HAL_NVIC_EnableIRQ(DMA2_Stream1_IRQn);
     }    
+		__HAL_DMA_ENABLE_IT(&DMADMCI_Handler,DMA_IT_TC);    //开启传输完成中断
+    HAL_NVIC_SetPriority(DMA2_Stream1_IRQn,0,0);        //DMA中断优先级
+    HAL_NVIC_EnableIRQ(DMA2_Stream1_IRQn);
 }
 
 //DCMI,启动传输

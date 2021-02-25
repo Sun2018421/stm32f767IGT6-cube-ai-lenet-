@@ -25,28 +25,10 @@
 #include "myiic.h"
 #include "pcf8574.h"
 #include "ov2640.h"
+#include "dcmi.h"
 #include "app_x-cube-ai.h"
 #include <stdio.h>
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
 
-/* USER CODE END Includes */
-
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
 
 CRC_HandleTypeDef hcrc;
 /* USER CODE BEGIN PV */
@@ -56,21 +38,38 @@ CRC_HandleTypeDef hcrc;
 /* Private function prototypes -----------------------------------------------*/
 static void MX_GPIO_Init(void);
 static void MX_CRC_Init(void);
-/* USER CODE BEGIN PFP */
 
-/* USER CODE END PFP */
+#define output_width 28
+#define output_height 28
 
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
+u16 dcmi_line_buf[output_width];  //一行空间缓冲
+u16 picture_data_buf[output_width*output_height]; //整个一张图片缓冲
+
+volatile u8 currentline = 0 ;
+volatile u8 one_shot_ok = 0;
+
 void jpeg_data_process(void)
 {
-	u16 i;
-	u16 rlen;			//剩余数据长度
-	u32 *pbuf;
-
-	
-
+	one_shot_ok = 1;
+	currentline = 0;
 }
+
+void DCMI_rx_callback(void){
+	u16 * datapointer ;
+	u16 *pbuf;
+	u16 i ;
+	pbuf=(u16*)dcmi_line_buf; 
+
+	datapointer = (u16*)picture_data_buf;
+	datapointer = datapointer + currentline*output_width;
+	if(one_shot_ok == 0){
+		for(i=0; i <output_width ; i++){
+			 datapointer[i]= pbuf[i];
+		}
+	}
+	if(currentline < output_height) currentline++;
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -79,6 +78,9 @@ void jpeg_data_process(void)
   */
 int main(void)
 {
+	u8 i , j;					
+	u8 fileout = 1;
+	u16 *ouputpointer;
   SCB_EnableICache();
   SCB_EnableDCache();
   HAL_Init();
@@ -86,15 +88,45 @@ int main(void)
 	Stm32_Clock_Init(432,25,2,9);
 	uart_init(115200);
 	delay_init(216);
+	PCF8574_Init();
 	while(OV2640_Init()){
 	}
-	
-	PCF8574_Init();
-  MX_GPIO_Init();
+	DCMI_Init();
+	MX_GPIO_Init();  //相关配置初始化
 	MX_CRC_Init();
-
   MX_X_CUBE_AI_Init();
-  MX_X_CUBE_AI_Process();
+	OV2640_RGB565_Mode();	//RGB565模式 
+	OV2640_Light_Mode(0);	//自动模式
+	OV2640_Color_Saturation(3);//色彩饱和度0
+	OV2640_Brightness(4);	//亮度0
+	OV2640_Contrast(3);		//对比度0
+	//OV2640_Special_Effects(2); //设置成黑白
+	OV2640_ImageWin_Set(0,0,800,600); // 800 = 40 * 20 , 576 = 32 *18
+	OV2640_OutSize_Set(output_width,output_height); //缩放
+	dcmi_rx_callback = DCMI_rx_callback;   //设置回调函数	
+	DCMI_DMA_Init((u32)dcmi_line_buf,0,output_width/2,DMA_MDATAALIGN_HALFWORD,DMA_MINC_ENABLE);
+	currentline = 0 ;
+	one_shot_ok = 0;
+  //MX_X_CUBE_AI_Process();
+	
+	
+	DCMI_Start();
+	while(1){
+		if((one_shot_ok == 1) && (fileout==1)){
+		ouputpointer = (u16*)picture_data_buf;
+			for(i=0;i < output_height ; i++){
+					for(j=0 ; j < output_width ; j++){
+						printf("%x ",ouputpointer[i*output_width+j]);
+					}
+			printf("\r\n");
+			}
+			fileout = 0;
+		}
+		if(fileout == 0){
+			break;
+		}
+	}
+	MX_X_CUBE_AI_Process();
 }
 
 
