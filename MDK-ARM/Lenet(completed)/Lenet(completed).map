@@ -243,6 +243,8 @@ Section Cross References
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(.bss) for .bss
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(.constdata) for .constdata
     app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) refers to app_x-cube-ai.o(.conststring) for .conststring
+    app_x-cube-ai.o(i.acquire_and_process_data) refers to printfa.o(i.__0printf) for __2printf
+    app_x-cube-ai.o(i.acquire_and_process_data) refers to main.o(.data) for Inputdatamode
     app_x-cube-ai.o(i.acquire_and_process_data) refers to main.o(.bss) for picture_data_buf
     app_x-cube-ai.o(i.ai_boostrap) refers to network.o(i.ai_network_create) for ai_network_create
     app_x-cube-ai.o(i.ai_boostrap) refers to memcpya.o(.text) for __aeabi_memcpy4
@@ -262,11 +264,11 @@ Section Cross References
     main.o(i.main) refers to sys.o(i.Stm32_Clock_Init) for Stm32_Clock_Init
     main.o(i.main) refers to usart.o(i.uart_init) for uart_init
     main.o(i.main) refers to delay.o(i.delay_init) for delay_init
+    main.o(i.main) refers to stm32f7xx_hal_crc.o(i.HAL_CRC_Init) for HAL_CRC_Init
+    main.o(i.main) refers to app_x-cube-ai.o(i.MX_X_CUBE_AI_Init) for MX_X_CUBE_AI_Init
     main.o(i.main) refers to pcf8574.o(i.PCF8574_Init) for PCF8574_Init
     main.o(i.main) refers to ov2640.o(i.OV2640_Init) for OV2640_Init
     main.o(i.main) refers to dcmi.o(i.DCMI_Init) for DCMI_Init
-    main.o(i.main) refers to stm32f7xx_hal_crc.o(i.HAL_CRC_Init) for HAL_CRC_Init
-    main.o(i.main) refers to app_x-cube-ai.o(i.MX_X_CUBE_AI_Init) for MX_X_CUBE_AI_Init
     main.o(i.main) refers to ov2640.o(i.OV2640_RGB565_Mode) for OV2640_RGB565_Mode
     main.o(i.main) refers to ov2640.o(i.OV2640_Light_Mode) for OV2640_Light_Mode
     main.o(i.main) refers to ov2640.o(i.OV2640_Color_Saturation) for OV2640_Color_Saturation
@@ -279,9 +281,9 @@ Section Cross References
     main.o(i.main) refers to printfa.o(i.__0printf) for __2printf
     main.o(i.main) refers to app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) for MX_X_CUBE_AI_Process
     main.o(i.main) refers to main.o(.bss) for .bss
+    main.o(i.main) refers to main.o(.data) for .data
     main.o(i.main) refers to main.o(i.DCMI_rx_callback) for DCMI_rx_callback
     main.o(i.main) refers to dcmi.o(.data) for dcmi_rx_callback
-    main.o(i.main) refers to main.o(.data) for .data
     stm32f7xx_it.o(i.SysTick_Handler) refers to stm32f7xx_hal.o(i.HAL_IncTick) for HAL_IncTick
     stm32f7xx_hal_msp.o(i.HAL_UART_MspDeInit) refers to stm32f7xx_hal_gpio.o(i.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
     stm32f7xx_hal_msp.o(i.HAL_UART_MspDeInit) refers to stm32f7xx_hal_cortex.o(i.HAL_NVIC_DisableIRQ) for HAL_NVIC_DisableIRQ
@@ -2679,115 +2681,115 @@ Image Symbol Table
     i._printf_pre_padding                    0x08003ddc   Section        0  printfa.o(i._printf_pre_padding)
     _printf_pre_padding                      0x08003ddd   Thumb Code    46  printfa.o(i._printf_pre_padding)
     i.acquire_and_process_data               0x08003e0c   Section        0  app_x-cube-ai.o(i.acquire_and_process_data)
-    i.ai_array_get_byte_size                 0x08003ef4   Section        0  ai_datatypes_format.o(i.ai_array_get_byte_size)
-    i.ai_array_to_buffer_fmt                 0x08003f38   Section        0  ai_datatypes_format.o(i.ai_array_to_buffer_fmt)
-    i.ai_boostrap                            0x08004024   Section        0  app_x-cube-ai.o(i.ai_boostrap)
-    ai_boostrap                              0x08004025   Thumb Code    90  app_x-cube-ai.o(i.ai_boostrap)
-    i.ai_check_custom_types                  0x080040c8   Section        0  layers.o(i.ai_check_custom_types)
-    i.ai_conv2d_kernel_depthwise_f32         0x080040f4   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32)
-    ai_conv2d_kernel_depthwise_f32           0x080040f5   Thumb Code   298  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32)
-    i.ai_conv2d_kernel_group_f32             0x08004224   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32)
-    ai_conv2d_kernel_group_f32               0x08004225   Thumb Code   378  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32)
-    i.ai_conv2d_kernel_simple_opt_f32        0x080043a4   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32)
-    ai_conv2d_kernel_simple_opt_f32          0x080043a5   Thumb Code   370  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32)
-    i.ai_conv2d_stripe_f32                   0x08004518   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32)
-    ai_conv2d_stripe_f32                     0x08004519   Thumb Code   616  layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32)
-    i.ai_dict4_dot_array_f32                 0x08004784   Section        0  layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32)
-    i.ai_dict8_dot_array_f32                 0x080048b4   Section        0  layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32)
-    i.ai_dict_decompress_f32                 0x080049b0   Section        0  layers_conv2d_generic_float.o(i.ai_dict_decompress_f32)
-    i.ai_forward_layer                       0x08004a2a   Section        0  layers.o(i.ai_forward_layer)
-    ai_forward_layer                         0x08004a2b   Thumb Code    18  layers.o(i.ai_forward_layer)
-    i.ai_layers_forward_all                  0x08004a3c   Section        0  layers.o(i.ai_layers_forward_all)
-    i.ai_log_err                             0x08004a88   Section        0  app_x-cube-ai.o(i.ai_log_err)
-    ai_log_err                               0x08004a89   Thumb Code    30  app_x-cube-ai.o(i.ai_log_err)
-    i.ai_network_create                      0x08004b0c   Section        0  network.o(i.ai_network_create)
-    i.ai_network_data_weights_get            0x08004b24   Section        0  network_data.o(i.ai_network_data_weights_get)
-    i.ai_network_get_error                   0x08004b2c   Section        0  network.o(i.ai_network_get_error)
-    i.ai_network_get_info                    0x08004b30   Section        0  network.o(i.ai_network_get_info)
-    i.ai_network_init                        0x08004b88   Section        0  network.o(i.ai_network_init)
-    i.ai_network_run                         0x08004bbe   Section        0  network.o(i.ai_network_run)
-    i.ai_platform_api_get_network_report     0x08004bc4   Section        0  ai_platform_interface.o(i.ai_platform_api_get_network_report)
-    i.ai_platform_api_get_version            0x08004c80   Section        0  ai_platform_interface.o(i.ai_platform_api_get_version)
-    i.ai_platform_context_acquire            0x08004c94   Section        0  ai_platform_interface.o(i.ai_platform_context_acquire)
-    i.ai_platform_interface_api_get_version  0x08004cb0   Section        0  ai_platform_interface.o(i.ai_platform_interface_api_get_version)
-    i.ai_platform_network_create             0x08004cc4   Section        0  ai_platform_interface.o(i.ai_platform_network_create)
-    i.ai_platform_network_get_error          0x08004d30   Section        0  ai_platform_interface.o(i.ai_platform_network_get_error)
-    i.ai_platform_network_init               0x08004d4c   Section        0  ai_platform_interface.o(i.ai_platform_network_init)
-    i.ai_platform_network_post_init          0x08004dca   Section        0  ai_platform_interface.o(i.ai_platform_network_post_init)
-    i.ai_platform_network_process            0x08004e0a   Section        0  ai_platform_interface.o(i.ai_platform_network_process)
-    i.ai_platform_network_set_error          0x08004e60   Section        0  ai_platform_interface.o(i.ai_platform_network_set_error)
-    i.ai_platform_runtime_get_revision       0x08004e6c   Section        0  ai_platform_interface.o(i.ai_platform_runtime_get_revision)
-    i.ai_platform_runtime_get_version        0x08004e7c   Section        0  ai_platform_interface.o(i.ai_platform_runtime_get_version)
-    i.ai_shape_get_size                      0x08004e90   Section        0  layers_nl_generic_float.o(i.ai_shape_get_size)
-    ai_shape_get_size                        0x08004e91   Thumb Code    26  layers_nl_generic_float.o(i.ai_shape_get_size)
-    i.core_get_error                         0x08004eaa   Section        0  core_common.o(i.core_get_error)
-    i.core_init                              0x08004eb6   Section        0  core_common.o(i.core_init)
-    i.core_nl_get_params_byte_size           0x08004eba   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size)
-    core_nl_get_params_byte_size             0x08004ebb   Thumb Code    16  layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size)
-    i.core_nl_get_params_ptr                 0x08004eca   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_ptr)
-    core_nl_get_params_ptr                   0x08004ecb   Thumb Code    18  layers_conv2d_generic_float.o(i.core_nl_get_params_ptr)
-    i.core_nl_get_params_stride              0x08004edc   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_stride)
-    core_nl_get_params_stride                0x08004edd   Thumb Code    10  layers_conv2d_generic_float.o(i.core_nl_get_params_stride)
-    i.core_set_error                         0x08004ee6   Section        0  core_common.o(i.core_set_error)
-    i.delay_init                             0x08004f00   Section        0  delay.o(i.delay_init)
-    i.delay_ms                               0x08004f14   Section        0  delay.o(i.delay_ms)
-    i.delay_us                               0x08004f30   Section        0  delay.o(i.delay_us)
-    i.forward_conv2d_nl_pool                 0x08004f64   Section        0  layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool)
-    i.forward_dense                          0x080053e4   Section        0  layers_conv2d_generic_float.o(i.forward_dense)
-    i.forward_relu                           0x08005574   Section        0  layers_nl_generic_float.o(i.forward_relu)
-    i.forward_sm                             0x0800560e   Section        0  layers_nl_generic_float.o(i.forward_sm)
-    i.fputc                                  0x0800567c   Section        0  usart.o(i.fputc)
-    i.func_dummy                             0x08005690   Section        0  layers_conv2d_generic_float.o(i.func_dummy)
-    func_dummy                               0x08005691   Thumb Code     2  layers_conv2d_generic_float.o(i.func_dummy)
-    i.internal_alloc                         0x08005694   Section        0  mallocr.o(i.internal_alloc)
-    internal_alloc                           0x08005695   Thumb Code    76  mallocr.o(i.internal_alloc)
-    i.jpeg_data_process                      0x080056e4   Section        0  main.o(i.jpeg_data_process)
-    i.main                                   0x080056f4   Section        0  main.o(i.main)
-    i.network_configure_activations          0x08005894   Section        0  network.o(i.network_configure_activations)
-    network_configure_activations            0x08005895   Thumb Code   112  network.o(i.network_configure_activations)
-    i.network_configure_weights              0x08005908   Section        0  network.o(i.network_configure_weights)
-    network_configure_weights                0x08005909   Thumb Code   228  network.o(i.network_configure_weights)
-    i.nl_func_relu_array_f32                 0x08005a00   Section        0  layers_nl_generic_float.o(i.nl_func_relu_array_f32)
-    i.nl_func_relu_generic_array_f32         0x08005a34   Section        0  layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32)
-    i.nl_func_relu_thresholded_array_f32     0x08005af4   Section        0  layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32)
-    i.nl_func_sm_array_f32                   0x08005b38   Section        0  layers_nl_generic_float.o(i.nl_func_sm_array_f32)
-    i.nl_func_sm_channel_f32                 0x08005b84   Section        0  layers_nl_generic_float.o(i.nl_func_sm_channel_f32)
-    i.pool_func_mp_array_f32                 0x08005c0c   Section        0  layers_pool_generic_float.o(i.pool_func_mp_array_f32)
-    i.post_process                           0x08005dac   Section        0  app_x-cube-ai.o(i.post_process)
-    i.uart_init                              0x08005e28   Section        0  usart.o(i.uart_init)
-    .constdata                               0x08005e50   Section        8  network.o(.constdata)
-    conv2d_1_chain                           0x08005e50   Data           8  network.o(.constdata)
-    .constdata                               0x08005e58   Section        8  network.o(.constdata)
-    conv2d_2_chain                           0x08005e58   Data           8  network.o(.constdata)
-    .constdata                               0x08005e60   Section        8  network.o(.constdata)
-    dense_1_chain                            0x08005e60   Data           8  network.o(.constdata)
-    .constdata                               0x08005e68   Section        8  network.o(.constdata)
-    dense_1_nl_chain                         0x08005e68   Data           8  network.o(.constdata)
-    .constdata                               0x08005e70   Section        8  network.o(.constdata)
-    dense_2_chain                            0x08005e70   Data           8  network.o(.constdata)
-    .constdata                               0x08005e78   Section        8  network.o(.constdata)
-    dense_2_nl_chain                         0x08005e78   Data           8  network.o(.constdata)
-    .constdata                               0x08005e80   Section        8  network.o(.constdata)
-    dense_3_chain                            0x08005e80   Data           8  network.o(.constdata)
-    .constdata                               0x08005e88   Section        8  network.o(.constdata)
-    dense_3_nl_chain                         0x08005e88   Data           8  network.o(.constdata)
-    .constdata                               0x08005e90   Section      116  network.o(.constdata)
-    .constdata                               0x08005f04   Section    246824  network_data.o(.constdata)
-    s_network_weights                        0x08005f04   Data       246824  network_data.o(.constdata)
-    .constdata                               0x0804232c   Section       52  app_x-cube-ai.o(.constdata)
-    .constdata                               0x08042360   Section        8  stm32f7xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x08042360   Data           8  stm32f7xx_hal_dma.o(.constdata)
-    .constdata                               0x08042368   Section       16  system_stm32f7xx.o(.constdata)
-    .constdata                               0x08042378   Section        8  system_stm32f7xx.o(.constdata)
-    .constdata                               0x08042380   Section      452  ov2640.o(.constdata)
-    OV2640_AUTOEXPOSURE_LEVEL                0x0804251c   Data          40  ov2640.o(.constdata)
-    .constdata                               0x08042544   Section       32  ai_platform_interface.o(.constdata)
-    .constdata                               0x08042564   Section       48  expf.o(.constdata)
-    twotokover4top                           0x08042564   Data          16  expf.o(.constdata)
-    twotokover4bot                           0x08042574   Data          16  expf.o(.constdata)
-    twotokover4all                           0x08042584   Data          16  expf.o(.constdata)
-    .conststring                             0x08042594   Section      108  network.o(.conststring)
-    .conststring                             0x08042600   Section       70  app_x-cube-ai.o(.conststring)
+    i.ai_array_get_byte_size                 0x08003f40   Section        0  ai_datatypes_format.o(i.ai_array_get_byte_size)
+    i.ai_array_to_buffer_fmt                 0x08003f84   Section        0  ai_datatypes_format.o(i.ai_array_to_buffer_fmt)
+    i.ai_boostrap                            0x08004070   Section        0  app_x-cube-ai.o(i.ai_boostrap)
+    ai_boostrap                              0x08004071   Thumb Code    90  app_x-cube-ai.o(i.ai_boostrap)
+    i.ai_check_custom_types                  0x08004114   Section        0  layers.o(i.ai_check_custom_types)
+    i.ai_conv2d_kernel_depthwise_f32         0x08004140   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32)
+    ai_conv2d_kernel_depthwise_f32           0x08004141   Thumb Code   298  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_depthwise_f32)
+    i.ai_conv2d_kernel_group_f32             0x08004270   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32)
+    ai_conv2d_kernel_group_f32               0x08004271   Thumb Code   378  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_group_f32)
+    i.ai_conv2d_kernel_simple_opt_f32        0x080043f0   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32)
+    ai_conv2d_kernel_simple_opt_f32          0x080043f1   Thumb Code   370  layers_conv2d_generic_float.o(i.ai_conv2d_kernel_simple_opt_f32)
+    i.ai_conv2d_stripe_f32                   0x08004564   Section        0  layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32)
+    ai_conv2d_stripe_f32                     0x08004565   Thumb Code   616  layers_conv2d_generic_float.o(i.ai_conv2d_stripe_f32)
+    i.ai_dict4_dot_array_f32                 0x080047d0   Section        0  layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32)
+    i.ai_dict8_dot_array_f32                 0x08004900   Section        0  layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32)
+    i.ai_dict_decompress_f32                 0x080049fc   Section        0  layers_conv2d_generic_float.o(i.ai_dict_decompress_f32)
+    i.ai_forward_layer                       0x08004a76   Section        0  layers.o(i.ai_forward_layer)
+    ai_forward_layer                         0x08004a77   Thumb Code    18  layers.o(i.ai_forward_layer)
+    i.ai_layers_forward_all                  0x08004a88   Section        0  layers.o(i.ai_layers_forward_all)
+    i.ai_log_err                             0x08004ad4   Section        0  app_x-cube-ai.o(i.ai_log_err)
+    ai_log_err                               0x08004ad5   Thumb Code    30  app_x-cube-ai.o(i.ai_log_err)
+    i.ai_network_create                      0x08004b58   Section        0  network.o(i.ai_network_create)
+    i.ai_network_data_weights_get            0x08004b70   Section        0  network_data.o(i.ai_network_data_weights_get)
+    i.ai_network_get_error                   0x08004b78   Section        0  network.o(i.ai_network_get_error)
+    i.ai_network_get_info                    0x08004b7c   Section        0  network.o(i.ai_network_get_info)
+    i.ai_network_init                        0x08004bd4   Section        0  network.o(i.ai_network_init)
+    i.ai_network_run                         0x08004c0a   Section        0  network.o(i.ai_network_run)
+    i.ai_platform_api_get_network_report     0x08004c10   Section        0  ai_platform_interface.o(i.ai_platform_api_get_network_report)
+    i.ai_platform_api_get_version            0x08004ccc   Section        0  ai_platform_interface.o(i.ai_platform_api_get_version)
+    i.ai_platform_context_acquire            0x08004ce0   Section        0  ai_platform_interface.o(i.ai_platform_context_acquire)
+    i.ai_platform_interface_api_get_version  0x08004cfc   Section        0  ai_platform_interface.o(i.ai_platform_interface_api_get_version)
+    i.ai_platform_network_create             0x08004d10   Section        0  ai_platform_interface.o(i.ai_platform_network_create)
+    i.ai_platform_network_get_error          0x08004d7c   Section        0  ai_platform_interface.o(i.ai_platform_network_get_error)
+    i.ai_platform_network_init               0x08004d98   Section        0  ai_platform_interface.o(i.ai_platform_network_init)
+    i.ai_platform_network_post_init          0x08004e16   Section        0  ai_platform_interface.o(i.ai_platform_network_post_init)
+    i.ai_platform_network_process            0x08004e56   Section        0  ai_platform_interface.o(i.ai_platform_network_process)
+    i.ai_platform_network_set_error          0x08004eac   Section        0  ai_platform_interface.o(i.ai_platform_network_set_error)
+    i.ai_platform_runtime_get_revision       0x08004eb8   Section        0  ai_platform_interface.o(i.ai_platform_runtime_get_revision)
+    i.ai_platform_runtime_get_version        0x08004ec8   Section        0  ai_platform_interface.o(i.ai_platform_runtime_get_version)
+    i.ai_shape_get_size                      0x08004edc   Section        0  layers_nl_generic_float.o(i.ai_shape_get_size)
+    ai_shape_get_size                        0x08004edd   Thumb Code    26  layers_nl_generic_float.o(i.ai_shape_get_size)
+    i.core_get_error                         0x08004ef6   Section        0  core_common.o(i.core_get_error)
+    i.core_init                              0x08004f02   Section        0  core_common.o(i.core_init)
+    i.core_nl_get_params_byte_size           0x08004f06   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size)
+    core_nl_get_params_byte_size             0x08004f07   Thumb Code    16  layers_conv2d_generic_float.o(i.core_nl_get_params_byte_size)
+    i.core_nl_get_params_ptr                 0x08004f16   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_ptr)
+    core_nl_get_params_ptr                   0x08004f17   Thumb Code    18  layers_conv2d_generic_float.o(i.core_nl_get_params_ptr)
+    i.core_nl_get_params_stride              0x08004f28   Section        0  layers_conv2d_generic_float.o(i.core_nl_get_params_stride)
+    core_nl_get_params_stride                0x08004f29   Thumb Code    10  layers_conv2d_generic_float.o(i.core_nl_get_params_stride)
+    i.core_set_error                         0x08004f32   Section        0  core_common.o(i.core_set_error)
+    i.delay_init                             0x08004f4c   Section        0  delay.o(i.delay_init)
+    i.delay_ms                               0x08004f60   Section        0  delay.o(i.delay_ms)
+    i.delay_us                               0x08004f7c   Section        0  delay.o(i.delay_us)
+    i.forward_conv2d_nl_pool                 0x08004fb0   Section        0  layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool)
+    i.forward_dense                          0x08005430   Section        0  layers_conv2d_generic_float.o(i.forward_dense)
+    i.forward_relu                           0x080055c0   Section        0  layers_nl_generic_float.o(i.forward_relu)
+    i.forward_sm                             0x0800565a   Section        0  layers_nl_generic_float.o(i.forward_sm)
+    i.fputc                                  0x080056c8   Section        0  usart.o(i.fputc)
+    i.func_dummy                             0x080056dc   Section        0  layers_conv2d_generic_float.o(i.func_dummy)
+    func_dummy                               0x080056dd   Thumb Code     2  layers_conv2d_generic_float.o(i.func_dummy)
+    i.internal_alloc                         0x080056e0   Section        0  mallocr.o(i.internal_alloc)
+    internal_alloc                           0x080056e1   Thumb Code    76  mallocr.o(i.internal_alloc)
+    i.jpeg_data_process                      0x08005730   Section        0  main.o(i.jpeg_data_process)
+    i.main                                   0x08005740   Section        0  main.o(i.main)
+    i.network_configure_activations          0x080058e8   Section        0  network.o(i.network_configure_activations)
+    network_configure_activations            0x080058e9   Thumb Code   112  network.o(i.network_configure_activations)
+    i.network_configure_weights              0x0800595c   Section        0  network.o(i.network_configure_weights)
+    network_configure_weights                0x0800595d   Thumb Code   228  network.o(i.network_configure_weights)
+    i.nl_func_relu_array_f32                 0x08005a54   Section        0  layers_nl_generic_float.o(i.nl_func_relu_array_f32)
+    i.nl_func_relu_generic_array_f32         0x08005a88   Section        0  layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32)
+    i.nl_func_relu_thresholded_array_f32     0x08005b48   Section        0  layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32)
+    i.nl_func_sm_array_f32                   0x08005b8c   Section        0  layers_nl_generic_float.o(i.nl_func_sm_array_f32)
+    i.nl_func_sm_channel_f32                 0x08005bd8   Section        0  layers_nl_generic_float.o(i.nl_func_sm_channel_f32)
+    i.pool_func_mp_array_f32                 0x08005c60   Section        0  layers_pool_generic_float.o(i.pool_func_mp_array_f32)
+    i.post_process                           0x08005e00   Section        0  app_x-cube-ai.o(i.post_process)
+    i.uart_init                              0x08005e7c   Section        0  usart.o(i.uart_init)
+    .constdata                               0x08005ea4   Section        8  network.o(.constdata)
+    conv2d_1_chain                           0x08005ea4   Data           8  network.o(.constdata)
+    .constdata                               0x08005eac   Section        8  network.o(.constdata)
+    conv2d_2_chain                           0x08005eac   Data           8  network.o(.constdata)
+    .constdata                               0x08005eb4   Section        8  network.o(.constdata)
+    dense_1_chain                            0x08005eb4   Data           8  network.o(.constdata)
+    .constdata                               0x08005ebc   Section        8  network.o(.constdata)
+    dense_1_nl_chain                         0x08005ebc   Data           8  network.o(.constdata)
+    .constdata                               0x08005ec4   Section        8  network.o(.constdata)
+    dense_2_chain                            0x08005ec4   Data           8  network.o(.constdata)
+    .constdata                               0x08005ecc   Section        8  network.o(.constdata)
+    dense_2_nl_chain                         0x08005ecc   Data           8  network.o(.constdata)
+    .constdata                               0x08005ed4   Section        8  network.o(.constdata)
+    dense_3_chain                            0x08005ed4   Data           8  network.o(.constdata)
+    .constdata                               0x08005edc   Section        8  network.o(.constdata)
+    dense_3_nl_chain                         0x08005edc   Data           8  network.o(.constdata)
+    .constdata                               0x08005ee4   Section      116  network.o(.constdata)
+    .constdata                               0x08005f58   Section    246824  network_data.o(.constdata)
+    s_network_weights                        0x08005f58   Data       246824  network_data.o(.constdata)
+    .constdata                               0x08042380   Section       52  app_x-cube-ai.o(.constdata)
+    .constdata                               0x080423b4   Section        8  stm32f7xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x080423b4   Data           8  stm32f7xx_hal_dma.o(.constdata)
+    .constdata                               0x080423bc   Section       16  system_stm32f7xx.o(.constdata)
+    .constdata                               0x080423cc   Section        8  system_stm32f7xx.o(.constdata)
+    .constdata                               0x080423d4   Section      452  ov2640.o(.constdata)
+    OV2640_AUTOEXPOSURE_LEVEL                0x08042570   Data          40  ov2640.o(.constdata)
+    .constdata                               0x08042598   Section       32  ai_platform_interface.o(.constdata)
+    .constdata                               0x080425b8   Section       48  expf.o(.constdata)
+    twotokover4top                           0x080425b8   Data          16  expf.o(.constdata)
+    twotokover4bot                           0x080425c8   Data          16  expf.o(.constdata)
+    twotokover4all                           0x080425d8   Data          16  expf.o(.constdata)
+    .conststring                             0x080425e8   Section      108  network.o(.conststring)
+    .conststring                             0x08042654   Section       70  app_x-cube-ai.o(.conststring)
     .data                                    0x20000000   Section       16  network.o(.data)
     <Data1>                                  0x20000000   Data          16  network.o(.data)
     .data                                    0x20000010   Section       16  network.o(.data)
@@ -3057,7 +3059,7 @@ Image Symbol Table
     dense_3_nl_layer                         0x20000a7c   Data          28  network.o(.data)
     .data                                    0x20000a98   Section        4  app_x-cube-ai.o(.data)
     network                                  0x20000a98   Data           4  app_x-cube-ai.o(.data)
-    .data                                    0x20000a9c   Section        2  main.o(.data)
+    .data                                    0x20000a9c   Section        3  main.o(.data)
     .data                                    0x20000aa0   Section       12  stm32f7xx_hal.o(.data)
     .data                                    0x20000aac   Section        4  system_stm32f7xx.o(.data)
     .data                                    0x20000ab0   Section        2  usart.o(.data)
@@ -3409,63 +3411,64 @@ Image Symbol Table
     __scatterload_null                       0x0800317b   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x0800317d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     __set_errno                              0x0800318d   Thumb Code     6  errno.o(i.__set_errno)
-    acquire_and_process_data                 0x08003e0d   Thumb Code   190  app_x-cube-ai.o(i.acquire_and_process_data)
-    ai_array_get_byte_size                   0x08003ef5   Thumb Code    68  ai_datatypes_format.o(i.ai_array_get_byte_size)
-    ai_array_to_buffer_fmt                   0x08003f39   Thumb Code   202  ai_datatypes_format.o(i.ai_array_to_buffer_fmt)
-    ai_check_custom_types                    0x080040c9   Thumb Code    38  layers.o(i.ai_check_custom_types)
-    ai_dict4_dot_array_f32                   0x08004785   Thumb Code   300  layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32)
-    ai_dict8_dot_array_f32                   0x080048b5   Thumb Code   246  layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32)
-    ai_dict_decompress_f32                   0x080049b1   Thumb Code   122  layers_conv2d_generic_float.o(i.ai_dict_decompress_f32)
-    ai_layers_forward_all                    0x08004a3d   Thumb Code    74  layers.o(i.ai_layers_forward_all)
-    ai_network_create                        0x08004b0d   Thumb Code    20  network.o(i.ai_network_create)
-    ai_network_data_weights_get              0x08004b25   Thumb Code     4  network_data.o(i.ai_network_data_weights_get)
-    ai_network_get_error                     0x08004b2d   Thumb Code     4  network.o(i.ai_network_get_error)
-    ai_network_get_info                      0x08004b31   Thumb Code    82  network.o(i.ai_network_get_info)
-    ai_network_init                          0x08004b89   Thumb Code    54  network.o(i.ai_network_init)
-    ai_network_run                           0x08004bbf   Thumb Code     4  network.o(i.ai_network_run)
-    ai_platform_api_get_network_report       0x08004bc5   Thumb Code   182  ai_platform_interface.o(i.ai_platform_api_get_network_report)
-    ai_platform_api_get_version              0x08004c81   Thumb Code    14  ai_platform_interface.o(i.ai_platform_api_get_version)
-    ai_platform_context_acquire              0x08004c95   Thumb Code    24  ai_platform_interface.o(i.ai_platform_context_acquire)
-    ai_platform_interface_api_get_version    0x08004cb1   Thumb Code    14  ai_platform_interface.o(i.ai_platform_interface_api_get_version)
-    ai_platform_network_create               0x08004cc5   Thumb Code    96  ai_platform_interface.o(i.ai_platform_network_create)
-    ai_platform_network_get_error            0x08004d31   Thumb Code    24  ai_platform_interface.o(i.ai_platform_network_get_error)
-    ai_platform_network_init                 0x08004d4d   Thumb Code   126  ai_platform_interface.o(i.ai_platform_network_init)
-    ai_platform_network_post_init            0x08004dcb   Thumb Code    64  ai_platform_interface.o(i.ai_platform_network_post_init)
-    ai_platform_network_process              0x08004e0b   Thumb Code    86  ai_platform_interface.o(i.ai_platform_network_process)
-    ai_platform_network_set_error            0x08004e61   Thumb Code    12  ai_platform_interface.o(i.ai_platform_network_set_error)
-    ai_platform_runtime_get_revision         0x08004e6d   Thumb Code    10  ai_platform_interface.o(i.ai_platform_runtime_get_revision)
-    ai_platform_runtime_get_version          0x08004e7d   Thumb Code    14  ai_platform_interface.o(i.ai_platform_runtime_get_version)
-    core_get_error                           0x08004eab   Thumb Code    12  core_common.o(i.core_get_error)
-    core_init                                0x08004eb7   Thumb Code     4  core_common.o(i.core_init)
-    core_set_error                           0x08004ee7   Thumb Code    26  core_common.o(i.core_set_error)
-    delay_init                               0x08004f01   Thumb Code    16  delay.o(i.delay_init)
-    delay_ms                                 0x08004f15   Thumb Code    26  delay.o(i.delay_ms)
-    delay_us                                 0x08004f31   Thumb Code    48  delay.o(i.delay_us)
-    forward_conv2d_nl_pool                   0x08004f65   Thumb Code  1148  layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool)
-    forward_dense                            0x080053e5   Thumb Code   396  layers_conv2d_generic_float.o(i.forward_dense)
-    forward_relu                             0x08005575   Thumb Code   154  layers_nl_generic_float.o(i.forward_relu)
-    forward_sm                               0x0800560f   Thumb Code   108  layers_nl_generic_float.o(i.forward_sm)
-    fputc                                    0x0800567d   Thumb Code    14  usart.o(i.fputc)
-    jpeg_data_process                        0x080056e5   Thumb Code    12  main.o(i.jpeg_data_process)
-    main                                     0x080056f5   Thumb Code   374  main.o(i.main)
-    nl_func_relu_array_f32                   0x08005a01   Thumb Code    48  layers_nl_generic_float.o(i.nl_func_relu_array_f32)
-    nl_func_relu_generic_array_f32           0x08005a35   Thumb Code   186  layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32)
-    nl_func_relu_thresholded_array_f32       0x08005af5   Thumb Code    62  layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32)
-    nl_func_sm_array_f32                     0x08005b39   Thumb Code    76  layers_nl_generic_float.o(i.nl_func_sm_array_f32)
-    nl_func_sm_channel_f32                   0x08005b85   Thumb Code   130  layers_nl_generic_float.o(i.nl_func_sm_channel_f32)
-    pool_func_mp_array_f32                   0x08005c0d   Thumb Code   412  layers_pool_generic_float.o(i.pool_func_mp_array_f32)
-    post_process                             0x08005dad   Thumb Code    70  app_x-cube-ai.o(i.post_process)
-    uart_init                                0x08005e29   Thumb Code    32  usart.o(i.uart_init)
-    AHBPrescTable                            0x08042368   Data          16  system_stm32f7xx.o(.constdata)
-    APBPrescTable                            0x08042378   Data           8  system_stm32f7xx.o(.constdata)
-    ov2640_svga_init_reg_tbl                 0x08042380   Data         354  ov2640.o(.constdata)
-    ov2640_jpeg_reg_tbl                      0x080424e2   Data          14  ov2640.o(.constdata)
-    ov2640_rgb565_reg_tbl                    0x080424f0   Data          28  ov2640.o(.constdata)
-    ov2640_yuv422_reg_tbl                    0x0804250c   Data          16  ov2640.o(.constdata)
-    Region$$Table$$Base                      0x08042648   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08042668   Number         0  anon$$obj.o(Region$$Table)
-    currentline                              0x20000a9c   Data           1  main.o(.data)
-    one_shot_ok                              0x20000a9d   Data           1  main.o(.data)
+    acquire_and_process_data                 0x08003e0d   Thumb Code   252  app_x-cube-ai.o(i.acquire_and_process_data)
+    ai_array_get_byte_size                   0x08003f41   Thumb Code    68  ai_datatypes_format.o(i.ai_array_get_byte_size)
+    ai_array_to_buffer_fmt                   0x08003f85   Thumb Code   202  ai_datatypes_format.o(i.ai_array_to_buffer_fmt)
+    ai_check_custom_types                    0x08004115   Thumb Code    38  layers.o(i.ai_check_custom_types)
+    ai_dict4_dot_array_f32                   0x080047d1   Thumb Code   300  layers_conv2d_generic_float.o(i.ai_dict4_dot_array_f32)
+    ai_dict8_dot_array_f32                   0x08004901   Thumb Code   246  layers_conv2d_generic_float.o(i.ai_dict8_dot_array_f32)
+    ai_dict_decompress_f32                   0x080049fd   Thumb Code   122  layers_conv2d_generic_float.o(i.ai_dict_decompress_f32)
+    ai_layers_forward_all                    0x08004a89   Thumb Code    74  layers.o(i.ai_layers_forward_all)
+    ai_network_create                        0x08004b59   Thumb Code    20  network.o(i.ai_network_create)
+    ai_network_data_weights_get              0x08004b71   Thumb Code     4  network_data.o(i.ai_network_data_weights_get)
+    ai_network_get_error                     0x08004b79   Thumb Code     4  network.o(i.ai_network_get_error)
+    ai_network_get_info                      0x08004b7d   Thumb Code    82  network.o(i.ai_network_get_info)
+    ai_network_init                          0x08004bd5   Thumb Code    54  network.o(i.ai_network_init)
+    ai_network_run                           0x08004c0b   Thumb Code     4  network.o(i.ai_network_run)
+    ai_platform_api_get_network_report       0x08004c11   Thumb Code   182  ai_platform_interface.o(i.ai_platform_api_get_network_report)
+    ai_platform_api_get_version              0x08004ccd   Thumb Code    14  ai_platform_interface.o(i.ai_platform_api_get_version)
+    ai_platform_context_acquire              0x08004ce1   Thumb Code    24  ai_platform_interface.o(i.ai_platform_context_acquire)
+    ai_platform_interface_api_get_version    0x08004cfd   Thumb Code    14  ai_platform_interface.o(i.ai_platform_interface_api_get_version)
+    ai_platform_network_create               0x08004d11   Thumb Code    96  ai_platform_interface.o(i.ai_platform_network_create)
+    ai_platform_network_get_error            0x08004d7d   Thumb Code    24  ai_platform_interface.o(i.ai_platform_network_get_error)
+    ai_platform_network_init                 0x08004d99   Thumb Code   126  ai_platform_interface.o(i.ai_platform_network_init)
+    ai_platform_network_post_init            0x08004e17   Thumb Code    64  ai_platform_interface.o(i.ai_platform_network_post_init)
+    ai_platform_network_process              0x08004e57   Thumb Code    86  ai_platform_interface.o(i.ai_platform_network_process)
+    ai_platform_network_set_error            0x08004ead   Thumb Code    12  ai_platform_interface.o(i.ai_platform_network_set_error)
+    ai_platform_runtime_get_revision         0x08004eb9   Thumb Code    10  ai_platform_interface.o(i.ai_platform_runtime_get_revision)
+    ai_platform_runtime_get_version          0x08004ec9   Thumb Code    14  ai_platform_interface.o(i.ai_platform_runtime_get_version)
+    core_get_error                           0x08004ef7   Thumb Code    12  core_common.o(i.core_get_error)
+    core_init                                0x08004f03   Thumb Code     4  core_common.o(i.core_init)
+    core_set_error                           0x08004f33   Thumb Code    26  core_common.o(i.core_set_error)
+    delay_init                               0x08004f4d   Thumb Code    16  delay.o(i.delay_init)
+    delay_ms                                 0x08004f61   Thumb Code    26  delay.o(i.delay_ms)
+    delay_us                                 0x08004f7d   Thumb Code    48  delay.o(i.delay_us)
+    forward_conv2d_nl_pool                   0x08004fb1   Thumb Code  1148  layers_conv2d_generic_float.o(i.forward_conv2d_nl_pool)
+    forward_dense                            0x08005431   Thumb Code   396  layers_conv2d_generic_float.o(i.forward_dense)
+    forward_relu                             0x080055c1   Thumb Code   154  layers_nl_generic_float.o(i.forward_relu)
+    forward_sm                               0x0800565b   Thumb Code   108  layers_nl_generic_float.o(i.forward_sm)
+    fputc                                    0x080056c9   Thumb Code    14  usart.o(i.fputc)
+    jpeg_data_process                        0x08005731   Thumb Code    12  main.o(i.jpeg_data_process)
+    main                                     0x08005741   Thumb Code   382  main.o(i.main)
+    nl_func_relu_array_f32                   0x08005a55   Thumb Code    48  layers_nl_generic_float.o(i.nl_func_relu_array_f32)
+    nl_func_relu_generic_array_f32           0x08005a89   Thumb Code   186  layers_nl_generic_float.o(i.nl_func_relu_generic_array_f32)
+    nl_func_relu_thresholded_array_f32       0x08005b49   Thumb Code    62  layers_nl_generic_float.o(i.nl_func_relu_thresholded_array_f32)
+    nl_func_sm_array_f32                     0x08005b8d   Thumb Code    76  layers_nl_generic_float.o(i.nl_func_sm_array_f32)
+    nl_func_sm_channel_f32                   0x08005bd9   Thumb Code   130  layers_nl_generic_float.o(i.nl_func_sm_channel_f32)
+    pool_func_mp_array_f32                   0x08005c61   Thumb Code   412  layers_pool_generic_float.o(i.pool_func_mp_array_f32)
+    post_process                             0x08005e01   Thumb Code    70  app_x-cube-ai.o(i.post_process)
+    uart_init                                0x08005e7d   Thumb Code    32  usart.o(i.uart_init)
+    AHBPrescTable                            0x080423bc   Data          16  system_stm32f7xx.o(.constdata)
+    APBPrescTable                            0x080423cc   Data           8  system_stm32f7xx.o(.constdata)
+    ov2640_svga_init_reg_tbl                 0x080423d4   Data         354  ov2640.o(.constdata)
+    ov2640_jpeg_reg_tbl                      0x08042536   Data          14  ov2640.o(.constdata)
+    ov2640_rgb565_reg_tbl                    0x08042544   Data          28  ov2640.o(.constdata)
+    ov2640_yuv422_reg_tbl                    0x08042560   Data          16  ov2640.o(.constdata)
+    Region$$Table$$Base                      0x0804269c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080426bc   Number         0  anon$$obj.o(Region$$Table)
+    Inputdatamode                            0x20000a9c   Data           1  main.o(.data)
+    currentline                              0x20000a9d   Data           1  main.o(.data)
+    one_shot_ok                              0x20000a9e   Data           1  main.o(.data)
     uwTickFreq                               0x20000aa0   Data           1  stm32f7xx_hal.o(.data)
     uwTickPrio                               0x20000aa4   Data           4  stm32f7xx_hal.o(.data)
     uwTick                                   0x20000aa8   Data           4  stm32f7xx_hal.o(.data)
@@ -3495,9 +3498,9 @@ Memory Map of the image
 
   Image Entry point : 0x080001f9
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00043138, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x000429f0])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0004318c, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x00042a44])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00042668, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000426bc, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3673,98 +3676,98 @@ Memory Map of the image
     0x08003db8   0x08003db8   0x00000024   Code   RO         4543    i._printf_post_padding  mc_w.l(printfa.o)
     0x08003ddc   0x08003ddc   0x0000002e   Code   RO         4544    i._printf_pre_padding  mc_w.l(printfa.o)
     0x08003e0a   0x08003e0a   0x00000002   PAD
-    0x08003e0c   0x08003e0c   0x000000e8   Code   RO          331    i.acquire_and_process_data  app_x-cube-ai.o
-    0x08003ef4   0x08003ef4   0x00000044   Code   RO         3963    i.ai_array_get_byte_size  NetworkRuntime520_CM7_Keil.lib(ai_datatypes_format.o)
-    0x08003f38   0x08003f38   0x000000ec   Code   RO         3966    i.ai_array_to_buffer_fmt  NetworkRuntime520_CM7_Keil.lib(ai_datatypes_format.o)
-    0x08004024   0x08004024   0x000000a4   Code   RO          332    i.ai_boostrap       app_x-cube-ai.o
-    0x080040c8   0x080040c8   0x0000002c   Code   RO         4026    i.ai_check_custom_types  NetworkRuntime520_CM7_Keil.lib(layers.o)
-    0x080040f4   0x080040f4   0x00000130   Code   RO         3759    i.ai_conv2d_kernel_depthwise_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08004224   0x08004224   0x00000180   Code   RO         3760    i.ai_conv2d_kernel_group_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x080043a4   0x080043a4   0x00000172   Code   RO         3761    i.ai_conv2d_kernel_simple_opt_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08004516   0x08004516   0x00000002   PAD
-    0x08004518   0x08004518   0x0000026c   Code   RO         3762    i.ai_conv2d_stripe_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08004784   0x08004784   0x00000130   Code   RO         3763    i.ai_dict4_dot_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x080048b4   0x080048b4   0x000000fc   Code   RO         3764    i.ai_dict8_dot_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x080049b0   0x080049b0   0x0000007a   Code   RO         3765    i.ai_dict_decompress_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08004a2a   0x08004a2a   0x00000012   Code   RO         4027    i.ai_forward_layer  NetworkRuntime520_CM7_Keil.lib(layers.o)
-    0x08004a3c   0x08004a3c   0x0000004a   Code   RO         4030    i.ai_layers_forward_all  NetworkRuntime520_CM7_Keil.lib(layers.o)
-    0x08004a86   0x08004a86   0x00000002   PAD
-    0x08004a88   0x08004a88   0x00000084   Code   RO          333    i.ai_log_err        app_x-cube-ai.o
-    0x08004b0c   0x08004b0c   0x00000018   Code   RO           10    i.ai_network_create  network.o
-    0x08004b24   0x08004b24   0x00000008   Code   RO          307    i.ai_network_data_weights_get  network_data.o
-    0x08004b2c   0x08004b2c   0x00000004   Code   RO           13    i.ai_network_get_error  network.o
-    0x08004b30   0x08004b30   0x00000058   Code   RO           14    i.ai_network_get_info  network.o
-    0x08004b88   0x08004b88   0x00000036   Code   RO           15    i.ai_network_init   network.o
-    0x08004bbe   0x08004bbe   0x00000004   Code   RO           16    i.ai_network_run    network.o
-    0x08004bc2   0x08004bc2   0x00000002   PAD
-    0x08004bc4   0x08004bc4   0x000000bc   Code   RO         3709    i.ai_platform_api_get_network_report  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004c80   0x08004c80   0x00000014   Code   RO         3710    i.ai_platform_api_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004c94   0x08004c94   0x0000001c   Code   RO         3711    i.ai_platform_context_acquire  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004cb0   0x08004cb0   0x00000014   Code   RO         3713    i.ai_platform_interface_api_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004cc4   0x08004cc4   0x0000006c   Code   RO         3714    i.ai_platform_network_create  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004d30   0x08004d30   0x0000001c   Code   RO         3716    i.ai_platform_network_get_error  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004d4c   0x08004d4c   0x0000007e   Code   RO         3717    i.ai_platform_network_init  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004dca   0x08004dca   0x00000040   Code   RO         3718    i.ai_platform_network_post_init  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004e0a   0x08004e0a   0x00000056   Code   RO         3719    i.ai_platform_network_process  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004e60   0x08004e60   0x0000000c   Code   RO         3720    i.ai_platform_network_set_error  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004e6c   0x08004e6c   0x00000010   Code   RO         3726    i.ai_platform_runtime_get_revision  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004e7c   0x08004e7c   0x00000014   Code   RO         3727    i.ai_platform_runtime_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08004e90   0x08004e90   0x0000001a   Code   RO         3797    i.ai_shape_get_size  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08004eaa   0x08004eaa   0x0000000c   Code   RO         4038    i.core_get_error    NetworkRuntime520_CM7_Keil.lib(core_common.o)
-    0x08004eb6   0x08004eb6   0x00000004   Code   RO         4039    i.core_init         NetworkRuntime520_CM7_Keil.lib(core_common.o)
-    0x08004eba   0x08004eba   0x00000010   Code   RO         3767    i.core_nl_get_params_byte_size  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08004eca   0x08004eca   0x00000012   Code   RO         3768    i.core_nl_get_params_ptr  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08004edc   0x08004edc   0x0000000a   Code   RO         3769    i.core_nl_get_params_stride  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08004ee6   0x08004ee6   0x0000001a   Code   RO         4040    i.core_set_error    NetworkRuntime520_CM7_Keil.lib(core_common.o)
-    0x08004f00   0x08004f00   0x00000014   Code   RO         3288    i.delay_init        delay.o
-    0x08004f14   0x08004f14   0x0000001a   Code   RO         3289    i.delay_ms          delay.o
-    0x08004f2e   0x08004f2e   0x00000002   PAD
-    0x08004f30   0x08004f30   0x00000034   Code   RO         3290    i.delay_us          delay.o
-    0x08004f64   0x08004f64   0x00000480   Code   RO         3771    i.forward_conv2d_nl_pool  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x080053e4   0x080053e4   0x00000190   Code   RO         3772    i.forward_dense     NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08005574   0x08005574   0x0000009a   Code   RO         3819    i.forward_relu      NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x0800560e   0x0800560e   0x0000006c   Code   RO         3828    i.forward_sm        NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x0800567a   0x0800567a   0x00000002   PAD
-    0x0800567c   0x0800567c   0x00000014   Code   RO         3230    i.fputc             usart.o
-    0x08005690   0x08005690   0x00000002   Code   RO         3775    i.func_dummy        NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
-    0x08005692   0x08005692   0x00000002   PAD
-    0x08005694   0x08005694   0x00000050   Code   RO         4568    i.internal_alloc    mc_w.l(mallocr.o)
-    0x080056e4   0x080056e4   0x00000010   Code   RO          516    i.jpeg_data_process  main.o
-    0x080056f4   0x080056f4   0x000001a0   Code   RO          517    i.main              main.o
-    0x08005894   0x08005894   0x00000074   Code   RO           17    i.network_configure_activations  network.o
-    0x08005908   0x08005908   0x000000f8   Code   RO           18    i.network_configure_weights  network.o
-    0x08005a00   0x08005a00   0x00000034   Code   RO         3855    i.nl_func_relu_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08005a34   0x08005a34   0x000000c0   Code   RO         3856    i.nl_func_relu_generic_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08005af4   0x08005af4   0x00000044   Code   RO         3857    i.nl_func_relu_thresholded_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08005b38   0x08005b38   0x0000004c   Code   RO         3865    i.nl_func_sm_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08005b84   0x08005b84   0x00000088   Code   RO         3866    i.nl_func_sm_channel_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
-    0x08005c0c   0x08005c0c   0x000001a0   Code   RO         3951    i.pool_func_mp_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_pool_generic_float.o)
-    0x08005dac   0x08005dac   0x0000007c   Code   RO          334    i.post_process      app_x-cube-ai.o
-    0x08005e28   0x08005e28   0x00000028   Code   RO         3231    i.uart_init         usart.o
-    0x08005e50   0x08005e50   0x00000008   Data   RO           26    .constdata          network.o
-    0x08005e58   0x08005e58   0x00000008   Data   RO           27    .constdata          network.o
-    0x08005e60   0x08005e60   0x00000008   Data   RO           28    .constdata          network.o
-    0x08005e68   0x08005e68   0x00000008   Data   RO           29    .constdata          network.o
-    0x08005e70   0x08005e70   0x00000008   Data   RO           30    .constdata          network.o
-    0x08005e78   0x08005e78   0x00000008   Data   RO           31    .constdata          network.o
-    0x08005e80   0x08005e80   0x00000008   Data   RO           32    .constdata          network.o
-    0x08005e88   0x08005e88   0x00000008   Data   RO           33    .constdata          network.o
-    0x08005e90   0x08005e90   0x00000074   Data   RO           34    .constdata          network.o
-    0x08005f04   0x08005f04   0x0003c428   Data   RO          308    .constdata          network_data.o
-    0x0804232c   0x0804232c   0x00000034   Data   RO          336    .constdata          app_x-cube-ai.o
-    0x08042360   0x08042360   0x00000008   Data   RO         1384    .constdata          stm32f7xx_hal_dma.o
-    0x08042368   0x08042368   0x00000010   Data   RO         3145    .constdata          system_stm32f7xx.o
-    0x08042378   0x08042378   0x00000008   Data   RO         3146    .constdata          system_stm32f7xx.o
-    0x08042380   0x08042380   0x000001c4   Data   RO         3521    .constdata          ov2640.o
-    0x08042544   0x08042544   0x00000020   Data   RO         3728    .constdata          NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
-    0x08042564   0x08042564   0x00000030   Data   RO         4179    .constdata          m_wv.l(expf.o)
-    0x08042594   0x08042594   0x0000006c   Data   RO           35    .conststring        network.o
-    0x08042600   0x08042600   0x00000046   Data   RO          337    .conststring        app_x-cube-ai.o
-    0x08042646   0x08042646   0x00000002   PAD
-    0x08042648   0x08042648   0x00000020   Data   RO         4690    Region$$Table       anon$$obj.o
+    0x08003e0c   0x08003e0c   0x00000134   Code   RO          331    i.acquire_and_process_data  app_x-cube-ai.o
+    0x08003f40   0x08003f40   0x00000044   Code   RO         3963    i.ai_array_get_byte_size  NetworkRuntime520_CM7_Keil.lib(ai_datatypes_format.o)
+    0x08003f84   0x08003f84   0x000000ec   Code   RO         3966    i.ai_array_to_buffer_fmt  NetworkRuntime520_CM7_Keil.lib(ai_datatypes_format.o)
+    0x08004070   0x08004070   0x000000a4   Code   RO          332    i.ai_boostrap       app_x-cube-ai.o
+    0x08004114   0x08004114   0x0000002c   Code   RO         4026    i.ai_check_custom_types  NetworkRuntime520_CM7_Keil.lib(layers.o)
+    0x08004140   0x08004140   0x00000130   Code   RO         3759    i.ai_conv2d_kernel_depthwise_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004270   0x08004270   0x00000180   Code   RO         3760    i.ai_conv2d_kernel_group_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x080043f0   0x080043f0   0x00000172   Code   RO         3761    i.ai_conv2d_kernel_simple_opt_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004562   0x08004562   0x00000002   PAD
+    0x08004564   0x08004564   0x0000026c   Code   RO         3762    i.ai_conv2d_stripe_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x080047d0   0x080047d0   0x00000130   Code   RO         3763    i.ai_dict4_dot_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004900   0x08004900   0x000000fc   Code   RO         3764    i.ai_dict8_dot_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x080049fc   0x080049fc   0x0000007a   Code   RO         3765    i.ai_dict_decompress_f32  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004a76   0x08004a76   0x00000012   Code   RO         4027    i.ai_forward_layer  NetworkRuntime520_CM7_Keil.lib(layers.o)
+    0x08004a88   0x08004a88   0x0000004a   Code   RO         4030    i.ai_layers_forward_all  NetworkRuntime520_CM7_Keil.lib(layers.o)
+    0x08004ad2   0x08004ad2   0x00000002   PAD
+    0x08004ad4   0x08004ad4   0x00000084   Code   RO          333    i.ai_log_err        app_x-cube-ai.o
+    0x08004b58   0x08004b58   0x00000018   Code   RO           10    i.ai_network_create  network.o
+    0x08004b70   0x08004b70   0x00000008   Code   RO          307    i.ai_network_data_weights_get  network_data.o
+    0x08004b78   0x08004b78   0x00000004   Code   RO           13    i.ai_network_get_error  network.o
+    0x08004b7c   0x08004b7c   0x00000058   Code   RO           14    i.ai_network_get_info  network.o
+    0x08004bd4   0x08004bd4   0x00000036   Code   RO           15    i.ai_network_init   network.o
+    0x08004c0a   0x08004c0a   0x00000004   Code   RO           16    i.ai_network_run    network.o
+    0x08004c0e   0x08004c0e   0x00000002   PAD
+    0x08004c10   0x08004c10   0x000000bc   Code   RO         3709    i.ai_platform_api_get_network_report  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004ccc   0x08004ccc   0x00000014   Code   RO         3710    i.ai_platform_api_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004ce0   0x08004ce0   0x0000001c   Code   RO         3711    i.ai_platform_context_acquire  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004cfc   0x08004cfc   0x00000014   Code   RO         3713    i.ai_platform_interface_api_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004d10   0x08004d10   0x0000006c   Code   RO         3714    i.ai_platform_network_create  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004d7c   0x08004d7c   0x0000001c   Code   RO         3716    i.ai_platform_network_get_error  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004d98   0x08004d98   0x0000007e   Code   RO         3717    i.ai_platform_network_init  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004e16   0x08004e16   0x00000040   Code   RO         3718    i.ai_platform_network_post_init  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004e56   0x08004e56   0x00000056   Code   RO         3719    i.ai_platform_network_process  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004eac   0x08004eac   0x0000000c   Code   RO         3720    i.ai_platform_network_set_error  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004eb8   0x08004eb8   0x00000010   Code   RO         3726    i.ai_platform_runtime_get_revision  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004ec8   0x08004ec8   0x00000014   Code   RO         3727    i.ai_platform_runtime_get_version  NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x08004edc   0x08004edc   0x0000001a   Code   RO         3797    i.ai_shape_get_size  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08004ef6   0x08004ef6   0x0000000c   Code   RO         4038    i.core_get_error    NetworkRuntime520_CM7_Keil.lib(core_common.o)
+    0x08004f02   0x08004f02   0x00000004   Code   RO         4039    i.core_init         NetworkRuntime520_CM7_Keil.lib(core_common.o)
+    0x08004f06   0x08004f06   0x00000010   Code   RO         3767    i.core_nl_get_params_byte_size  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004f16   0x08004f16   0x00000012   Code   RO         3768    i.core_nl_get_params_ptr  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004f28   0x08004f28   0x0000000a   Code   RO         3769    i.core_nl_get_params_stride  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08004f32   0x08004f32   0x0000001a   Code   RO         4040    i.core_set_error    NetworkRuntime520_CM7_Keil.lib(core_common.o)
+    0x08004f4c   0x08004f4c   0x00000014   Code   RO         3288    i.delay_init        delay.o
+    0x08004f60   0x08004f60   0x0000001a   Code   RO         3289    i.delay_ms          delay.o
+    0x08004f7a   0x08004f7a   0x00000002   PAD
+    0x08004f7c   0x08004f7c   0x00000034   Code   RO         3290    i.delay_us          delay.o
+    0x08004fb0   0x08004fb0   0x00000480   Code   RO         3771    i.forward_conv2d_nl_pool  NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x08005430   0x08005430   0x00000190   Code   RO         3772    i.forward_dense     NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x080055c0   0x080055c0   0x0000009a   Code   RO         3819    i.forward_relu      NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x0800565a   0x0800565a   0x0000006c   Code   RO         3828    i.forward_sm        NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x080056c6   0x080056c6   0x00000002   PAD
+    0x080056c8   0x080056c8   0x00000014   Code   RO         3230    i.fputc             usart.o
+    0x080056dc   0x080056dc   0x00000002   Code   RO         3775    i.func_dummy        NetworkRuntime520_CM7_Keil.lib(layers_conv2d_generic_float.o)
+    0x080056de   0x080056de   0x00000002   PAD
+    0x080056e0   0x080056e0   0x00000050   Code   RO         4568    i.internal_alloc    mc_w.l(mallocr.o)
+    0x08005730   0x08005730   0x00000010   Code   RO          516    i.jpeg_data_process  main.o
+    0x08005740   0x08005740   0x000001a8   Code   RO          517    i.main              main.o
+    0x080058e8   0x080058e8   0x00000074   Code   RO           17    i.network_configure_activations  network.o
+    0x0800595c   0x0800595c   0x000000f8   Code   RO           18    i.network_configure_weights  network.o
+    0x08005a54   0x08005a54   0x00000034   Code   RO         3855    i.nl_func_relu_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08005a88   0x08005a88   0x000000c0   Code   RO         3856    i.nl_func_relu_generic_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08005b48   0x08005b48   0x00000044   Code   RO         3857    i.nl_func_relu_thresholded_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08005b8c   0x08005b8c   0x0000004c   Code   RO         3865    i.nl_func_sm_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08005bd8   0x08005bd8   0x00000088   Code   RO         3866    i.nl_func_sm_channel_f32  NetworkRuntime520_CM7_Keil.lib(layers_nl_generic_float.o)
+    0x08005c60   0x08005c60   0x000001a0   Code   RO         3951    i.pool_func_mp_array_f32  NetworkRuntime520_CM7_Keil.lib(layers_pool_generic_float.o)
+    0x08005e00   0x08005e00   0x0000007c   Code   RO          334    i.post_process      app_x-cube-ai.o
+    0x08005e7c   0x08005e7c   0x00000028   Code   RO         3231    i.uart_init         usart.o
+    0x08005ea4   0x08005ea4   0x00000008   Data   RO           26    .constdata          network.o
+    0x08005eac   0x08005eac   0x00000008   Data   RO           27    .constdata          network.o
+    0x08005eb4   0x08005eb4   0x00000008   Data   RO           28    .constdata          network.o
+    0x08005ebc   0x08005ebc   0x00000008   Data   RO           29    .constdata          network.o
+    0x08005ec4   0x08005ec4   0x00000008   Data   RO           30    .constdata          network.o
+    0x08005ecc   0x08005ecc   0x00000008   Data   RO           31    .constdata          network.o
+    0x08005ed4   0x08005ed4   0x00000008   Data   RO           32    .constdata          network.o
+    0x08005edc   0x08005edc   0x00000008   Data   RO           33    .constdata          network.o
+    0x08005ee4   0x08005ee4   0x00000074   Data   RO           34    .constdata          network.o
+    0x08005f58   0x08005f58   0x0003c428   Data   RO          308    .constdata          network_data.o
+    0x08042380   0x08042380   0x00000034   Data   RO          336    .constdata          app_x-cube-ai.o
+    0x080423b4   0x080423b4   0x00000008   Data   RO         1384    .constdata          stm32f7xx_hal_dma.o
+    0x080423bc   0x080423bc   0x00000010   Data   RO         3145    .constdata          system_stm32f7xx.o
+    0x080423cc   0x080423cc   0x00000008   Data   RO         3146    .constdata          system_stm32f7xx.o
+    0x080423d4   0x080423d4   0x000001c4   Data   RO         3521    .constdata          ov2640.o
+    0x08042598   0x08042598   0x00000020   Data   RO         3728    .constdata          NetworkRuntime520_CM7_Keil.lib(ai_platform_interface.o)
+    0x080425b8   0x080425b8   0x00000030   Data   RO         4179    .constdata          m_wv.l(expf.o)
+    0x080425e8   0x080425e8   0x0000006c   Data   RO           35    .conststring        network.o
+    0x08042654   0x08042654   0x00000046   Data   RO          337    .conststring        app_x-cube-ai.o
+    0x0804269a   0x0804269a   0x00000002   PAD
+    0x0804269c   0x0804269c   0x00000020   Data   RO         4690    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08042668, Size: 0x0000b8b8, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x00000388])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080426bc, Size: 0x0000b8b8, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x00000388])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3892,8 +3895,8 @@ Memory Map of the image
     0x20000a64   COMPRESSED   0x00000018   Data   RW          157    .data               network.o
     0x20000a7c   COMPRESSED   0x0000001c   Data   RW          158    .data               network.o
     0x20000a98   COMPRESSED   0x00000004   Data   RW          338    .data               app_x-cube-ai.o
-    0x20000a9c   COMPRESSED   0x00000002   Data   RW          519    .data               main.o
-    0x20000a9e   COMPRESSED   0x00000002   PAD
+    0x20000a9c   COMPRESSED   0x00000003   Data   RW          519    .data               main.o
+    0x20000a9f   COMPRESSED   0x00000001   PAD
     0x20000aa0   COMPRESSED   0x0000000c   Data   RW         1763    .data               stm32f7xx_hal.o
     0x20000aac   COMPRESSED   0x00000004   Data   RW         3147    .data               system_stm32f7xx.o
     0x20000ab0   COMPRESSED   0x00000002   Data   RW         3233    .data               usart.o
@@ -3926,10 +3929,10 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       880        376        122          4      25844     851940   app_x-cube-ai.o
+       956        390        122          4      25844     852082   app_x-cube-ai.o
        684         90          0          8        176       5395   dcmi.o
         98          8          0          4          0       2055   delay.o
-       500         56          0          2       1660      39559   main.o
+       508         56          0          3       1660      39593   main.o
        712         40          0          0          0       5286   myiic.o
        538         34        288       2712        128      52020   network.o
          8          4     246824          0          0       9470   network_data.o
@@ -3955,9 +3958,9 @@ Image component sizes
        304         36          0          6        328       4487   usart.o
 
     ----------------------------------------------------------------------
-     11234       1026     248256       2756      44520    1079128   Object Totals
+     11318       1040     248256       2756      44520    1079304   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        30          0          2          4          0          0   (incl. Padding)
+        30          0          2          3          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -4027,15 +4030,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     23640       1432     248336       2768      44520    1071432   Grand Totals
-     23640       1432     248336        904      44520    1071432   ELF Image Totals (compressed)
-     23640       1432     248336        904          0          0   ROM Totals
+     23724       1446     248336       2768      44520    1071508   Grand Totals
+     23724       1446     248336        904      44520    1071508   ELF Image Totals (compressed)
+     23724       1446     248336        904          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               271976 ( 265.60kB)
+    Total RO  Size (Code + RO Data)               272060 ( 265.68kB)
     Total RW  Size (RW Data + ZI Data)             47288 (  46.18kB)
-    Total ROM Size (Code + RO Data + RW Data)     272880 ( 266.48kB)
+    Total ROM Size (Code + RO Data + RW Data)     272964 ( 266.57kB)
 
 ==============================================================================
 

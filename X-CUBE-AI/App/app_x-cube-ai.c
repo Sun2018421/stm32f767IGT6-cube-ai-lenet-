@@ -85,6 +85,7 @@
 static ai_handle network = AI_HANDLE_NULL;
 static ai_network_report network_info;
 extern uint16_t picture_data_buf[28*28];
+extern uint8_t Inputdatamode ;
 /* Global c-array to handle the activations buffer */
 AI_ALIGNED(4)
 static ai_float activations[AI_NETWORK_DATA_ACTIVATIONS_SIZE];
@@ -178,27 +179,35 @@ static int ai_run(void *data_in, void *data_out)
 int acquire_and_process_data(void * data)
 {
 	//RGB 565 -> Gray , 前8位为RGB565的低字节，后8位为RGB565的高字节
-	uint32_t  i ,R ,G ,B ;
-	uint32_t temp;
-	ai_float * data_in = (ai_float *)data;
-	ai_float max=256, min = -1;
-	for(i = 0 ; i < AI_NETWORK_IN_1_SIZE ; i++){
-		temp = picture_data_buf[i];
-		R = (temp& 0x00F8)>>3;  // 
-		G = ((temp&0x0007)<<3) +((temp&0xe000)>>13); 
-		B = (temp&0x1f00)>>8;
-		data_in[i] = ((1.0)*R*299 + (1.0)*G*587 +(1.0)*B*114)/1000;
-		if(data_in[i] >max)
-			max = data_in[i];
-		if(data_in[i] < min)
-			min = data_in[i];
-//		if(i == 0){
-//			printf("data:%x R:%x G:%x B:%x gray:%f\r\n",temp,R,G,B,data_in[0]);
-//		}
+	if(Inputdatamode==1){
+		uint32_t  i ,R ,G ,B ,j;
+		uint32_t temp;
+		ai_float * data_in = (ai_float *)data;
+		ai_float max=256, min = -1;
+		for(i = 0 ; i < AI_NETWORK_IN_1_SIZE ; i++){
+			temp = picture_data_buf[i];
+			R = (temp& 0x00F8)>>3;  // 
+			G = ((temp&0x0007)<<3) +((temp&0xe000)>>13); 
+			B = (temp&0x1f00)>>8;
+			data_in[i] = ((1.0)*R*299 + (1.0)*G*587 +(1.0)*B*114)/1000;
+			if(data_in[i] >max)
+				max = data_in[i];
+			if(data_in[i] < min)
+				min = data_in[i];
+		}
+		for(i =0 ; i<28 ;i++){
+			for(j=0 ; j<28; j++){
+				printf("%.2f ",data_in[i]);
+			}
+			printf("\r\n");
+		}
+		for(i = 0 ; i<AI_NETWORK_IN_1_SIZE ; i++){
+			data_in[i] = (data_in[i]-min)/(max-min);
+		}
 	}
-	for(i = 0 ; i<AI_NETWORK_IN_1_SIZE ; i++){
-		data_in[i] = (data_in[i]-min)/(max-min);
-	}
+	else {
+		
+	}	
   return 0;
 }
 
@@ -226,7 +235,6 @@ void MX_X_CUBE_AI_Init(void)
 {
     /* USER CODE BEGIN 3 */
   printf("\r\nTEMPLATE - initialization\r\n");
-
   ai_boostrap(ai_network_data_weights_get(), activations);
     /* USER CODE END 3 */
 }

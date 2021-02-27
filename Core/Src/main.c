@@ -42,6 +42,10 @@ static void MX_CRC_Init(void);
 #define output_width 28
 #define output_height 28
 
+
+u8 Inputdatamode = 1; /*0代表从串口输入
+												1代表为从摄像头输入
+											*/
 u16 dcmi_line_buf[output_width];  //一行空间缓冲
 u16 picture_data_buf[output_width*output_height]; //整个一张图片缓冲
 
@@ -88,42 +92,42 @@ int main(void)
 	Stm32_Clock_Init(432,25,2,9);
 	uart_init(115200);
 	delay_init(216);
-	PCF8574_Init();
-	while(OV2640_Init()){
-	}
-	DCMI_Init();
 	MX_GPIO_Init();  //相关配置初始化
 	MX_CRC_Init();
   MX_X_CUBE_AI_Init();
-	OV2640_RGB565_Mode();	//RGB565模式 
-	OV2640_Light_Mode(0);	//自动模式
-	OV2640_Color_Saturation(3);//色彩饱和度0
-	OV2640_Brightness(4);	//亮度0
-	OV2640_Contrast(3);		//对比度0
-	//OV2640_Special_Effects(2); //设置成黑白
-	OV2640_ImageWin_Set(0,0,800,600); // 800 = 40 * 20 , 576 = 32 *18
-	OV2640_OutSize_Set(output_width,output_height); //缩放
-	dcmi_rx_callback = DCMI_rx_callback;   //设置回调函数	
-	DCMI_DMA_Init((u32)dcmi_line_buf,0,output_width/2,DMA_MDATAALIGN_HALFWORD,DMA_MINC_ENABLE);
-	currentline = 0 ;
-	one_shot_ok = 0;
-  //MX_X_CUBE_AI_Process();
-	
-	
-	DCMI_Start();
-	while(1){
-		if((one_shot_ok == 1) && (fileout==1)){
-		ouputpointer = (u16*)picture_data_buf;
-			for(i=0;i < output_height ; i++){
-					for(j=0 ; j < output_width ; j++){
-						printf("%x ",ouputpointer[i*output_width+j]);
-					}
-			printf("\r\n");
-			}
-			fileout = 0;
+
+	if(Inputdatamode == 1){
+		PCF8574_Init();
+		while(OV2640_Init()){
 		}
-		if(fileout == 0){
-			break;
+		DCMI_Init();
+		OV2640_RGB565_Mode();	//RGB565模式 
+		OV2640_Light_Mode(0);	//自动模式
+		OV2640_Color_Saturation(3);//色彩饱和度0
+		OV2640_Brightness(4);	//亮度0
+		OV2640_Contrast(3);		//对比度0
+		//OV2640_Special_Effects(2); //设置成黑白
+		OV2640_ImageWin_Set(0,0,800,600); // 800 = 40 * 20 , 576 = 32 *18
+		OV2640_OutSize_Set(output_width,output_height); //缩放
+		dcmi_rx_callback = DCMI_rx_callback;   //设置回调函数	
+		DCMI_DMA_Init((u32)dcmi_line_buf,0,output_width/2,DMA_MDATAALIGN_HALFWORD,DMA_MINC_ENABLE);
+		currentline = 0 ;
+		one_shot_ok = 0 ;		
+		DCMI_Start();
+		while(1){
+			if((one_shot_ok == 1) && (fileout==1)){
+			ouputpointer = (u16*)picture_data_buf;
+				for(i=0;i < output_height ; i++){
+						for(j=0 ; j < output_width ; j++){
+							printf("%x ",ouputpointer[i*output_width+j]);
+						}
+				printf("\r\n");
+				}
+				fileout = 0;
+			}
+			if(fileout == 0){
+				break;
+			}
 		}
 	}
 	MX_X_CUBE_AI_Process();
