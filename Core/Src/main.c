@@ -43,11 +43,12 @@ static void MX_CRC_Init(void);
 #define output_height 28
 
 
-u8 Inputdatamode = 1; /*0代表从串口输入
+u8 Inputdatamode = 0; /*0代表从串口输入
 												1代表为从摄像头输入
 											*/
 u16 dcmi_line_buf[output_width];  //一行空间缓冲
 u16 picture_data_buf[output_width*output_height]; //整个一张图片缓冲
+u8 usartbuf[output_width*output_height];
 
 volatile u8 currentline = 0 ;
 volatile u8 one_shot_ok = 0;
@@ -132,7 +133,9 @@ int main(void)
 		MX_X_CUBE_AI_Process();
 	}
 	else{
-		
+		HAL_UART_Receive_IT(&UART1_Handler,usartbuf,1);
+		while(1){
+		}
 	}
 }
 
@@ -181,15 +184,23 @@ static void MX_GPIO_Init(void)
 
 }
 
-/* USER CODE BEGIN 4 */
-//int fputc(int ch, FILE *f)
-//{ 	
-//	while((USART1->ISR&0X40)==0);//循环发送,直到发送完毕   
-//	USART1->TDR=(unsigned char)ch;      
-//	return ch;
-//}
-/* USER CODE END 4 */
+void USART1_IRQHandler(void){
+	HAL_UART_IRQHandler(&UART1_Handler);
+}
 
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
+{
+
+	if(UartHandle==&UART1_Handler){
+//		for(i = 0 ; i< testsize; i++){
+//				printf("%c",tempbuf[i]);
+//		}
+		//MX_X_CUBE_AI_Process();
+				//HAL_UART_Transmit(&huart1,tempbuf,testsize,0xffff);
+		printf("received");
+	}
+	//HAL_UART_Receive_IT(&huart1,tempbuf,testsize);
+}
 /**
   * @brief  This function is executed in case of error occurrence.
   * @retval None
