@@ -129,8 +129,11 @@ int main(void)
 				break;
 			}
 		}
+		MX_X_CUBE_AI_Process();
 	}
-	MX_X_CUBE_AI_Process();
+	else{
+		
+	}
 }
 
 
